@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import {
+  CaretRightFill,
   Cart4,
   GeoAlt,
   List,
@@ -135,6 +136,9 @@ export const Popup = styled.div`
     height: 50px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-left: 20px;
+    svg {
+      margin-right: 30px;
+    }
   }
 `;
 
@@ -142,6 +146,14 @@ const Header = () => {
   const [closeIt, setCloseIt] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showWomans, setShowWomans] = useState(false);
+  const [showBeauty, setShowBeauty] = useState(false);
+  const [showBaby, setShowBaby] = useState(false);
+  const [showKids, setShowKids] = useState(false);
+  const [showTeens, setShowTeens] = useState(false);
+  const [showCharacter, setShowCharacter] = useState(false);
+  const [showHomeware, setShowHomeware] = useState(false);
+  const [showTech, setShowTech] = useState(false);
+  const [showFinacial, setShowFinancial] = useState(false);
 
   const themenu = [
     "My Profile",
@@ -258,6 +270,17 @@ const Header = () => {
     "Accessories",
   ];
 
+  const FinanctialSolutions = [
+    "Account Application",
+    "Ackerman Account",
+    "Lay-by",
+    "Insurance",
+    "Loans",
+    "Bill Payment",
+    "Money Transer",
+    "Vouchers",
+  ];
+
   return (
     <HeaderStyled>
       <div className="container d-flex justify-content-between align-items-center  mt-3">
@@ -332,8 +355,9 @@ const Header = () => {
           <h3>Menu</h3>
           <XLg
             onClick={() => {
-              setCloseIt(!closeIt);
-              setShowMenu(!showMenu);
+              setCloseIt(false);
+              setShowMenu(false);
+              setShowWomans(false);
             }}
           />
         </div>
@@ -342,22 +366,141 @@ const Header = () => {
           ? themenu.map((menu) => {
               return (
                 <div
-                  className="list d-flex align-items-center"
+                  className="list d-flex align-items-center justify-content-between"
                   onClick={() => {
                     if (menu === "Woman") {
                       setShowMenu(!showMenu);
                       setShowWomans(true);
                     }
+                    if (menu === "Beauty") {
+                      setShowMenu(!showMenu);
+                      setShowBeauty(true);
+                    }
+                    if (menu === "Baby") {
+                      setShowMenu(!showMenu);
+                      setShowBaby(true);
+                    }
+                    if (menu === "Kids") {
+                      setShowMenu(!showMenu);
+                      setShowKids(true);
+                    }
+                    if (menu === "Teens") {
+                      setShowMenu(!showMenu);
+                      setShowTeens(true);
+                    }
+                    if (menu === "Character") {
+                      setShowMenu(!showMenu);
+                      setShowCharacter(true);
+                    }
+                    if (menu === "Homeware") {
+                      setShowMenu(!showMenu);
+                      setShowHomeware(true);
+                    }
+                    if (menu === "Tech") {
+                      setShowMenu(!showMenu);
+                      setShowTech(true);
+                    }
+                    if (menu === "Financtial Solutions") {
+                      setShowMenu(!showMenu);
+                      setShowFinancial(true);
+                    }
                   }}
                 >
-                  {menu}
+                  {menu} <CaretRightFill />
                 </div>
               );
             })
           : ""}
-        {woman.map((woman) => {
-          return <div className="list d-flex align-items-center">{woman}</div>;
-        })}
+
+        {showWomans
+          ? woman.map((woman) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {woman} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showBeauty
+          ? beauty.map((beauty) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {beauty} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showBaby
+          ? baby.map((baby) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {baby} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showKids
+          ? kids.map((kids) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {kids} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showTeens
+          ? teens.map((teens) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {teens} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showCharacter
+          ? character.map((character) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {character} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showHomeware
+          ? homeware.map((homeware) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {homeware} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showTech
+          ? tech.map((tech) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {tech} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showFinacial
+          ? FinanctialSolutions.map((financial) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {financial} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
       </Popup>
     </HeaderStyled>
   );
