@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Cart4, GeoAlt, List, Person, Search } from "react-bootstrap-icons";
+import {
+  Cart4,
+  GeoAlt,
+  List,
+  Person,
+  Search,
+  XLg,
+} from "react-bootstrap-icons";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -110,61 +119,246 @@ export const HeaderStyled = styled.header`
   }
 `;
 
-//loving you is a losing game
+export const Popup = styled.div`
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  .menu {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 50px;
+    svg {
+      margin-right: 20px;
+    }
+  }
+  .list {
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+  }
+`;
 
 const Header = () => {
+  const [closeIt, setCloseIt] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [showWomans, setShowWomans] = useState(false);
+
+  const themenu = [
+    "My Profile",
+    "My Orders",
+    "Shop",
+    "Promotions",
+    "Woman",
+    "Beauty",
+    "Baby",
+    "Kids",
+    "Teens",
+    "Character",
+    "Homeware",
+    "Tech",
+    "Cellular",
+    "More",
+    "Financtial Solutions",
+    "Competions",
+    "Ackermans",
+    "Catalogues",
+  ];
+
+  const promotions = ["Back To School", "Christmas"];
+
+  const woman = [
+    "View all in Woman",
+    "Sale",
+    "Clothing",
+    "Lingerie & Sleepwear",
+    "Shoes",
+    "Accessories",
+    "ActiveWare",
+    "Limited Edition",
+    "The LIngerie Shop",
+    "The Denim Shop",
+    "Bra Guide",
+    "Trnding",
+    "Christmas",
+    "Summer-Ware Capsule",
+  ];
+
+  const beauty = [
+    "View all in Beauty",
+    "Makeup",
+    "Bath & Body",
+    "Skincare",
+    "Oral Care",
+    "Fragrance",
+    "Brands",
+  ];
+
+  const baby = [
+    "View all in Baby",
+    "Sale",
+    "Newborn",
+    "Boys 3-36 Months",
+    "Girls 3-36 Months",
+    "Baby Esentials",
+    "Limitted Edition",
+    "Christmas",
+    "Lilly + Sid",
+    "My First Wardrobe",
+  ];
+
+  const kids = [
+    "View all in Kids",
+    "Sale",
+    "Boys 2-10 Years",
+    "Girls 2-10 Years",
+    "School",
+    "Limited Edition",
+    "The Denim Shop",
+    "Christmas",
+    "Swim Shop",
+    "Lilly + Sid",
+  ];
+
+  const teens = [
+    "View all in Teens",
+    "Sale",
+    "Teen Boys",
+    "Teen Girls",
+    "Brands",
+    "Graphic Tees",
+    "Tropical Heat",
+    "The Demin Shop",
+    "Limited Edition",
+  ];
+
+  const character = [
+    "View all in Character",
+    "Sale",
+    "Baby",
+    "Kids",
+    "Homeware",
+    "Brands",
+    "Christmas",
+  ];
+
+  const homeware = [
+    "View all in Homeware",
+    "Sale",
+    "Bathroom",
+    "Drinkware & Lunchboxes",
+    "Party & Decorations",
+    "Limited Edition",
+    "Novelty Essentials",
+  ];
+
+  const tech = [
+    "View all in Tech",
+    "Audio",
+    "Power Bank & Chargers",
+    "Accessories",
+  ];
+
   return (
-    <HeaderStyled className=" d-flex justify-content-between align-items-center  mt-3">
-      <div className=" d-flex align-items-start  ">
-        <List className=" d-lg-none" />
-        <h3>ACKERMANS</h3>
+    <HeaderStyled>
+      <div className="container d-flex justify-content-between align-items-center  mt-3">
+        <div className=" d-flex align-items-start  ">
+          <List
+            className=" d-lg-none"
+            onClick={() => {
+              setCloseIt(!closeIt);
+              setShowMenu(!showMenu);
+            }}
+          />
+          <h3>ACKERMANS</h3>
+        </div>
+        <nav className=" d-none d-lg-block">
+          <ul>
+            <li>
+              <Link to={"/123"}>
+                <Search />
+                SEARCH
+              </Link>
+            </li>
+            <li>
+              <Link to={"/123"}>
+                <Person />
+                LOGIN
+              </Link>
+            </li>
+            <li>
+              <Link to={"/123"}>
+                <Cart4 />
+                MY CART
+              </Link>
+            </li>
+            <li>
+              <Link to={"/123"}>
+                <GeoAlt /> STORE LOCATOR
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <nav className=" d-lg-none ">
+          <ul>
+            <li>
+              <Link to={"/123"}>
+                <Search />
+              </Link>
+            </li>
+            <li>
+              <Link to={"/123"}>
+                <Person />
+              </Link>
+            </li>
+            <li>
+              <Link to={"/123"}>
+                <Cart4 />
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav className=" d-none d-lg-block">
-        <ul>
-          <li>
-            <Link to={"/123"}>
-              <Search />
-              SEARCH
-            </Link>
-          </li>
-          <li>
-            <Link to={"/123"}>
-              <Person />
-              LOGIN
-            </Link>
-          </li>
-          <li>
-            <Link to={"/123"}>
-              <Cart4 />
-              MY CART
-            </Link>
-          </li>
-          <li>
-            <Link to={"/123"}>
-              <GeoAlt /> STORE LOCATOR
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <nav className=" d-lg-none ">
-        <ul>
-          <li>
-            <Link to={"/123"}>
-              <Search />
-            </Link>
-          </li>
-          <li>
-            <Link to={"/123"}>
-              <Person />
-            </Link>
-          </li>
-          <li>
-            <Link to={"/123"}>
-              <Cart4 />
-            </Link>
-          </li>
-        </ul>
-      </nav>
+
+      {/* This is the code for when the menu is clicked */}
+
+      <Popup
+        as={motion.div}
+        animate={{
+          x: closeIt ? -12 : -500,
+        }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="menu d-flex justify-content-between mt-2 align-items-center ">
+          <h3>Menu</h3>
+          <XLg
+            onClick={() => {
+              setCloseIt(!closeIt);
+              setShowMenu(!showMenu);
+            }}
+          />
+        </div>
+
+        {showMenu
+          ? themenu.map((menu) => {
+              return (
+                <div
+                  className="list d-flex align-items-center"
+                  onClick={() => {
+                    if (menu === "Woman") {
+                      setShowMenu(!showMenu);
+                      setShowWomans(true);
+                    }
+                  }}
+                >
+                  {menu}
+                </div>
+              );
+            })
+          : ""}
+        {woman.map((woman) => {
+          return <div className="list d-flex align-items-center">{woman}</div>;
+        })}
+      </Popup>
     </HeaderStyled>
   );
 };
