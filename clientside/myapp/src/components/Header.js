@@ -155,6 +155,13 @@ const Header = () => {
   const [showTech, setShowTech] = useState(false);
   const [showFinacial, setShowFinancial] = useState(false);
 
+  // ----- This area all the state for the items on the womans clothing menu ------ \\
+
+  const [showClothing, setShowClothing] = useState(false);
+  const [showLingerieAndSleep, setShowLingerieAndSleep] = useState(false);
+  const [showShoes, setShowShoes] = useState(false);
+  const [showAccessories, setShowAccessories] = useState(false);
+
   const themenu = [
     "My Profile",
     "My Orders",
@@ -280,6 +287,41 @@ const Header = () => {
     "Money Transer",
     "Vouchers",
   ];
+
+  // ----------------- clothing menus here ----------------------//
+
+  const clothing = [
+    "View all in Clothing",
+    "Tops",
+    "T-Shirts",
+    "Pants",
+    "Demin Jeans",
+    "Shorts",
+    "Skirts",
+    "Dresses Jumpsuits",
+  ];
+
+  const LingerieAndSleep = [
+    "View all in Lingerie & SleepWear",
+    "Bras",
+    "Panties",
+    "Seamfree",
+    "Shapewear",
+    "Socks & Hosiery",
+    "Lingerie Essentials",
+    "Sleepware",
+    "Matching Sets",
+  ];
+
+  const shoes = [
+    "View all in Shoes",
+    "Heels",
+    "Pumps & Flats",
+    "Sandals",
+    "Sneakers & Trainers",
+  ];
+
+  const Accessories = ["View all in Accessories", "Bags & Wallets", "Headgear"];
 
   return (
     <HeaderStyled>
@@ -415,7 +457,31 @@ const Header = () => {
         {showWomans
           ? woman.map((woman) => {
               return (
-                <div className="list d-flex align-items-center justify-content-between">
+                <div
+                  className="list d-flex align-items-center justify-content-between"
+                  onClick={() => {
+                    if (woman === "Clothing") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(true);
+                    }
+                    if (woman === "Lingerie & Sleepwear") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowLingerieAndSleep(true);
+                    }
+                    if (woman === "Shoes") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowShoes(true);
+                    }
+                    if (woman === "Accessories") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowAccessories(true);
+                    }
+                  }}
+                >
                   {woman} <CaretRightFill />
                 </div>
               );
@@ -497,6 +563,49 @@ const Header = () => {
               return (
                 <div className="list d-flex align-items-center justify-content-between">
                   {financial} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {/* This is really getting messy soon it's gonna be impossible to debugg */}
+        {/* Woman / Clothing menu    clothing manu womans menu "open the ackermans website to see more"*/}
+
+        {showClothing
+          ? clothing.map((cloths) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {cloths} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showLingerieAndSleep
+          ? LingerieAndSleep.map((lingerie) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {lingerie} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showShoes
+          ? shoes.map((shoes) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {shoes} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showAccessories
+          ? Accessories.map((acc) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {acc} <CaretRightFill />
                 </div>
               );
             })
