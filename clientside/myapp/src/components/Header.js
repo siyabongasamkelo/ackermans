@@ -336,6 +336,15 @@ const Header = () => {
     "Shoes",
   ];
 
+  //-----------------------tops clothing menu---------------------------//
+
+  const tops = [
+    "View all in Tops",
+    "Shirts",
+    "Short Sleeve Tops",
+    "Sleeveless Tops",
+  ];
+
   return (
     <HeaderStyled>
       <div className="container d-flex justify-content-between align-items-center  mt-3">
