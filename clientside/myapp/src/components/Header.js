@@ -163,6 +163,13 @@ const Header = () => {
   const [showAccessories, setShowAccessories] = useState(false);
   const [showActiveware, setShowActiveware] = useState(false);
   const [showLimittedEdition, setShowLimittedEdition] = useState(false);
+  const [showTops, setShowTops] = useState(false);
+  const [showTshirts, setShowTshirts] = useState(false);
+  const [showPants, setShowPants] = useState(false);
+  const [showDeminJeans, setShowDeminJeans] = useState(false);
+  const [showShorts, setShowShorts] = useState(false);
+  const [showSkirts, setShowSkirts] = useState(false);
+  const [showDressesAndJump, setShowDressesAndJump] = useState(false);
 
   const themenu = [
     "My Profile",
@@ -343,6 +350,31 @@ const Header = () => {
     "Shirts",
     "Short Sleeve Tops",
     "Sleeveless Tops",
+  ];
+
+  const tshirts = [
+    "View all in T-shirts",
+    "Long Sleeve T-shirts",
+    "Short Sleeve T-shirts",
+  ];
+
+  const pants = ["View all in Pants", "Leggings", "Pants"];
+
+  const deminJeans = [
+    "View all in Demin Jeans",
+    "Fashion",
+    "Joggings",
+    "Skinny",
+  ];
+
+  const shorts = ["View all in Shorts", "Demin Shorts", "Shorts"];
+
+  const skirts = ["View all in Skirts", "Demin Skirts", "Skirts"];
+
+  const dressesAndJump = [
+    "View all in Dresses & Jumpsuits",
+    "Dresses",
+    "Jumpsuits",
   ];
 
   return (
@@ -606,7 +638,53 @@ const Header = () => {
         {showClothing
           ? clothing.map((cloths) => {
               return (
-                <div className="list d-flex align-items-center justify-content-between">
+                <div
+                  className="list d-flex align-items-center justify-content-between"
+                  onClick={() => {
+                    if (cloths === "Tops") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowTops(true);
+                    }
+                    if (cloths === "T-Shirts") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowTshirts(true);
+                    }
+                    if (cloths === "Pants") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowPants(true);
+                    }
+                    if (cloths === "Demin Jeans") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowDeminJeans(true);
+                    }
+                    if (cloths === "Shorts") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowShorts(true);
+                    }
+                    if (cloths === "Skirts") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowSkirts(true);
+                    }
+                    if (cloths === "Dresses Jumpsuits") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowDressesAndJump(true);
+                    }
+                  }}
+                >
                   {cloths} <CaretRightFill />
                 </div>
               );
@@ -658,6 +736,79 @@ const Header = () => {
               return (
                 <div className="list d-flex align-items-center justify-content-between">
                   {limited} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {/* This is really getting messy soon it's gonna be impossible to debugg */}
+        {/* Woman / Clothing / tops    clothing manu womans menu "open the ackermans website to see more"*/}
+
+        {showTops
+          ? tops.map((top) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {top} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showTshirts
+          ? tshirts.map((tshirts) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {tshirts} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showPants
+          ? pants.map((pants) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {pants} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showDeminJeans
+          ? deminJeans.map((demin) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {demin} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showShorts
+          ? shorts.map((shorts) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {shorts} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showSkirts
+          ? skirts.map((skirts) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {skirts} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showDressesAndJump
+          ? dressesAndJump.map((dresses) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {dresses} <CaretRightFill />
                 </div>
               );
             })
