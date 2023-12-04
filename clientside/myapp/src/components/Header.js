@@ -198,6 +198,14 @@ const Header = () => {
   const [showPantsAactive, setShowPantsAactive] = useState(false);
   const [showTopsActive, setShowTopsActive] = useState(false);
 
+  // ----- This area all the state for the items on the womans LimittedEdition ------ \\
+
+  const [showClothingLimited, setShowClothingLimited] = useState(false);
+  const [showLingerieLimited, setShowLingerieLimited] = useState(false);
+  const [showSleepwareLimited, setShowSleepwareLimited] = useState(false);
+  const [showAccessoriesLimited, setShowAccessoriesLimited] = useState(false);
+  const [showShoesLimited, setShowShoesLimited] = useState(false);
+
   const themenu = [
     "My Profile",
     "My Orders",
@@ -494,6 +502,18 @@ const Header = () => {
   ];
 
   const PantsActive = ["View all in Pants", "Leggings", "Joggers"];
+
+  //-----------------------woman clothing activeWear---------------------------//
+
+  const clothingLimited = ["View all in Clothing", "Limited Edition"];
+
+  const lingerieLimited = ["View all in Lingerie", "Limited Edition"];
+
+  const sleepwareLimited = ["View all in Sleepware", "Limited Edition"];
+
+  const accessoriesLimited = ["View all in Accessories", "Limited Edition"];
+
+  const SheosLimited = ["View all in Shoes", "Limited Edition"];
 
   return (
     <HeaderStyled>
@@ -975,7 +995,46 @@ const Header = () => {
         {showLimittedEdition
           ? limitedEdition.map((limited) => {
               return (
-                <div className="list d-flex align-items-center justify-content-between">
+                <div
+                  className="list d-flex align-items-center justify-content-between"
+                  onClick={() => {
+                    if (limited === "Clothing") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLimittedEdition(false);
+                      setShowClothingLimited(true);
+                    }
+                    if (limited === "Lingerie") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLimittedEdition(false);
+                      setShowLingerieLimited(true);
+                    }
+                    if (limited === "Sleepware") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLimittedEdition(false);
+                      setShowSleepware(true);
+                    }
+                    if (limited === "Accessories") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLimittedEdition(false);
+                      setShowAccessoriesLimited(true);
+                    }
+                    if (limited === "Shoes") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLimittedEdition(false);
+                      setShowShoesLimited(true);
+                    }
+                  }}
+                >
                   {limited} <CaretRightFill />
                 </div>
               );
@@ -1206,11 +1265,64 @@ const Header = () => {
               );
             })
           : ""}
+
         {showPantsAactive
           ? PantsActive.map((PantsActive) => {
               return (
                 <div className="list d-flex align-items-center justify-content-between">
                   {PantsActive} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {/* This is really getting messy soon it's gonna be impossible to debugg */}
+        {/* Woman / limitedEdition    clothing manu womans menu "open the ackermans website to see more"*/}
+
+        {showAccessoriesLimited
+          ? accessoriesLimited.map((acclim) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {acclim} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showClothingLimited
+          ? clothingLimited.map((clothingLimited) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {clothingLimited} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showLingerieLimited
+          ? lingerieLimited.map((lingerieLimited) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {lingerieLimited} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showSleepwareLimited
+          ? sleepwareLimited.map((sleepwareLimited) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {sleepwareLimited} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+        {showShoesLimited
+          ? SheosLimited.map((SheosLimited) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {SheosLimited} <CaretRightFill />
                 </div>
               );
             })
