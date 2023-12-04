@@ -171,6 +171,23 @@ const Header = () => {
   const [showSkirts, setShowSkirts] = useState(false);
   const [showDressesAndJump, setShowDressesAndJump] = useState(false);
 
+  // ----- This area all the state for the items on the womans lingerie bra menu ------ \\
+
+  const [showBra, setShowBra] = useState(false);
+  const [showPanties, setShowPanties] = useState(false);
+  const [showSeamfree, setShowSeamfree] = useState(false);
+  const [showShapewear, setShowShapewear] = useState(false);
+  const [showSocksAndHosiery, setShowSocksAndHosiery] = useState(false);
+  const [showLingerieEssential, setShowLingerieEssential] = useState(false);
+  const [showSleepware, setShowSleepware] = useState(false);
+
+  // ----- This area all the state for the items on the womans shoe menu ------ \\
+
+  const [showHeels, setShowHeels] = useState(false);
+  const [showPumpsAndFlats, setShowPumpsAndFlats] = useState(false);
+  const [showSandals, setShowSandals] = useState(false);
+  const [showSneakersAndTrainers, setShowSneakersAndTrainers] = useState(false);
+
   const themenu = [
     "My Profile",
     "My Orders",
@@ -343,7 +360,7 @@ const Header = () => {
     "Shoes",
   ];
 
-  //-----------------------tops clothing menu---------------------------//
+  //-----------------------woamn clothing menu---------------------------//
 
   const tops = [
     "View all in Tops",
@@ -375,6 +392,81 @@ const Header = () => {
     "View all in Dresses & Jumpsuits",
     "Dresses",
     "Jumpsuits",
+  ];
+
+  //-----------------------woman clothing lingerie & sleepware---------------------------//
+
+  const bras = [
+    "View all in Bras",
+    "Nursing Bras",
+    "Bra Accessories",
+    "T-shirts Bras",
+    "Multiway Bras",
+    "Balconette Bras",
+    "Wirefree Bras",
+    "Underwire bras",
+  ];
+
+  const panties = [
+    "View all in Panties",
+    "Panties",
+    "Thongs",
+    "Boylegs",
+    "Bikinis",
+    "Briefs",
+  ];
+
+  const seamfree = [
+    "View all in Seamfree",
+    "Bralettes",
+    "Cycle Shorts",
+    "Croptops",
+    "Panties",
+  ];
+
+  const shapewear = [
+    "View all in Shapewear",
+    "Bodysuits",
+    "Camisoles",
+    "Longlegs",
+    "Panties",
+  ];
+
+  const socksAndHosiery = [
+    "View all in Socks & Hosiery",
+    "Anklets",
+    "Tights",
+    "Secrete Socks",
+    "Low Cut Socks",
+  ];
+
+  const lingerieEssential = [
+    "View all in Lingerie Essential",
+    "Cycle Shorts",
+    "Slips",
+  ];
+
+  const sleepware = [
+    "View all in Sleepware",
+    "Pyjamas",
+    "Gowns",
+    "Onesies",
+    "Sleep Shirts",
+    "Chemises",
+  ];
+
+  //-----------------------woman clothing lingerie & sleepware---------------------------//
+
+  const heels = ["View all in Heels", "Heels"];
+
+  const pumpsAndFlats = ["View all in Pumps & Flats", "Pumps & Flats"];
+
+  const sandals = ["View all in Sandals", "Sandals"];
+
+  const sneakersAndTrainers = [
+    "View all in Sneakers & Trainers",
+    "Sneakers",
+    "Trainers",
   ];
 
   return (
@@ -694,7 +786,60 @@ const Header = () => {
         {showLingerieAndSleep
           ? LingerieAndSleep.map((lingerie) => {
               return (
-                <div className="list d-flex align-items-center justify-content-between">
+                <div
+                  className="list d-flex align-items-center justify-content-between"
+                  onClick={() => {
+                    if (lingerie === "Bras") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLingerieAndSleep(false);
+                      setShowBra(true);
+                    }
+                    if (lingerie === "Panties") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLingerieAndSleep(false);
+                      setShowPanties(true);
+                    }
+                    if (lingerie === "Seamfree") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLingerieAndSleep(false);
+                      setShowSeamfree(true);
+                    }
+                    if (lingerie === "Shapewear") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLingerieAndSleep(false);
+                      setShowShapewear(true);
+                    }
+                    if (lingerie === "Socks & Hosiery") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLingerieAndSleep(false);
+                      setShowSocksAndHosiery(true);
+                    }
+                    if (lingerie === "Lingerie Essentials") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLingerieAndSleep(false);
+                      setShowLingerieEssential(true);
+                    }
+                    if (lingerie === "Sleepware") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowLingerieAndSleep(false);
+                      setShowSleepware(true);
+                    }
+                  }}
+                >
                   {lingerie} <CaretRightFill />
                 </div>
               );
@@ -704,7 +849,39 @@ const Header = () => {
         {showShoes
           ? shoes.map((shoes) => {
               return (
-                <div className="list d-flex align-items-center justify-content-between">
+                <div
+                  className="list d-flex align-items-center justify-content-between"
+                  onClick={() => {
+                    if (shoes === "Heels") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowShoes(false);
+                      setShowHeels(true);
+                    }
+                    if (shoes === "Pumps & Flats") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowShoes(false);
+                      setShowPumpsAndFlats(true);
+                    }
+                    if (shoes === "Sandals") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowShoes(false);
+                      setShowSandals(true);
+                    }
+                    if (shoes === "Sneakers & Trainers") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowShoes(false);
+                      setShowSneakersAndTrainers(true);
+                    }
+                  }}
+                >
                   {shoes} <CaretRightFill />
                 </div>
               );
@@ -809,6 +986,122 @@ const Header = () => {
               return (
                 <div className="list d-flex align-items-center justify-content-between">
                   {dresses} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {/* This is really getting messy soon it's gonna be impossible to debugg */}
+        {/* Woman / lingerie / bras    clothing manu womans menu "open the ackermans website to see more"*/}
+
+        {showBra
+          ? bras.map((bras) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {bras} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showPanties
+          ? panties.map((panties) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {panties} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showSeamfree
+          ? seamfree.map((seamfree) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {seamfree} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showShapewear
+          ? shapewear.map((shapewear) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {shapewear} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showSocksAndHosiery
+          ? socksAndHosiery.map((socksAndHosiery) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {socksAndHosiery} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showLingerieEssential
+          ? lingerieEssential.map((lingerieE) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {lingerieE} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showSleepware
+          ? sleepware.map((sleepware) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {sleepware} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {/* This is really getting messy soon it's gonna be impossible to debugg */}
+        {/* Woman / Shoes    clothing manu womans menu "open the ackermans website to see more"*/}
+
+        {showHeels
+          ? heels.map((heels) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {heels} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showSneakersAndTrainers
+          ? sneakersAndTrainers.map((Sneakers) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {Sneakers} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showPumpsAndFlats
+          ? pumpsAndFlats.map((pumps) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {pumps} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showSandals
+          ? sandals.map((sandals) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {sandals} <CaretRightFill />
                 </div>
               );
             })
