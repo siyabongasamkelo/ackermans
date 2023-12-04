@@ -188,6 +188,16 @@ const Header = () => {
   const [showSandals, setShowSandals] = useState(false);
   const [showSneakersAndTrainers, setShowSneakersAndTrainers] = useState(false);
 
+  // ----- This area all the state for the items on the womans accessories ------ \\
+
+  const [showBagsAndWallets, setShowBagsAndWallets] = useState(false);
+  const [showHeadgear, setShowHeadgear] = useState(false);
+
+  // ----- This area all the state for the items on the womans accessories ------ \\
+
+  const [showPantsAactive, setShowPantsAactive] = useState(false);
+  const [showTopsActive, setShowTopsActive] = useState(false);
+
   const themenu = [
     "My Profile",
     "My Orders",
@@ -455,7 +465,7 @@ const Header = () => {
     "Chemises",
   ];
 
-  //-----------------------woman clothing lingerie & sleepware---------------------------//
+  //-----------------------woman clothing shoes---------------------------//
 
   const heels = ["View all in Heels", "Heels"];
 
@@ -468,6 +478,22 @@ const Header = () => {
     "Sneakers",
     "Trainers",
   ];
+
+  //-----------------------woman clothing accessories---------------------------//
+
+  const bagsAndWallets = ["View all in Bags & Wallets", "Bags"];
+
+  const headgear = ["View all in Headgear", "Headgear"];
+
+  //-----------------------woman clothing activeWear---------------------------//
+
+  const topsActive = [
+    "View all in Tops",
+    "Sleeveless Tops",
+    "Short Sleeve Tops",
+  ];
+
+  const PantsActive = ["View all in Pants", "Leggings", "Joggers"];
 
   return (
     <HeaderStyled>
@@ -891,7 +917,27 @@ const Header = () => {
         {showAccessories
           ? Accessories.map((acc) => {
               return (
-                <div className="list d-flex align-items-center justify-content-between">
+                <div
+                  className="list d-flex align-items-center justify-content-between"
+                  onClick={() => {
+                    if (acc === "Bags & Wallets") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowShoes(false);
+                      setShowAccessories(false);
+                      setShowBagsAndWallets(true);
+                    }
+                    if (acc === "Headgear") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowShoes(false);
+                      setShowAccessories(false);
+                      setShowHeadgear(true);
+                    }
+                  }}
+                >
                   {acc} <CaretRightFill />
                 </div>
               );
@@ -901,7 +947,25 @@ const Header = () => {
         {showActiveware
           ? activeWare.map((active) => {
               return (
-                <div className="list d-flex align-items-center justify-content-between">
+                <div
+                  className="list d-flex align-items-center justify-content-between"
+                  onClick={() => {
+                    if (active === "Top") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowActiveware(false);
+                      setShowTopsActive(true);
+                    }
+                    if (active === "Pants") {
+                      setShowMenu(false);
+                      setShowWomans(false);
+                      setShowClothing(false);
+                      setShowActiveware(false);
+                      setShowPantsAactive(true);
+                    }
+                  }}
+                >
                   {active} <CaretRightFill />
                 </div>
               );
@@ -1102,6 +1166,51 @@ const Header = () => {
               return (
                 <div className="list d-flex align-items-center justify-content-between">
                   {sandals} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {/* This is really getting messy soon it's gonna be impossible to debugg */}
+        {/* Woman / Shoes    clothing manu womans menu "open the ackermans website to see more"*/}
+
+        {showBagsAndWallets
+          ? bagsAndWallets.map((bw) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {bw} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {showHeadgear
+          ? headgear.map((headgear) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {headgear} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+
+        {/* This is really getting messy soon it's gonna be impossible to debugg */}
+        {/* Woman / Shoes    clothing manu womans menu "open the ackermans website to see more"*/}
+
+        {showTopsActive
+          ? topsActive.map((topsActive) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {topsActive} <CaretRightFill />
+                </div>
+              );
+            })
+          : ""}
+        {showPantsAactive
+          ? PantsActive.map((PantsActive) => {
+              return (
+                <div className="list d-flex align-items-center justify-content-between">
+                  {PantsActive} <CaretRightFill />
                 </div>
               );
             })
