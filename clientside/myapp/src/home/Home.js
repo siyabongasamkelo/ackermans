@@ -1,7 +1,8 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Header from "../components/Header";
+import Headers from "../components/Headers";
+// import Header from "../components/Header";
 
 const Home = () => {
   return (
@@ -9,7 +10,8 @@ const Home = () => {
       <Container>
         <Row>
           <Col>
-            <Header />
+            {/* <Header /> */}
+            <Headers />
           </Col>
         </Row>
       </Container>

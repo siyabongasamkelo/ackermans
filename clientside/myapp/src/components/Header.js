@@ -515,6 +515,32 @@ const Header = () => {
 
   const SheosLimited = ["View all in Shoes", "Limited Edition"];
 
+  //-----------------------woman clothing activeWear---------------------------//
+
+  const makeUp = [
+    "View all in Makeup",
+    "Eyes",
+    "Lips",
+    "Face",
+    "Cosmetic Accessories",
+  ];
+
+  const bathAndBody = [
+    "View all in Bath & Body",
+    "Bath",
+    "Toiletries",
+    "Hair Care",
+    "Bath & Body",
+  ];
+
+  const skincare = ["View all in Skincare", "Cleansers", "Moisturisers"];
+
+  const oralCare = ["View all in Oral care", "Toothpaste", "Toothbrush"];
+
+  const frangrance = ["View all in Frangrance", "Pocket Perfume"];
+
+  const brands = ["View all in Brands", "Maybelline", "Essence", "Be Fabulous"];
+
   return (
     <HeaderStyled>
       <div className="container d-flex justify-content-between align-items-center  mt-3">
