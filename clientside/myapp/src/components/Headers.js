@@ -13,6 +13,7 @@ import { useState } from "react";
 import Menu from "./Menu";
 import { useDispatch } from "react-redux";
 import { showMenu } from "../Features/HeaderLinks";
+import Womans from "./Womans";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -229,6 +230,7 @@ const Headers = () => {
           />
         </div>
         <Menu />
+        <Womans />
       </Popup>
     </HeaderStyled>
   );

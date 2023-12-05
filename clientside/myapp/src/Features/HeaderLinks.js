@@ -5,14 +5,18 @@ export const HeadrsLinksSlice = createSlice({
   initialState: {
     value: {
       closeIt: false,
+      showWomans: false,
     },
   },
   reducers: {
     showMenu: (state, action) => {
       state.value.closeIt = !state.value.closeIt;
     },
+    showWoman: (state, action) => {
+      state.value.showWomans = !state.value.showWomans;
+    },
   },
 });
 
-export const { showMenu } = HeadrsLinksSlice.actions;
+export const { showMenu, showWoman } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;

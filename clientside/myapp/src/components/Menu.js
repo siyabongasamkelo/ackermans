@@ -1,12 +1,9 @@
 import { CaretRightFill } from "react-bootstrap-icons";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { showWoman } from "../Features/HeaderLinks";
 
 const Menu = () => {
-  const showMenu = useSelector((state) => state.header.value.closeIt);
-  //   const test = useSelector((state) => state.header.value.closeIt);
-
-  //   console.log(test);
-
+  const dispatch = useDispatch();
   const themenu = [
     "My Profile",
     "My Orders",
@@ -37,6 +34,7 @@ const Menu = () => {
             onClick={() => {
               if (menu === "Woman") {
                 // setShowWomans(true);
+                dispatch(showWoman);
               }
             }}
           >
