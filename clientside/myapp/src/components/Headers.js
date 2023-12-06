@@ -14,6 +14,7 @@ import Menu from "./Menu";
 import { useDispatch } from "react-redux";
 import { showMenu } from "../Features/HeaderLinks";
 import Womans from "./Womans";
+import { useSelector } from "react-redux";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -147,9 +148,10 @@ export const Popup = styled.div`
 
 const Headers = () => {
   const dispatch = useDispatch();
-
+  const showWomans = useSelector((state) => state.header.value.showWomans);
   const [closeIt, setCloseIt] = useState(false);
 
+  console.log(showWomans);
   //   const [showWomans, setShowWomans] = useState(false);
   return (
     <HeaderStyled>

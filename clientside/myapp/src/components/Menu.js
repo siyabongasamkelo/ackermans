@@ -34,7 +34,7 @@ const Menu = () => {
             onClick={() => {
               if (menu === "Woman") {
                 // setShowWomans(true);
-                dispatch(showWoman);
+                dispatch(showWoman());
               }
             }}
           >
