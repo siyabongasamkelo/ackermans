@@ -1,20 +1,13 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import {
-  Cart4,
-  GeoAlt,
-  List,
-  Person,
-  Search,
-  XLg,
-} from "react-bootstrap-icons";
+import { Cart4, GeoAlt, List, Person, Search } from "react-bootstrap-icons";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import Menu from "./Menu";
 import { useDispatch } from "react-redux";
-import { closeAll, showMenu } from "../Features/HeaderLinks";
+import { showMenu, closeIts } from "../Features/HeaderLinks";
 import Womans from "./Womans";
 import { useSelector } from "react-redux";
+import Beauty from "./Beauty";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -148,11 +141,10 @@ export const Popup = styled.div`
 
 const Headers = () => {
   const dispatch = useDispatch();
-  const showWomans = useSelector((state) => state.header.value.closeIt);
-  const [closeIt, setCloseIt] = useState(false);
+  const closeIt = useSelector((state) => state.header.value.closeIt);
 
-  //   console.log(showWomans);
-  //   const [showWomans, setShowWomans] = useState(false);
+  console.log({ closeIt });
+
   return (
     <HeaderStyled>
       <div className="container d-flex justify-content-between align-items-center  mt-3">
@@ -161,7 +153,7 @@ const Headers = () => {
             className=" d-lg-none"
             onClick={() => {
               dispatch(showMenu());
-              setCloseIt(!closeIt);
+              dispatch(closeIts());
             }}
           />
           <h3>ACKERMANS</h3>
@@ -223,17 +215,9 @@ const Headers = () => {
         }}
         transition={{ duration: 0.5 }}
       >
-        <div className="menu d-flex justify-content-between mt-2 align-items-center ">
-          <h3>Menu</h3>
-          <XLg
-            onClick={() => {
-              setCloseIt(false);
-              dispatch(closeAll());
-            }}
-          />
-        </div>
         <Menu />
         <Womans />
+        <Beauty />
       </Popup>
     </HeaderStyled>
   );
