@@ -15,8 +15,12 @@ export const HeadrsLinksSlice = createSlice({
     showWoman: (state, action) => {
       state.value.showWomans = !state.value.showWomans;
     },
+    closeAll: (state, action) => {
+      state.value.showWomans = false;
+      state.value.closeIt = false;
+    },
   },
 });
 
-export const { showMenu, showWoman } = HeadrsLinksSlice.actions;
+export const { showMenu, showWoman, closeAll } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;

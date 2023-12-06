@@ -1,9 +1,11 @@
 import { CaretRightFill } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { showWoman } from "../Features/HeaderLinks";
-
+import { showMenu } from "../Features/HeaderLinks";
 const Menu = () => {
   const dispatch = useDispatch();
+  const showMenus = useSelector((state) => state.header.value.closeIt);
+
   const themenu = [
     "My Profile",
     "My Orders",
@@ -27,21 +29,24 @@ const Menu = () => {
 
   return (
     <>
-      {themenu.map((menu) => {
-        return (
-          <div
-            className="list d-flex align-items-center justify-content-between"
-            onClick={() => {
-              if (menu === "Woman") {
-                // setShowWomans(true);
-                dispatch(showWoman());
-              }
-            }}
-          >
-            {menu} <CaretRightFill />
-          </div>
-        );
-      })}
+      {showMenus
+        ? themenu.map((menu) => {
+            return (
+              <div
+                className="list d-flex align-items-center justify-content-between"
+                onClick={() => {
+                  if (menu === "Woman") {
+                    // setShowWomans(true);
+                    dispatch(showWoman());
+                    dispatch(showMenu());
+                  }
+                }}
+              >
+                {menu} <CaretRightFill />
+              </div>
+            );
+          })
+        : ""}
     </>
   );
 };

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { CaretRightFill } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -31,38 +30,7 @@ const Womans = () => {
             return (
               <div
                 className="list d-flex align-items-center justify-content-between"
-                onClick={() => {
-                  // if (woman === "Clothing") {
-                  //   setShowMenu(false);
-                  //   setShowWomans(false);
-                  //   setShowClothing(true);
-                  // }
-                  // if (woman === "Lingerie & Sleepwear") {
-                  //   setShowMenu(false);
-                  //   setShowWomans(false);
-                  //   setShowLingerieAndSleep(true);
-                  // }
-                  // if (woman === "Shoes") {
-                  //   setShowMenu(false);
-                  //   setShowWomans(false);
-                  //   setShowShoes(true);
-                  // }
-                  // if (woman === "Accessories") {
-                  //   setShowMenu(false);
-                  //   setShowWomans(false);
-                  //   setShowAccessories(true);
-                  // }
-                  // if (woman === "ActiveWare") {
-                  //   setShowMenu(false);
-                  //   setShowWomans(false);
-                  //   setShowActiveware(true);
-                  // }
-                  // if (woman === "Limited Edition") {
-                  //   setShowMenu(false);
-                  //   setShowWomans(false);
-                  //   setShowLimittedEdition(true);
-                  // }
-                }}
+                onClick={() => {}}
               >
                 {woman} <CaretRightFill />
               </div>
