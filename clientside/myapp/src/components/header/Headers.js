@@ -4,10 +4,13 @@ import { Cart4, GeoAlt, List, Person, Search } from "react-bootstrap-icons";
 import { motion } from "framer-motion";
 import Menu from "./Menu";
 import { useDispatch } from "react-redux";
-import { showMenu, closeIts } from "../Features/HeaderLinks";
+import { showMenu, closeIts } from "../../Features/HeaderLinks";
 import Womans from "./Womans";
 import { useSelector } from "react-redux";
 import Beauty from "./Beauty";
+import Baby from "./Baby";
+import Kids from "./Kids";
+import Teens from "./Teens";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -143,8 +146,6 @@ const Headers = () => {
   const dispatch = useDispatch();
   const closeIt = useSelector((state) => state.header.value.closeIt);
 
-  console.log({ closeIt });
-
   return (
     <HeaderStyled>
       <div className="container d-flex justify-content-between align-items-center  mt-3">
@@ -218,6 +219,9 @@ const Headers = () => {
         <Menu />
         <Womans />
         <Beauty />
+        <Baby />
+        <Kids />
+        <Teens />
       </Popup>
     </HeaderStyled>
   );

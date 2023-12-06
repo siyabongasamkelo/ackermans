@@ -1,8 +1,7 @@
-import { ArrowLeft, CaretRightFill } from "react-bootstrap-icons";
+import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
-import { XLg } from "react-bootstrap-icons";
 import styled from "styled-components";
-import { showMenu, closeAll } from "../Features/HeaderLinks";
+import { showMenu, closeAll, closeIts } from "../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -42,11 +41,17 @@ const Womans = () => {
       {showWomans ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
-            <ArrowLeft /> Woman
+            <ArrowLeft
+              onClick={() => {
+                dispatch(closeAll());
+                dispatch(showMenu());
+                dispatch(closeIts());
+              }}
+            />{" "}
+            Woman
           </div>
           <XLg
             onClick={() => {
-              dispatch(showMenu());
               dispatch(closeAll());
             }}
           />

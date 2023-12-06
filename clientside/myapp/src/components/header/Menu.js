@@ -5,7 +5,10 @@ import {
   showWoman,
   showMenu,
   closeAll,
-} from "../Features/HeaderLinks";
+  showBaby,
+  showKids,
+  showTeens,
+} from "../../Features/HeaderLinks";
 
 import styled from "styled-components";
 
@@ -25,7 +28,6 @@ export const Top = styled.div`
 const Menu = () => {
   const dispatch = useDispatch();
   const showMenus = useSelector((state) => state.header.value.showMenu);
-  console.log({ showMenus });
 
   const themenu = [
     "My Profile",
@@ -74,6 +76,15 @@ const Menu = () => {
                   }
                   if (menu === "Beauty") {
                     dispatch(showBeauty());
+                  }
+                  if (menu === "Baby") {
+                    dispatch(showBaby());
+                  }
+                  if (menu === "Kids") {
+                    dispatch(showKids());
+                  }
+                  if (menu === "Teens") {
+                    dispatch(showTeens());
                   }
                 }}
               >
