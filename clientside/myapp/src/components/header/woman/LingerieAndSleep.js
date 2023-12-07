@@ -16,24 +16,27 @@ export const Top = styled.div`
   }
 `;
 
-const Clothing = () => {
+const LingerieAndSleep = () => {
   const dispatch = useDispatch();
-  const showClothing = useSelector((state) => state.header.value.showClothing);
+  const showLingerieAndSleep = useSelector(
+    (state) => state.header.value.showLingerieAndSleep
+  );
 
-  const clothing = [
-    "View all in Clothing",
-    "Tops",
-    "T-Shirts",
-    "Pants",
-    "Demin Jeans",
-    "Shorts",
-    "Skirts",
-    "Dresses Jumpsuits",
+  const LingerieAndSleep = [
+    "View all in Lingerie & SleepWear",
+    "Bras",
+    "Panties",
+    "Seamfree",
+    "Shapewear",
+    "Socks & Hosiery",
+    "Lingerie Essentials",
+    "Sleepware",
+    "Matching Sets",
   ];
 
   return (
     <>
-      {showClothing ? (
+      {showLingerieAndSleep ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -43,7 +46,7 @@ const Clothing = () => {
                 dispatch(closeIts());
               }}
             />
-            Clothing
+            Lingerie & Sleep
           </div>
           <XLg
             onClick={() => {
@@ -54,8 +57,8 @@ const Clothing = () => {
       ) : (
         ""
       )}
-      {showClothing
-        ? clothing.map((clothing) => {
+      {showLingerieAndSleep
+        ? LingerieAndSleep.map((clothing) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
                 {clothing} <CaretRightFill />
@@ -67,4 +70,4 @@ const Clothing = () => {
   );
 };
 
-export default Clothing;
+export default LingerieAndSleep;

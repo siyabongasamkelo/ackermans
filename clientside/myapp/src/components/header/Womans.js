@@ -1,7 +1,14 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import { showMenu, closeAll, closeIts } from "../../Features/HeaderLinks";
+import {
+  showMenu,
+  closeAll,
+  closeIts,
+  showClothing,
+  showWoman,
+  showLingerieAndSleep,
+} from "../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -47,7 +54,7 @@ const Womans = () => {
                 dispatch(showMenu());
                 dispatch(closeIts());
               }}
-            />{" "}
+            />
             Woman
           </div>
           <XLg
@@ -64,7 +71,16 @@ const Womans = () => {
             return (
               <div
                 className="list d-flex align-items-center justify-content-between"
-                onClick={() => {}}
+                onClick={() => {
+                  if (woman === "Clothing") {
+                    dispatch(showClothing());
+                    dispatch(showWoman());
+                  }
+                  if (woman === "Lingerie & Sleepwear") {
+                    dispatch(showWoman());
+                    dispatch(showLingerieAndSleep());
+                  }
+                }}
               >
                 {woman} <CaretRightFill />
               </div>
