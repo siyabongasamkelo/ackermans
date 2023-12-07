@@ -8,6 +8,10 @@ import {
   showBaby,
   showKids,
   showTeens,
+  showCharacter,
+  showHomeware,
+  showTech,
+  showFinance,
 } from "../../Features/HeaderLinks";
 
 import styled from "styled-components";
@@ -85,6 +89,18 @@ const Menu = () => {
                   }
                   if (menu === "Teens") {
                     dispatch(showTeens());
+                  }
+                  if (menu === "Character") {
+                    dispatch(showCharacter());
+                  }
+                  if (menu === "Homeware") {
+                    dispatch(showHomeware());
+                  }
+                  if (menu === "Tech") {
+                    dispatch(showTech());
+                  }
+                  if (menu === "Financtial Solutions") {
+                    dispatch(showFinance());
                   }
                 }}
               >

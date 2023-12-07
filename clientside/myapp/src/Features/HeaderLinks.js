@@ -11,6 +11,10 @@ export const HeadrsLinksSlice = createSlice({
       showBaby: false,
       showKids: false,
       showTeens: false,
+      showCharacter: false,
+      showHomeware: false,
+      showTech: false,
+      showFinance: false,
     },
   },
   reducers: {
@@ -40,6 +44,22 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showTeens = true;
       state.value.showMenu = false;
     },
+    showCharacter: (state, action) => {
+      state.value.showCharacter = true;
+      state.value.showMenu = false;
+    },
+    showHomeware: (state, action) => {
+      state.value.showHomeware = true;
+      state.value.showMenu = false;
+    },
+    showTech: (state, action) => {
+      state.value.showTech = true;
+      state.value.showMenu = false;
+    },
+    showFinance: (state, action) => {
+      state.value.showFinance = true;
+      state.value.showMenu = false;
+    },
     closeAll: (state, action) => {
       state.value.closeIt = false;
       state.value.showWomans = false;
@@ -47,6 +67,11 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showBeauty = false;
       state.value.showBaby = false;
       state.value.showKids = false;
+      state.value.showCharacter = false;
+      state.value.showTeens = false;
+      state.value.showHomeware = false;
+      state.value.showTech = false;
+      state.value.showFinance = false;
     },
   },
 });
@@ -59,6 +84,10 @@ export const {
   showBaby,
   showKids,
   showTeens,
+  showCharacter,
+  showHomeware,
+  showTech,
+  showFinance,
   closeAll,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;

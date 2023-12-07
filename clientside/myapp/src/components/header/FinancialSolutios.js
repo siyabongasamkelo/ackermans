@@ -16,25 +16,24 @@ export const Top = styled.div`
   }
 `;
 
-const Teens = () => {
+const FinanctialSolutions = () => {
   const dispatch = useDispatch();
-  const showTeens = useSelector((state) => state.header.value.showTeens);
+  const showFinance = useSelector((state) => state.header.value.showFinance);
 
-  const teens = [
-    "View all in Teens",
-    "Sale",
-    "Teen Boys",
-    "Teen Girls",
-    "Brands",
-    "Graphic Tees",
-    "Tropical Heat",
-    "The Demin Shop",
-    "Limited Edition",
+  const FinanctialSolutions = [
+    "Account Application",
+    "Ackerman Account",
+    "Lay-by",
+    "Insurance",
+    "Loans",
+    "Bill Payment",
+    "Money Transer",
+    "Vouchers",
   ];
 
   return (
     <>
-      {showTeens ? (
+      {showFinance ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -44,7 +43,7 @@ const Teens = () => {
                 dispatch(closeIts());
               }}
             />
-            Teens
+            Tech
           </div>
           <XLg
             onClick={() => {
@@ -55,11 +54,11 @@ const Teens = () => {
       ) : (
         ""
       )}
-      {showTeens
-        ? teens.map((teens) => {
+      {showFinance
+        ? FinanctialSolutions.map((homeware) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
-                {teens} <CaretRightFill />
+                {homeware} <CaretRightFill />
               </div>
             );
           })
@@ -68,4 +67,4 @@ const Teens = () => {
   );
 };
 
-export default Teens;
+export default FinanctialSolutions;
