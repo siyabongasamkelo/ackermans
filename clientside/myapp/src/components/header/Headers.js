@@ -17,6 +17,7 @@ import Tech from "./Tech";
 import FinanctialSolutions from "./FinancialSolutios";
 import Clothing from "./woman/Clothing";
 import LingerieAndSleep from "./woman/LingerieAndSleep";
+import Shoes from "./woman/Shoes";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -237,6 +238,7 @@ const Headers = () => {
 
         <Clothing />
         <LingerieAndSleep />
+        <Shoes />
       </Popup>
     </HeaderStyled>
   );

@@ -8,6 +8,7 @@ import {
   showClothing,
   showWoman,
   showLingerieAndSleep,
+  showShoes,
 } from "../../Features/HeaderLinks";
 
 export const Top = styled.div`
@@ -79,6 +80,10 @@ const Womans = () => {
                   if (woman === "Lingerie & Sleepwear") {
                     dispatch(showWoman());
                     dispatch(showLingerieAndSleep());
+                  }
+                  if (woman === "Shoes") {
+                    dispatch(showWoman());
+                    dispatch(showShoes());
                   }
                 }}
               >
