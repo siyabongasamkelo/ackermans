@@ -20,6 +20,9 @@ import LingerieAndSleep from "./woman/LingerieAndSleep";
 import Shoes from "./woman/Shoes";
 import Accessories from "./woman/Accessoris";
 import ActiveWare from "./woman/ActiveWear";
+import LimittedEdition from "./woman/LimitedEdition";
+import Tops from "./woman/Wclothing/Tops";
+import Tshirt from "./woman/Wclothing/Tshirts";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -243,6 +246,9 @@ const Headers = () => {
         <Shoes />
         <Accessories />
         <ActiveWare />
+        <LimittedEdition />
+        <Tops />
+        <Tshirt />
       </Popup>
     </HeaderStyled>
   );

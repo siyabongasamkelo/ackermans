@@ -1,14 +1,7 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import {
-  closeIts,
-  showMenu,
-  closeAll,
-  showClothing,
-  showTops,
-  showTshirts,
-} from "../../../Features/HeaderLinks";
+import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -23,24 +16,24 @@ export const Top = styled.div`
   }
 `;
 
-const Clothing = () => {
+const LimittedEdition = () => {
   const dispatch = useDispatch();
-  const showClothings = useSelector((state) => state.header.value.showClothing);
+  const showLimitedEdition = useSelector(
+    (state) => state.header.value.showLimitedEdtion
+  );
 
-  const clothing = [
-    "View all in Clothing",
-    "Tops",
-    "T-Shirts",
-    "Pants",
-    "Demin Jeans",
-    "Shorts",
-    "Skirts",
-    "Dresses Jumpsuits",
+  const limitedEdition = [
+    "View all in Limited Edition",
+    "Clothing",
+    "Lingerie",
+    "Sleepware",
+    "Accessories",
+    "Shoes",
   ];
 
   return (
     <>
-      {showClothings ? (
+      {showLimitedEdition ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -50,7 +43,7 @@ const Clothing = () => {
                 dispatch(closeIts());
               }}
             />
-            Clothing
+            Limited Edition
           </div>
           <XLg
             onClick={() => {
@@ -61,22 +54,10 @@ const Clothing = () => {
       ) : (
         ""
       )}
-      {showClothings
-        ? clothing.map((clothing) => {
+      {showLimitedEdition
+        ? limitedEdition.map((clothing) => {
             return (
-              <div
-                className="list d-flex align-items-center justify-content-between"
-                onClick={() => {
-                  if (clothing === "Tops") {
-                    dispatch(showClothing());
-                    dispatch(showTops());
-                  }
-                  if (clothing === "T-Shirts") {
-                    dispatch(showClothing());
-                    dispatch(showTshirts());
-                  }
-                }}
-              >
+              <div className="list d-flex align-items-center justify-content-between">
                 {clothing} <CaretRightFill />
               </div>
             );
@@ -86,4 +67,4 @@ const Clothing = () => {
   );
 };
 
-export default Clothing;
+export default LimittedEdition;

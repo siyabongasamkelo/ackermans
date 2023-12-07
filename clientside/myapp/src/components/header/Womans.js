@@ -11,6 +11,7 @@ import {
   showShoes,
   showAccessories,
   showActiveware,
+  showLimitedEdtion,
 } from "../../Features/HeaderLinks";
 
 export const Top = styled.div`
@@ -94,6 +95,10 @@ const Womans = () => {
                   if (woman === "ActiveWare") {
                     dispatch(showWoman());
                     dispatch(showActiveware());
+                  }
+                  if (woman === "Limited Edition") {
+                    dispatch(showWoman());
+                    dispatch(showLimitedEdtion());
                   }
                 }}
               >
