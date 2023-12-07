@@ -16,17 +16,17 @@ export const Top = styled.div`
   }
 `;
 
-const Accessories = () => {
+const ActiveWare = () => {
   const dispatch = useDispatch();
-  const showAccessories = useSelector(
-    (state) => state.header.value.showAccessories
+  const showActiveware = useSelector(
+    (state) => state.header.value.showActiveware
   );
 
-  const Accessories = ["View all in Accessories", "Bags & Wallets", "Headgear"];
+  const activeWare = ["View all in ActiveWare", "Top", "Pants"];
 
   return (
     <>
-      {showAccessories ? (
+      {showActiveware ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -36,7 +36,7 @@ const Accessories = () => {
                 dispatch(closeIts());
               }}
             />
-            Accessories
+            Shoes
           </div>
           <XLg
             onClick={() => {
@@ -47,11 +47,11 @@ const Accessories = () => {
       ) : (
         ""
       )}
-      {showAccessories
-        ? Accessories.map((accessories) => {
+      {showActiveware
+        ? activeWare.map((clothing) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
-                {accessories} <CaretRightFill />
+                {clothing} <CaretRightFill />
               </div>
             );
           })
@@ -60,4 +60,4 @@ const Accessories = () => {
   );
 };
 
-export default Accessories;
+export default ActiveWare;
