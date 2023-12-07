@@ -25,6 +25,21 @@ export const HeadrsLinksSlice = createSlice({
       // ------- states for womans clothing menu -------------//
       showTops: false,
       showTshirts: false,
+      showPants: false,
+      showDeminJeans: false,
+      showShorts: false,
+      showSkirt: false,
+      showDressAndJump: false,
+      // ------- states for womans clothing lingerie & Sleep -------------//
+      showBras: false,
+      showPanties: false,
+      showSeamFree: false,
+      showShapeWare: false,
+      showSocksAndHorsery: false,
+      showLingerieEssentials: false,
+      showSleepWare: false,
+      // ------- states for womans clothing shoes -------------//
+      showHeels: false,
     },
   },
   reducers: {
@@ -75,11 +90,11 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showMenu = false;
     },
     showLingerieAndSleep: (state, action) => {
-      state.value.showLingerieAndSleep = true;
+      state.value.showLingerieAndSleep = !state.value.showLingerieAndSleep;
       state.value.showMenu = false;
     },
     showShoes: (state, action) => {
-      state.value.showShoes = true;
+      state.value.showShoes = !state.value.showShoes;
       state.value.showMenu = false;
     },
     showAccessories: (state, action) => {
@@ -100,6 +115,58 @@ export const HeadrsLinksSlice = createSlice({
     },
     showTshirts: (state, action) => {
       state.value.showTshirts = true;
+      state.value.showMenu = false;
+    },
+    showPants: (state, action) => {
+      state.value.showPants = true;
+      state.value.showMenu = false;
+    },
+    showDeminJeans: (state, action) => {
+      state.value.showDeminJeans = true;
+      state.value.showMenu = false;
+    },
+    showShorts: (state, action) => {
+      state.value.showShorts = true;
+      state.value.showMenu = false;
+    },
+    showSkirt: (state, action) => {
+      state.value.showSkirt = true;
+      state.value.showMenu = false;
+    },
+    showDressAndJump: (state, action) => {
+      state.value.showDressAndJump = true;
+      state.value.showMenu = false;
+    },
+    showBras: (state, action) => {
+      state.value.showBras = true;
+      state.value.showMenu = false;
+    },
+    showPanties: (state, action) => {
+      state.value.showPanties = true;
+      state.value.showMenu = false;
+    },
+    showSeamFree: (state, action) => {
+      state.value.showSeamFree = true;
+      state.value.showMenu = false;
+    },
+    showShapeWare: (state, action) => {
+      state.value.showShapeWare = true;
+      state.value.showMenu = false;
+    },
+    showSocksAndHorsery: (state, action) => {
+      state.value.showSocksAndHorsery = true;
+      state.value.showMenu = false;
+    },
+    showLingerieEssentials: (state, action) => {
+      state.value.showLingerieEssentials = true;
+      state.value.showMenu = false;
+    },
+    showSleepWare: (state, action) => {
+      state.value.showSleepWare = true;
+      state.value.showMenu = false;
+    },
+    showHeels: (state, action) => {
+      state.value.showHeels = true;
       state.value.showMenu = false;
     },
     closeAll: (state, action) => {
@@ -124,6 +191,22 @@ export const HeadrsLinksSlice = createSlice({
       // ------- states for womans clothing menu -------------//
       state.value.showTops = false;
       state.value.showTshirts = false;
+      state.value.showPants = false;
+      state.value.showDeminJeans = false;
+      state.value.showShorts = false;
+      state.value.showSkirt = false;
+      state.value.showDressAndJump = false;
+
+      // ------- states for womans clothing lingerie -------------//
+      state.value.showBras = false;
+      state.value.showPanties = false;
+      state.value.showSeamFree = false;
+      state.value.showShapeWare = false;
+      state.value.showSocksAndHorsery = false;
+      state.value.showLingerieEssentials = false;
+      state.value.showSleepWare = false;
+      // ------- states for womans clothing lingerie -------------//
+      state.value.showHeels = false;
     },
   },
 });
@@ -148,6 +231,19 @@ export const {
   showLimitedEdtion,
   showTops,
   showTshirts,
+  showPants,
+  showDeminJeans,
+  showShorts,
+  showSkirt,
+  showDressAndJump,
+  showBras,
+  showPanties,
+  showSeamFree,
+  showShapeWare,
+  showSocksAndHorsery,
+  showLingerieEssentials,
+  showSleepWare,
+  showHeels,
   closeAll,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;

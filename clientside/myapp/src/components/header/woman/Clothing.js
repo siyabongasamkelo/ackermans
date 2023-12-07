@@ -8,6 +8,11 @@ import {
   showClothing,
   showTops,
   showTshirts,
+  showPants,
+  showDeminJeans,
+  showShorts,
+  showSkirt,
+  showDressAndJump,
 } from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
@@ -74,6 +79,26 @@ const Clothing = () => {
                   if (clothing === "T-Shirts") {
                     dispatch(showClothing());
                     dispatch(showTshirts());
+                  }
+                  if (clothing === "Pants") {
+                    dispatch(showClothing());
+                    dispatch(showPants());
+                  }
+                  if (clothing === "Demin Jeans") {
+                    dispatch(showClothing());
+                    dispatch(showDeminJeans());
+                  }
+                  if (clothing === "Shorts") {
+                    dispatch(showClothing());
+                    dispatch(showShorts());
+                  }
+                  if (clothing === "Skirts") {
+                    dispatch(showClothing());
+                    dispatch(showSkirt());
+                  }
+                  if (clothing === "Dresses Jumpsuits") {
+                    dispatch(showClothing());
+                    dispatch(showDressAndJump());
                   }
                 }}
               >

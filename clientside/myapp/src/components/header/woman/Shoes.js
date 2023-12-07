@@ -1,7 +1,13 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import {
+  closeIts,
+  showMenu,
+  closeAll,
+  showShoes,
+  showHeels,
+} from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -18,7 +24,7 @@ export const Top = styled.div`
 
 const Shoes = () => {
   const dispatch = useDispatch();
-  const showShoes = useSelector((state) => state.header.value.showShoes);
+  const showShoess = useSelector((state) => state.header.value.showShoes);
 
   const shoes = [
     "View all in Shoes",
@@ -30,7 +36,7 @@ const Shoes = () => {
 
   return (
     <>
-      {showShoes ? (
+      {showShoess ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -51,11 +57,19 @@ const Shoes = () => {
       ) : (
         ""
       )}
-      {showShoes
-        ? shoes.map((clothing) => {
+      {showShoess
+        ? shoes.map((shoes) => {
             return (
-              <div className="list d-flex align-items-center justify-content-between">
-                {clothing} <CaretRightFill />
+              <div
+                className="list d-flex align-items-center justify-content-between"
+                onClick={() => {
+                  if (shoes === "Heels") {
+                    dispatch(showShoes());
+                    dispatch(showHeels());
+                  }
+                }}
+              >
+                {shoes} <CaretRightFill />
               </div>
             );
           })

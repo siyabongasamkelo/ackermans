@@ -16,19 +16,23 @@ export const Top = styled.div`
   }
 `;
 
-const Tshirt = () => {
+const ShapeWare = () => {
   const dispatch = useDispatch();
-  const showTshirts = useSelector((state) => state.header.value.showTshirts);
+  const showShapeWare = useSelector(
+    (state) => state.header.value.showShapeWare
+  );
 
-  const tshirts = [
-    "View all in T-shirts",
-    "Long Sleeve T-shirts",
-    "Short Sleeve T-shirts",
+  const shapewear = [
+    "View all in Shapewear",
+    "Bodysuits",
+    "Camisoles",
+    "Longlegs",
+    "Panties",
   ];
 
   return (
     <>
-      {showTshirts ? (
+      {showShapeWare ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -38,7 +42,7 @@ const Tshirt = () => {
                 dispatch(closeIts());
               }}
             />
-            T-shirts
+            Shapeware
           </div>
           <XLg
             onClick={() => {
@@ -49,11 +53,11 @@ const Tshirt = () => {
       ) : (
         ""
       )}
-      {showTshirts
-        ? tshirts.map((clothing) => {
+      {showShapeWare
+        ? shapewear.map((shapewear) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
-                {clothing} <CaretRightFill />
+                {shapewear} <CaretRightFill />
               </div>
             );
           })
@@ -62,4 +66,4 @@ const Tshirt = () => {
   );
 };
 
-export default Tshirt;
+export default ShapeWare;

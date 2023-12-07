@@ -1,7 +1,19 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import {
+  closeIts,
+  showMenu,
+  closeAll,
+  showBras,
+  showLingerieAndSleep,
+  showPanties,
+  showSeamFree,
+  showShapeWare,
+  showSocksAndHorsery,
+  showLingerieEssentials,
+  showSleepWare,
+} from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -18,7 +30,7 @@ export const Top = styled.div`
 
 const LingerieAndSleep = () => {
   const dispatch = useDispatch();
-  const showLingerieAndSleep = useSelector(
+  const showLingerieAndSleeps = useSelector(
     (state) => state.header.value.showLingerieAndSleep
   );
 
@@ -36,7 +48,7 @@ const LingerieAndSleep = () => {
 
   return (
     <>
-      {showLingerieAndSleep ? (
+      {showLingerieAndSleeps ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -57,11 +69,43 @@ const LingerieAndSleep = () => {
       ) : (
         ""
       )}
-      {showLingerieAndSleep
-        ? LingerieAndSleep.map((clothing) => {
+      {showLingerieAndSleeps
+        ? LingerieAndSleep.map((lingerie) => {
             return (
-              <div className="list d-flex align-items-center justify-content-between">
-                {clothing} <CaretRightFill />
+              <div
+                className="list d-flex align-items-center justify-content-between"
+                onClick={() => {
+                  if (lingerie === "Bras") {
+                    dispatch(showLingerieAndSleep());
+                    dispatch(showBras());
+                  }
+                  if (lingerie === "Panties") {
+                    dispatch(showLingerieAndSleep());
+                    dispatch(showPanties());
+                  }
+                  if (lingerie === "Seamfree") {
+                    dispatch(showLingerieAndSleep());
+                    dispatch(showSeamFree());
+                  }
+                  if (lingerie === "Shapewear") {
+                    dispatch(showLingerieAndSleep());
+                    dispatch(showShapeWare());
+                  }
+                  if (lingerie === "Socks & Hosiery") {
+                    dispatch(showLingerieAndSleep());
+                    dispatch(showSocksAndHorsery());
+                  }
+                  if (lingerie === "Lingerie Essentials") {
+                    dispatch(showLingerieAndSleep());
+                    dispatch(showLingerieEssentials());
+                  }
+                  if (lingerie === "Sleepware") {
+                    dispatch(showLingerieAndSleep());
+                    dispatch(showSleepWare());
+                  }
+                }}
+              >
+                {lingerie} <CaretRightFill />
               </div>
             );
           })

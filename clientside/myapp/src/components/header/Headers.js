@@ -23,6 +23,19 @@ import ActiveWare from "./woman/ActiveWear";
 import LimittedEdition from "./woman/LimitedEdition";
 import Tops from "./woman/Wclothing/Tops";
 import Tshirt from "./woman/Wclothing/Tshirts";
+import Pants from "./woman/Wclothing/Pants";
+import DeminJeans from "./woman/Wclothing/DeminJeans";
+import Short from "./woman/Wclothing/Shorts";
+import Skirt from "./woman/Wclothing/Skirt";
+import DressesAndJump from "./woman/Wclothing/DressAndJump";
+import Bras from "./woman/LingerieAndSleep/Bras";
+import Panties from "./woman/LingerieAndSleep/Panties";
+import SeamFree from "./woman/LingerieAndSleep/SeamFree";
+import ShapeWare from "./woman/LingerieAndSleep/ShapeWare";
+import SocksAndHosiery from "./woman/LingerieAndSleep/SocksAndHosiery";
+import LingerieEssential from "./woman/LingerieAndSleep/LingerieEssential";
+import Sleepware from "./woman/LingerieAndSleep/SleepWare";
+import Heels from "./woman/Shoes/Heels";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -249,6 +262,22 @@ const Headers = () => {
         <LimittedEdition />
         <Tops />
         <Tshirt />
+        <Pants />
+        <DeminJeans />
+        <Short />
+        <Skirt />
+        <DressesAndJump />
+
+        {/* display things on woman clothes lingerie */}
+        <Bras />
+        <Panties />
+        <SeamFree />
+        <ShapeWare />
+        <SocksAndHosiery />
+        <LingerieEssential />
+        <Sleepware />
+        {/* display things on woman clothes lingerie */}
+        <Heels />
       </Popup>
     </HeaderStyled>
   );
