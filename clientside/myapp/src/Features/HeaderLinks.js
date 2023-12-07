@@ -40,6 +40,9 @@ export const HeadrsLinksSlice = createSlice({
       showSleepWare: false,
       // ------- states for womans clothing shoes -------------//
       showHeels: false,
+      showPumpsAndFlats: false,
+      showSandals: false,
+      showSneakersAndTrainers: false,
     },
   },
   reducers: {
@@ -169,6 +172,18 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showHeels = true;
       state.value.showMenu = false;
     },
+    showPumpsAndFlats: (state, action) => {
+      state.value.showPumpsAndFlats = true;
+      state.value.showMenu = false;
+    },
+    showSandals: (state, action) => {
+      state.value.showSandals = true;
+      state.value.showMenu = false;
+    },
+    showSneakersAndTrainers: (state, action) => {
+      state.value.showSneakersAndTrainers = true;
+      state.value.showMenu = false;
+    },
     closeAll: (state, action) => {
       state.value.closeIt = false;
       state.value.showWomans = false;
@@ -207,6 +222,9 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showSleepWare = false;
       // ------- states for womans clothing lingerie -------------//
       state.value.showHeels = false;
+      state.value.showPumpsAndFlats = false;
+      state.value.showSandals = false;
+      state.value.showSneakersAndTrainers = false;
     },
   },
 });
@@ -244,6 +262,9 @@ export const {
   showLingerieEssentials,
   showSleepWare,
   showHeels,
+  showPumpsAndFlats,
+  showSandals,
+  showSneakersAndTrainers,
   closeAll,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;

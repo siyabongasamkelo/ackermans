@@ -7,6 +7,9 @@ import {
   closeAll,
   showShoes,
   showHeels,
+  showPumpsAndFlats,
+  showSandals,
+  showSneakersAndTrainers,
 } from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
@@ -66,6 +69,18 @@ const Shoes = () => {
                   if (shoes === "Heels") {
                     dispatch(showShoes());
                     dispatch(showHeels());
+                  }
+                  if (shoes === "Pumps & Flats") {
+                    dispatch(showShoes());
+                    dispatch(showPumpsAndFlats());
+                  }
+                  if (shoes === "Sandals") {
+                    dispatch(showShoes());
+                    dispatch(showSandals());
+                  }
+                  if (shoes === "Sneakers & Trainers") {
+                    dispatch(showShoes());
+                    dispatch(showSneakersAndTrainers());
                   }
                 }}
               >
