@@ -72,6 +72,8 @@ export const HeadrsLinksSlice = createSlice({
       showSwimShops: false,
       showBackToCrech: false,
       showLillyAndSadKids: false,
+      // ----------------- states for Teens -------------//
+      showShopAll: false,
     },
   },
   reducers: {
@@ -98,7 +100,7 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showMenu = false;
     },
     showTeens: (state, action) => {
-      state.value.showTeens = true;
+      state.value.showTeens = !state.value.showTeens;
       state.value.showMenu = false;
     },
     showCharacter: (state, action) => {
@@ -309,6 +311,10 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showLillyAndSadKids = true;
       state.value.showMenu = false;
     },
+    showShopAll: (state, action) => {
+      state.value.showShopAll = true;
+      state.value.showMenu = false;
+    },
     closeAll: (state, action) => {
       state.value.closeIt = false;
       state.value.showWomans = false;
@@ -356,14 +362,14 @@ export const HeadrsLinksSlice = createSlice({
       // ------- states for womans clothing activeware -------------//
       state.value.showActiveTop = false;
       state.value.showActivePants = false;
-      // ------- states for womans Beauty -------------//
+      // ------- states for  Beauty -------------//
       state.value.showMakeUp = false;
       state.value.showBathAndBody = false;
       state.value.showSkincare = false;
       state.value.showOralCare = false;
       state.value.showFragrance = false;
       state.value.showBrands = false;
-      // ------- states for womans Baby -------------//
+      // ------- states for Baby -------------//
       state.value.showNewBorn = false;
       state.value.showBoys3to36 = false;
       state.value.showGirls3to36 = false;
@@ -371,7 +377,7 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showBabyLimitedEdition = false;
       state.value.showLIllyAndSid = false;
       state.value.showFirstWardrobe = false;
-      // ------- states for womans Kids -------------//
+      // ------- states for Kids -------------//
       state.value.showBoys210 = false;
       state.value.showGirls210 = false;
       state.value.showSchool = false;
@@ -379,6 +385,8 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showSwimShops = false;
       state.value.showBackToCrech = false;
       state.value.showLillyAndSadKids = false;
+      // ------- states for TEENS -------------//
+      state.value.showShopAll = false;
     },
   },
 });
@@ -443,6 +451,7 @@ export const {
   showSwimShops,
   showBackToCrech,
   showLillyAndSadKids,
+  showShopAll,
   closeAll,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;

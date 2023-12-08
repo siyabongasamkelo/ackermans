@@ -63,6 +63,7 @@ import LimitedEditionKids from "./Kids/LimitedEditionKids";
 import SwimShops from "./Kids/SwimShop";
 import BackToCrech from "./Kids/BackToCreche";
 import LillyAndSidKids from "./Kids/LillyAndSadKids";
+import ShopAll from "./Teens/ShopAll";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -337,6 +338,8 @@ const Headers = () => {
         <SwimShops />
         <BackToCrech />
         <LillyAndSidKids />
+        {/* display things on Teens */}
+        <ShopAll />
       </Popup>
     </HeaderStyled>
   );
