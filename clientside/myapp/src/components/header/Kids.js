@@ -1,6 +1,18 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
-import { showMenu, closeAll, closeIts } from "../../Features/HeaderLinks";
+import {
+  showMenu,
+  closeAll,
+  closeIts,
+  showKids,
+  showBoys210,
+  showGirls210,
+  showSchool,
+  showLimitedKids,
+  showSwimShops,
+  showBackToCrech,
+  showLillyAndSadKids,
+} from "../../Features/HeaderLinks";
 import styled from "styled-components";
 
 export const Top = styled.div`
@@ -18,7 +30,7 @@ export const Top = styled.div`
 
 const Kids = () => {
   const dispatch = useDispatch();
-  const showKids = useSelector((state) => state.header.value.showKids);
+  const showKidss = useSelector((state) => state.header.value.showKids);
 
   const kids = [
     "View all in Kids",
@@ -30,12 +42,14 @@ const Kids = () => {
     "The Denim Shop",
     "Christmas",
     "Swim Shop",
+    "Back To Crech",
+    "Valentines Day",
     "Lilly + Sid",
   ];
 
   return (
     <>
-      {showKids ? (
+      {showKidss ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -56,10 +70,46 @@ const Kids = () => {
       ) : (
         ""
       )}
-      {showKids
+      {showKidss
         ? kids.map((kids) => {
             return (
-              <div className="list d-flex align-items-center justify-content-between">
+              <div
+                className="list d-flex align-items-center justify-content-between"
+                onClick={() => {
+                  if (kids === "Boys 2-10 Years") {
+                    dispatch(showKids());
+                    dispatch(showBoys210());
+                  }
+                  if (kids === "Girls 2-10 Years") {
+                    dispatch(showKids());
+                    dispatch(showGirls210());
+                  }
+                  if (kids === "School") {
+                    dispatch(showKids());
+                    dispatch(showSchool());
+                  }
+                  if (kids === "Limited Edition") {
+                    dispatch(showKids());
+                    dispatch(showLimitedKids());
+                  }
+                  if (kids === "Swim Shop") {
+                    dispatch(showKids());
+                    dispatch(showSwimShops());
+                  }
+                  if (kids === "Swim Shop") {
+                    dispatch(showKids());
+                    dispatch(showSwimShops());
+                  }
+                  if (kids === "Back To Crech") {
+                    dispatch(showKids());
+                    dispatch(showBackToCrech());
+                  }
+                  if (kids === "Lilly + Sid") {
+                    dispatch(showKids());
+                    dispatch(showLillyAndSadKids());
+                  }
+                }}
+              >
                 {kids} <CaretRightFill />
               </div>
             );

@@ -64,6 +64,14 @@ export const HeadrsLinksSlice = createSlice({
       showBabyLimitedEdition: false,
       showLIllyAndSid: false,
       showFirstWardrobe: false,
+      // ----------------- states for Kids -------------//
+      showBoys210: false,
+      showGirls210: false,
+      showSchool: false,
+      showLimitedKids: false,
+      showSwimShops: false,
+      showBackToCrech: false,
+      showLillyAndSadKids: false,
     },
   },
   reducers: {
@@ -86,7 +94,7 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showMenu = false;
     },
     showKids: (state, action) => {
-      state.value.showKids = true;
+      state.value.showKids = !state.value.showKids;
       state.value.showMenu = false;
     },
     showTeens: (state, action) => {
@@ -273,6 +281,34 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showFirstWardrobe = true;
       state.value.showMenu = false;
     },
+    showBoys210: (state, action) => {
+      state.value.showBoys210 = true;
+      state.value.showMenu = false;
+    },
+    showGirls210: (state, action) => {
+      state.value.showGirls210 = true;
+      state.value.showMenu = false;
+    },
+    showSchool: (state, action) => {
+      state.value.showSchool = true;
+      state.value.showMenu = false;
+    },
+    showLimitedKids: (state, action) => {
+      state.value.showLimitedKids = true;
+      state.value.showMenu = false;
+    },
+    showSwimShops: (state, action) => {
+      state.value.showSwimShops = true;
+      state.value.showMenu = false;
+    },
+    showBackToCrech: (state, action) => {
+      state.value.showBackToCrech = true;
+      state.value.showMenu = false;
+    },
+    showLillyAndSadKids: (state, action) => {
+      state.value.showLillyAndSadKids = true;
+      state.value.showMenu = false;
+    },
     closeAll: (state, action) => {
       state.value.closeIt = false;
       state.value.showWomans = false;
@@ -335,6 +371,14 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showBabyLimitedEdition = false;
       state.value.showLIllyAndSid = false;
       state.value.showFirstWardrobe = false;
+      // ------- states for womans Kids -------------//
+      state.value.showBoys210 = false;
+      state.value.showGirls210 = false;
+      state.value.showSchool = false;
+      state.value.showLimitedKids = false;
+      state.value.showSwimShops = false;
+      state.value.showBackToCrech = false;
+      state.value.showLillyAndSadKids = false;
     },
   },
 });
@@ -392,6 +436,13 @@ export const {
   showBabyLimitedEdition,
   showLIllyAndSid,
   showFirstWardrobe,
+  showBoys210,
+  showGirls210,
+  showSchool,
+  showLimitedKids,
+  showSwimShops,
+  showBackToCrech,
+  showLillyAndSadKids,
   closeAll,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;

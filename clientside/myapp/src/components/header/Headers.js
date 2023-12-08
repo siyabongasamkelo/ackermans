@@ -56,6 +56,13 @@ import BabyEssentials from "./Baby/BabyEssentials";
 import LimitedEdition from "./Baby/LimitedEdition";
 import LillyAndSid from "./Baby/LIllyAndSid";
 import FirstWardrobe from "./Baby/FirstWardrobe";
+import BoysTwoToTen from "./Kids/BoysTwoToTen";
+import GirlsTwoToTen from "./Kids/GirlsTwoToTen";
+import School from "./Kids/School";
+import LimitedEditionKids from "./Kids/LimitedEditionKids";
+import SwimShops from "./Kids/SwimShop";
+import BackToCrech from "./Kids/BackToCreche";
+import LillyAndSidKids from "./Kids/LillyAndSadKids";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -322,6 +329,14 @@ const Headers = () => {
         <LimitedEdition />
         <LillyAndSid />
         <FirstWardrobe />
+        {/* display things on Kids */}
+        <BoysTwoToTen />
+        <GirlsTwoToTen />
+        <School />
+        <LimitedEditionKids />
+        <SwimShops />
+        <BackToCrech />
+        <LillyAndSidKids />
       </Popup>
     </HeaderStyled>
   );
