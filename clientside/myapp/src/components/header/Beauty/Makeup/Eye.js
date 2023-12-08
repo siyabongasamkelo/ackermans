@@ -1,7 +1,7 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
-import { showMenu, closeAll, closeIts } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { closeIts, showMenu, closeAll } from "../../../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -16,23 +16,21 @@ export const Top = styled.div`
   }
 `;
 
-const Beauty = () => {
+const ActiveTop = () => {
   const dispatch = useDispatch();
-  const showBeauty = useSelector((state) => state.header.value.showBeauty);
+  const showActiveTop = useSelector(
+    (state) => state.header.value.showActiveTop
+  );
 
-  const beauty = [
-    "View all in Beauty",
-    "Makeup",
-    "Bath & Body",
-    "Skincare",
-    "Oral Care",
-    "Fragrance",
-    "Brands",
+  const topsActive = [
+    "View all in Tops",
+    "Sleeveless Tops",
+    "Short Sleeve Tops",
   ];
 
   return (
     <>
-      {showBeauty ? (
+      {showActiveTop ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -42,7 +40,7 @@ const Beauty = () => {
                 dispatch(closeIts());
               }}
             />
-            Beauty
+            Tops
           </div>
           <XLg
             onClick={() => {
@@ -53,11 +51,11 @@ const Beauty = () => {
       ) : (
         ""
       )}
-      {showBeauty
-        ? beauty.map((beauty) => {
+      {showActiveTop
+        ? topsActive.map((bags) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
-                {beauty} <CaretRightFill />
+                {bags} <CaretRightFill />
               </div>
             );
           })
@@ -66,4 +64,4 @@ const Beauty = () => {
   );
 };
 
-export default Beauty;
+export default ActiveTop;
