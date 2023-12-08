@@ -1,7 +1,14 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import {
+  closeIts,
+  showMenu,
+  closeAll,
+  showAccessories,
+  showBagAndWallets,
+  showHeadgear,
+} from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -18,7 +25,7 @@ export const Top = styled.div`
 
 const Accessories = () => {
   const dispatch = useDispatch();
-  const showAccessories = useSelector(
+  const showAccessoriess = useSelector(
     (state) => state.header.value.showAccessories
   );
 
@@ -26,7 +33,7 @@ const Accessories = () => {
 
   return (
     <>
-      {showAccessories ? (
+      {showAccessoriess ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -47,10 +54,22 @@ const Accessories = () => {
       ) : (
         ""
       )}
-      {showAccessories
+      {showAccessoriess
         ? Accessories.map((accessories) => {
             return (
-              <div className="list d-flex align-items-center justify-content-between">
+              <div
+                className="list d-flex align-items-center justify-content-between"
+                onClick={() => {
+                  if (accessories === "Bags & Wallets") {
+                    dispatch(showAccessories());
+                    dispatch(showBagAndWallets());
+                  }
+                  if (accessories === "Headgear") {
+                    dispatch(showAccessories());
+                    dispatch(showHeadgear());
+                  }
+                }}
+              >
                 {accessories} <CaretRightFill />
               </div>
             );

@@ -43,6 +43,12 @@ export const HeadrsLinksSlice = createSlice({
       showPumpsAndFlats: false,
       showSandals: false,
       showSneakersAndTrainers: false,
+      // ------- states for womans clothing accessoris -------------//
+      showBagAndWallets: false,
+      showHeadgear: false,
+      // ------- states for womans clothing activeware -------------//
+      showActiveTop: false,
+      showActivePants: false,
     },
   },
   reducers: {
@@ -101,11 +107,11 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showMenu = false;
     },
     showAccessories: (state, action) => {
-      state.value.showAccessories = true;
+      state.value.showAccessories = !state.value.showAccessories;
       state.value.showMenu = false;
     },
     showActiveware: (state, action) => {
-      state.value.showActiveware = true;
+      state.value.showActiveware = !state.value.showActiveware;
       state.value.showMenu = false;
     },
     showLimitedEdtion: (state, action) => {
@@ -184,6 +190,22 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showSneakersAndTrainers = true;
       state.value.showMenu = false;
     },
+    showBagAndWallets: (state, action) => {
+      state.value.showBagAndWallets = true;
+      state.value.showMenu = false;
+    },
+    showHeadgear: (state, action) => {
+      state.value.showHeadgear = true;
+      state.value.showMenu = false;
+    },
+    showActiveTop: (state, action) => {
+      state.value.showActiveTop = true;
+      state.value.showMenu = false;
+    },
+    showActivePants: (state, action) => {
+      state.value.showActivePants = true;
+      state.value.showMenu = false;
+    },
     closeAll: (state, action) => {
       state.value.closeIt = false;
       state.value.showWomans = false;
@@ -220,11 +242,17 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showSocksAndHorsery = false;
       state.value.showLingerieEssentials = false;
       state.value.showSleepWare = false;
-      // ------- states for womans clothing lingerie -------------//
+      // ------- states for womans clothing shoes -------------//
       state.value.showHeels = false;
       state.value.showPumpsAndFlats = false;
       state.value.showSandals = false;
       state.value.showSneakersAndTrainers = false;
+      // ------- states for womans clothing accessories -------------//
+      state.value.showBagAndWallets = false;
+      state.value.showHeadgear = false;
+      // ------- states for womans clothing activeware -------------//
+      state.value.showActiveTop = false;
+      state.value.showActivePants = false;
     },
   },
 });
@@ -265,6 +293,10 @@ export const {
   showPumpsAndFlats,
   showSandals,
   showSneakersAndTrainers,
+  showBagAndWallets,
+  showHeadgear,
+  showActiveTop,
+  showActivePants,
   closeAll,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;

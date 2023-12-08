@@ -1,7 +1,14 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import {
+  closeIts,
+  showMenu,
+  closeAll,
+  showActiveware,
+  showActiveTop,
+  showActivePants,
+} from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -18,7 +25,7 @@ export const Top = styled.div`
 
 const ActiveWare = () => {
   const dispatch = useDispatch();
-  const showActiveware = useSelector(
+  const showActivewares = useSelector(
     (state) => state.header.value.showActiveware
   );
 
@@ -26,7 +33,7 @@ const ActiveWare = () => {
 
   return (
     <>
-      {showActiveware ? (
+      {showActivewares ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -36,7 +43,7 @@ const ActiveWare = () => {
                 dispatch(closeIts());
               }}
             />
-            Shoes
+            ActiveWare
           </div>
           <XLg
             onClick={() => {
@@ -47,10 +54,22 @@ const ActiveWare = () => {
       ) : (
         ""
       )}
-      {showActiveware
+      {showActivewares
         ? activeWare.map((clothing) => {
             return (
-              <div className="list d-flex align-items-center justify-content-between">
+              <div
+                className="list d-flex align-items-center justify-content-between"
+                onClick={() => {
+                  if (clothing === "Top") {
+                    dispatch(showActiveware());
+                    dispatch(showActiveTop());
+                  }
+                  if (clothing === "Pants") {
+                    dispatch(showActiveware());
+                    dispatch(showActivePants());
+                  }
+                }}
+              >
                 {clothing} <CaretRightFill />
               </div>
             );
