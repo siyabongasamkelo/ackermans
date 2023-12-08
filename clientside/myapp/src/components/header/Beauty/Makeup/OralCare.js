@@ -16,21 +16,15 @@ export const Top = styled.div`
   }
 `;
 
-const Eye = () => {
+const OralCare = () => {
   const dispatch = useDispatch();
-  const showActiveTop = useSelector(
-    (state) => state.header.value.showActiveTop
-  );
+  const showOralCare = useSelector((state) => state.header.value.showOralCare);
 
-  const topsActive = [
-    "View all in Tops",
-    "Sleeveless Tops",
-    "Short Sleeve Tops",
-  ];
+  const oralCare = ["View all in Oral care", "Toothpaste", "Toothbrush"];
 
   return (
     <>
-      {showActiveTop ? (
+      {showOralCare ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -40,7 +34,7 @@ const Eye = () => {
                 dispatch(closeIts());
               }}
             />
-            Tops
+            Oral Care
           </div>
           <XLg
             onClick={() => {
@@ -51,11 +45,11 @@ const Eye = () => {
       ) : (
         ""
       )}
-      {showActiveTop
-        ? topsActive.map((bags) => {
+      {showOralCare
+        ? oralCare.map((makeup) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
-                {bags} <CaretRightFill />
+                {makeup} <CaretRightFill />
               </div>
             );
           })
@@ -64,4 +58,4 @@ const Eye = () => {
   );
 };
 
-export default Eye;
+export default OralCare;

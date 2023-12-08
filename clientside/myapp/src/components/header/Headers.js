@@ -43,6 +43,12 @@ import BagsAndWallets from "./woman/Accessories/BagsAndWallets";
 import Headgear from "./woman/Accessories/Headgear";
 import ActiveTop from "./woman/ActiveWare/ActiveTop";
 import ActivePants from "./woman/ActiveWare/ActivePants";
+import Makeup from "./Beauty/Makeup";
+import BathAndBody from "./Beauty/BathAndBody";
+import Skincare from "./Beauty/SkinCare";
+import OralCare from "./Beauty/Makeup/OralCare";
+import Fragrance from "./Beauty/Makeup/Fragrance";
+import Brands from "./Beauty/Brands";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -294,6 +300,13 @@ const Headers = () => {
         {/* display things on woman clothes activeware */}
         <ActiveTop />
         <ActivePants />
+        {/* display things on Beauty */}
+        <Makeup />
+        <BathAndBody />
+        <Skincare />
+        <OralCare />
+        <Fragrance />
+        <Brands />
       </Popup>
     </HeaderStyled>
   );

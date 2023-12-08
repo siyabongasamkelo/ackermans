@@ -1,7 +1,7 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import { closeIts, showMenu, closeAll } from "../../../../Features/HeaderLinks";
+import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -16,21 +16,15 @@ export const Top = styled.div`
   }
 `;
 
-const Eye = () => {
+const Skincare = () => {
   const dispatch = useDispatch();
-  const showActiveTop = useSelector(
-    (state) => state.header.value.showActiveTop
-  );
+  const showSkincare = useSelector((state) => state.header.value.showSkincare);
 
-  const topsActive = [
-    "View all in Tops",
-    "Sleeveless Tops",
-    "Short Sleeve Tops",
-  ];
+  const skincare = ["View all in Skincare", "Cleansers", "Moisturisers"];
 
   return (
     <>
-      {showActiveTop ? (
+      {showSkincare ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -40,7 +34,7 @@ const Eye = () => {
                 dispatch(closeIts());
               }}
             />
-            Tops
+            Skincare
           </div>
           <XLg
             onClick={() => {
@@ -51,11 +45,11 @@ const Eye = () => {
       ) : (
         ""
       )}
-      {showActiveTop
-        ? topsActive.map((bags) => {
+      {showSkincare
+        ? skincare.map((skincare) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
-                {bags} <CaretRightFill />
+                {skincare} <CaretRightFill />
               </div>
             );
           })
@@ -64,4 +58,4 @@ const Eye = () => {
   );
 };
 
-export default Eye;
+export default Skincare;

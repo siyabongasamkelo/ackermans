@@ -1,6 +1,17 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
-import { showMenu, closeAll, closeIts } from "../../Features/HeaderLinks";
+import {
+  showMenu,
+  closeAll,
+  closeIts,
+  showBeauty,
+  showMakeUp,
+  showBathAndBody,
+  showSkincare,
+  showOralCare,
+  showFragrance,
+  showBrands,
+} from "../../Features/HeaderLinks";
 import styled from "styled-components";
 
 export const Top = styled.div`
@@ -18,7 +29,7 @@ export const Top = styled.div`
 
 const Beauty = () => {
   const dispatch = useDispatch();
-  const showBeauty = useSelector((state) => state.header.value.showBeauty);
+  const showBeautys = useSelector((state) => state.header.value.showBeauty);
 
   const beauty = [
     "View all in Beauty",
@@ -32,7 +43,7 @@ const Beauty = () => {
 
   return (
     <>
-      {showBeauty ? (
+      {showBeautys ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -53,10 +64,38 @@ const Beauty = () => {
       ) : (
         ""
       )}
-      {showBeauty
+      {showBeautys
         ? beauty.map((beauty) => {
             return (
-              <div className="list d-flex align-items-center justify-content-between">
+              <div
+                className="list d-flex align-items-center justify-content-between"
+                onClick={() => {
+                  if (beauty === "Makeup") {
+                    dispatch(showBeauty());
+                    dispatch(showMakeUp());
+                  }
+                  if (beauty === "Bath & Body") {
+                    dispatch(showBeauty());
+                    dispatch(showBathAndBody());
+                  }
+                  if (beauty === "Skincare") {
+                    dispatch(showBeauty());
+                    dispatch(showSkincare());
+                  }
+                  if (beauty === "Oral Care") {
+                    dispatch(showBeauty());
+                    dispatch(showOralCare());
+                  }
+                  if (beauty === "Fragrance") {
+                    dispatch(showBeauty());
+                    dispatch(showFragrance());
+                  }
+                  if (beauty === "Brands") {
+                    dispatch(showBeauty());
+                    dispatch(showBrands());
+                  }
+                }}
+              >
                 {beauty} <CaretRightFill />
               </div>
             );

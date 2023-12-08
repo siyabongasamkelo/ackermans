@@ -49,6 +49,13 @@ export const HeadrsLinksSlice = createSlice({
       // ------- states for womans clothing activeware -------------//
       showActiveTop: false,
       showActivePants: false,
+      // ----------------- states for Beauty -------------//
+      showMakeUp: false,
+      showBathAndBody: false,
+      showSkincare: false,
+      showOralCare: false,
+      showFragrance: false,
+      showBrands: false,
     },
   },
   reducers: {
@@ -63,7 +70,7 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showMenu = false;
     },
     showBeauty: (state, action) => {
-      state.value.showBeauty = true;
+      state.value.showBeauty = !state.value.showBeauty;
       state.value.showMenu = false;
     },
     showBaby: (state, action) => {
@@ -206,6 +213,30 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showActivePants = true;
       state.value.showMenu = false;
     },
+    showMakeUp: (state, action) => {
+      state.value.showMakeUp = true;
+      state.value.showMenu = false;
+    },
+    showBathAndBody: (state, action) => {
+      state.value.showBathAndBody = true;
+      state.value.showMenu = false;
+    },
+    showSkincare: (state, action) => {
+      state.value.showSkincare = true;
+      state.value.showMenu = false;
+    },
+    showOralCare: (state, action) => {
+      state.value.showOralCare = true;
+      state.value.showMenu = false;
+    },
+    showFragrance: (state, action) => {
+      state.value.showFragrance = true;
+      state.value.showMenu = false;
+    },
+    showBrands: (state, action) => {
+      state.value.showBrands = true;
+      state.value.showMenu = false;
+    },
     closeAll: (state, action) => {
       state.value.closeIt = false;
       state.value.showWomans = false;
@@ -253,6 +284,13 @@ export const HeadrsLinksSlice = createSlice({
       // ------- states for womans clothing activeware -------------//
       state.value.showActiveTop = false;
       state.value.showActivePants = false;
+      // ------- states for womans Beauty -------------//
+      state.value.showMakeUp = false;
+      state.value.showBathAndBody = false;
+      state.value.showSkincare = false;
+      state.value.showOralCare = false;
+      state.value.showFragrance = false;
+      state.value.showBrands = false;
     },
   },
 });
@@ -297,6 +335,12 @@ export const {
   showHeadgear,
   showActiveTop,
   showActivePants,
+  showMakeUp,
+  showBathAndBody,
+  showSkincare,
+  showOralCare,
+  showFragrance,
+  showBrands,
   closeAll,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;

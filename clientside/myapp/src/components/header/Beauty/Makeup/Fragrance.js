@@ -16,21 +16,17 @@ export const Top = styled.div`
   }
 `;
 
-const Eye = () => {
+const Fragrance = () => {
   const dispatch = useDispatch();
-  const showActiveTop = useSelector(
-    (state) => state.header.value.showActiveTop
+  const showFragrance = useSelector(
+    (state) => state.header.value.showFragrance
   );
 
-  const topsActive = [
-    "View all in Tops",
-    "Sleeveless Tops",
-    "Short Sleeve Tops",
-  ];
+  const frangrance = ["View all in Frangrance", "Pocket Perfume"];
 
   return (
     <>
-      {showActiveTop ? (
+      {showFragrance ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -40,7 +36,7 @@ const Eye = () => {
                 dispatch(closeIts());
               }}
             />
-            Tops
+            Fragrance
           </div>
           <XLg
             onClick={() => {
@@ -51,11 +47,11 @@ const Eye = () => {
       ) : (
         ""
       )}
-      {showActiveTop
-        ? topsActive.map((bags) => {
+      {showFragrance
+        ? frangrance.map((frangrance) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
-                {bags} <CaretRightFill />
+                {frangrance} <CaretRightFill />
               </div>
             );
           })
@@ -64,4 +60,4 @@ const Eye = () => {
   );
 };
 
-export default Eye;
+export default Fragrance;
