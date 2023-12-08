@@ -1,6 +1,18 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
-import { showMenu, closeAll, closeIts } from "../../Features/HeaderLinks";
+import {
+  showMenu,
+  closeAll,
+  closeIts,
+  showBaby,
+  showNewBorn,
+  showBoys3to36,
+  showGirls3to36,
+  showBabyEssential,
+  showBabyLimitedEdition,
+  showLIllyAndSid,
+  showFirstWardrobe,
+} from "../../Features/HeaderLinks";
 import styled from "styled-components";
 
 export const Top = styled.div`
@@ -18,7 +30,7 @@ export const Top = styled.div`
 
 const Baby = () => {
   const dispatch = useDispatch();
-  const showBaby = useSelector((state) => state.header.value.showBaby);
+  const showBabys = useSelector((state) => state.header.value.showBaby);
 
   const baby = [
     "View all in Baby",
@@ -35,7 +47,7 @@ const Baby = () => {
 
   return (
     <>
-      {showBaby ? (
+      {showBabys ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -56,10 +68,42 @@ const Baby = () => {
       ) : (
         ""
       )}
-      {showBaby
+      {showBabys
         ? baby.map((baby) => {
             return (
-              <div className="list d-flex align-items-center justify-content-between">
+              <div
+                className="list d-flex align-items-center justify-content-between"
+                onClick={() => {
+                  if (baby === "Newborn") {
+                    dispatch(showBaby());
+                    dispatch(showNewBorn());
+                  }
+                  if (baby === "Boys 3-36 Months") {
+                    dispatch(showBaby());
+                    dispatch(showBoys3to36());
+                  }
+                  if (baby === "Girls 3-36 Months") {
+                    dispatch(showBaby());
+                    dispatch(showGirls3to36());
+                  }
+                  if (baby === "Baby Esentials") {
+                    dispatch(showBaby());
+                    dispatch(showBabyEssential());
+                  }
+                  if (baby === "Limitted Edition") {
+                    dispatch(showBaby());
+                    dispatch(showBabyLimitedEdition());
+                  }
+                  if (baby === "Lilly + Sid") {
+                    dispatch(showBaby());
+                    dispatch(showLIllyAndSid());
+                  }
+                  if (baby === "My First Wardrobe") {
+                    dispatch(showBaby());
+                    dispatch(showFirstWardrobe());
+                  }
+                }}
+              >
                 {baby} <CaretRightFill />
               </div>
             );

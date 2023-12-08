@@ -49,6 +49,13 @@ import Skincare from "./Beauty/SkinCare";
 import OralCare from "./Beauty/Makeup/OralCare";
 import Fragrance from "./Beauty/Makeup/Fragrance";
 import Brands from "./Beauty/Brands";
+import Newborn from "./Baby/NewBorn";
+import Boys3to36 from "./Baby/Boys3to36";
+import Girls3to36 from "./Baby/Girls3to36";
+import BabyEssentials from "./Baby/BabyEssentials";
+import LimitedEdition from "./Baby/LimitedEdition";
+import LillyAndSid from "./Baby/LIllyAndSid";
+import FirstWardrobe from "./Baby/FirstWardrobe";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -307,6 +314,14 @@ const Headers = () => {
         <OralCare />
         <Fragrance />
         <Brands />
+        {/* display things on Baby */}
+        <Newborn />
+        <Boys3to36 />
+        <Girls3to36 />
+        <BabyEssentials />
+        <LimitedEdition />
+        <LillyAndSid />
+        <FirstWardrobe />
       </Popup>
     </HeaderStyled>
   );

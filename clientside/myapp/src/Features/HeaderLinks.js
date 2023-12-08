@@ -56,6 +56,14 @@ export const HeadrsLinksSlice = createSlice({
       showOralCare: false,
       showFragrance: false,
       showBrands: false,
+      // ----------------- states for Baby -------------//
+      showNewBorn: false,
+      showBoys3to36: false,
+      showGirls3to36: false,
+      showBabyEssential: false,
+      showBabyLimitedEdition: false,
+      showLIllyAndSid: false,
+      showFirstWardrobe: false,
     },
   },
   reducers: {
@@ -74,7 +82,7 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showMenu = false;
     },
     showBaby: (state, action) => {
-      state.value.showBaby = true;
+      state.value.showBaby = !state.value.showBaby;
       state.value.showMenu = false;
     },
     showKids: (state, action) => {
@@ -237,6 +245,34 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showBrands = true;
       state.value.showMenu = false;
     },
+    showNewBorn: (state, action) => {
+      state.value.showNewBorn = true;
+      state.value.showMenu = false;
+    },
+    showBoys3to36: (state, action) => {
+      state.value.showBoys3to36 = true;
+      state.value.showMenu = false;
+    },
+    showGirls3to36: (state, action) => {
+      state.value.showGirls3to36 = true;
+      state.value.showMenu = false;
+    },
+    showBabyEssential: (state, action) => {
+      state.value.showBabyEssential = true;
+      state.value.showMenu = false;
+    },
+    showBabyLimitedEdition: (state, action) => {
+      state.value.showBabyLimitedEdition = true;
+      state.value.showMenu = false;
+    },
+    showLIllyAndSid: (state, action) => {
+      state.value.showLIllyAndSid = true;
+      state.value.showMenu = false;
+    },
+    showFirstWardrobe: (state, action) => {
+      state.value.showFirstWardrobe = true;
+      state.value.showMenu = false;
+    },
     closeAll: (state, action) => {
       state.value.closeIt = false;
       state.value.showWomans = false;
@@ -291,6 +327,14 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showOralCare = false;
       state.value.showFragrance = false;
       state.value.showBrands = false;
+      // ------- states for womans Baby -------------//
+      state.value.showNewBorn = false;
+      state.value.showBoys3to36 = false;
+      state.value.showGirls3to36 = false;
+      state.value.showBabyEssential = false;
+      state.value.showBabyLimitedEdition = false;
+      state.value.showLIllyAndSid = false;
+      state.value.showFirstWardrobe = false;
     },
   },
 });
@@ -341,6 +385,13 @@ export const {
   showOralCare,
   showFragrance,
   showBrands,
+  showNewBorn,
+  showBoys3to36,
+  showGirls3to36,
+  showBabyEssential,
+  showBabyLimitedEdition,
+  showLIllyAndSid,
+  showFirstWardrobe,
   closeAll,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;
