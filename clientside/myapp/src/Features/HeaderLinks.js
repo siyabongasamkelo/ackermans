@@ -81,6 +81,7 @@ export const HeadrsLinksSlice = createSlice({
       showTeenLimitedEdition: false,
       // ----------------- states for Homewear -------------//
       showBathroom: false,
+      showDrinkAndLunch: false,
     },
   },
   reducers: {
@@ -346,6 +347,10 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showBathroom = true;
       state.value.showMenu = false;
     },
+    showDrinkAndLunch: (state, action) => {
+      state.value.showDrinkAndLunch = true;
+      state.value.showMenu = false;
+    },
     closeAll: (state, action) => {
       state.value.closeIt = false;
       state.value.showWomans = false;
@@ -425,6 +430,7 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showTeenLimitedEdition = false;
       // ------- states for Homewear -------------//
       state.value.showBathroom = false;
+      state.value.showDrinkAndLunch = false;
     },
   },
 });
@@ -497,5 +503,6 @@ export const {
   showTeenLimitedEdition,
   showBathroom,
   closeAll,
+  showDrinkAndLunch,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;
