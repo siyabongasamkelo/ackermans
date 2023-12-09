@@ -1,14 +1,7 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  showMenu,
-  closeAll,
-  closeIts,
-  showTech,
-  showAudio,
-  showPowerAndCharger,
-} from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -23,20 +16,15 @@ export const Top = styled.div`
   }
 `;
 
-const Tech = () => {
+const Audio = () => {
   const dispatch = useDispatch();
-  const showTechs = useSelector((state) => state.header.value.showTech);
+  const showAudio = useSelector((state) => state.header.value.showAudio);
 
-  const tech = [
-    "View all in Tech",
-    "Audio",
-    "Power Bank & Chargers",
-    "Accessories",
-  ];
+  const audio = ["View all in Audio", "Earphones", "Headphones"];
 
   return (
     <>
-      {showTechs ? (
+      {showAudio ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -46,7 +34,7 @@ const Tech = () => {
                 dispatch(closeIts());
               }}
             />
-            Tech
+            Audio
           </div>
           <XLg
             onClick={() => {
@@ -57,24 +45,11 @@ const Tech = () => {
       ) : (
         ""
       )}
-      {showTechs
-        ? tech.map((tech) => {
+      {showAudio
+        ? audio.map((audio) => {
             return (
-              <div
-                className="list d-flex align-items-center justify-content-between"
-                onClick={() => {
-                  if (tech === "Audio") {
-                    dispatch(showTech());
-                    dispatch(showAudio());
-                  }
-                  if (tech === "Power Bank & Chargers") {
-                    dispatch(showTech());
-
-                    dispatch(showPowerAndCharger());
-                  }
-                }}
-              >
-                {tech} <CaretRightFill />
+              <div className="list d-flex align-items-center justify-content-between">
+                {audio} <CaretRightFill />
               </div>
             );
           })
@@ -83,4 +58,4 @@ const Tech = () => {
   );
 };
 
-export default Tech;
+export default Audio;
