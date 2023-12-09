@@ -7,6 +7,7 @@ import {
   showHomeware,
   showBathroom,
   showDrinkAndLunch,
+  showPartyAndDecoration,
 } from "../../Features/HeaderLinks";
 import styled from "styled-components";
 
@@ -72,8 +73,11 @@ const Homeware = () => {
                   }
                   if (homeware === "Drinkware & Lunchboxes") {
                     dispatch(showHomeware());
-
                     dispatch(showDrinkAndLunch());
+                  }
+                  if (homeware === "Party & Decorations") {
+                    dispatch(showHomeware());
+                    dispatch(showPartyAndDecoration());
                   }
                 }}
               >

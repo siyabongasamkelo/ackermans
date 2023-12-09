@@ -70,6 +70,8 @@ import TeenBrands from "./Teens/Brands";
 import GraphicTees from "./Teens/GraphicTees";
 import LimitedEditionTeens from "./Teens/LimitedEditionTeen";
 import Bathroom from "./Homewear/Bathroom";
+import DrinkAndLunch from "./Homewear/DrinkAndLunch";
+import PartyAndDecoration from "./Homewear/PartyAndDecoration";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -353,6 +355,8 @@ const Headers = () => {
         <LimitedEditionTeens />
         {/* display things on Homeware */}
         <Bathroom />
+        <DrinkAndLunch />
+        <PartyAndDecoration />
       </Popup>
     </HeaderStyled>
   );
