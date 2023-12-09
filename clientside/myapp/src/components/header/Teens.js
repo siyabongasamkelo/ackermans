@@ -6,6 +6,11 @@ import {
   closeIts,
   showTeens,
   showShopAll,
+  showTeenBoys,
+  showTeenGirls,
+  showTeenBrands,
+  showGraphicTees,
+  showTeenLimitedEdition,
 } from "../../Features/HeaderLinks";
 import styled from "styled-components";
 
@@ -71,6 +76,26 @@ const Teens = () => {
                   if (teens === "Shop All") {
                     dispatch(showTeens());
                     dispatch(showShopAll());
+                  }
+                  if (teens === "Teen Boys") {
+                    dispatch(showTeens());
+                    dispatch(showTeenBoys());
+                  }
+                  if (teens === "Teen Girls") {
+                    dispatch(showTeens());
+                    dispatch(showTeenGirls());
+                  }
+                  if (teens === "Brands") {
+                    dispatch(showTeens());
+                    dispatch(showTeenBrands());
+                  }
+                  if (teens === "Graphic Tees") {
+                    dispatch(showTeens());
+                    dispatch(showGraphicTees());
+                  }
+                  if (teens === "Limited Edition") {
+                    dispatch(showTeens());
+                    dispatch(showTeenLimitedEdition());
                   }
                 }}
               >

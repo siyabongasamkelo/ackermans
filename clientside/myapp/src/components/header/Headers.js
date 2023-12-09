@@ -64,6 +64,11 @@ import SwimShops from "./Kids/SwimShop";
 import BackToCrech from "./Kids/BackToCreche";
 import LillyAndSidKids from "./Kids/LillyAndSadKids";
 import ShopAll from "./Teens/ShopAll";
+import TeenBoys from "./Teens/TeenBoys";
+import TeenGirls from "./Teens/TeenGirls";
+import TeenBrands from "./Teens/Brands";
+import GraphicTees from "./Teens/GraphicTees";
+import LimitedEditionTeens from "./Teens/LimitedEditionTeen";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -340,6 +345,11 @@ const Headers = () => {
         <LillyAndSidKids />
         {/* display things on Teens */}
         <ShopAll />
+        <TeenBoys />
+        <TeenGirls />
+        <TeenBrands />
+        <GraphicTees />
+        <LimitedEditionTeens />
       </Popup>
     </HeaderStyled>
   );

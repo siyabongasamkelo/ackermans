@@ -74,6 +74,11 @@ export const HeadrsLinksSlice = createSlice({
       showLillyAndSadKids: false,
       // ----------------- states for Teens -------------//
       showShopAll: false,
+      showTeenBoys: false,
+      showTeenGirls: false,
+      showTeenBrands: false,
+      showGraphicTees: false,
+      showTeenLimitedEdition: false,
     },
   },
   reducers: {
@@ -315,6 +320,26 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showShopAll = true;
       state.value.showMenu = false;
     },
+    showTeenBoys: (state, action) => {
+      state.value.showTeenBoys = true;
+      state.value.showMenu = false;
+    },
+    showTeenGirls: (state, action) => {
+      state.value.showTeenGirls = true;
+      state.value.showMenu = false;
+    },
+    showTeenBrands: (state, action) => {
+      state.value.showTeenBrands = true;
+      state.value.showMenu = false;
+    },
+    showGraphicTees: (state, action) => {
+      state.value.showGraphicTees = true;
+      state.value.showMenu = false;
+    },
+    showTeenLimitedEdition: (state, action) => {
+      state.value.showTeenLimitedEdition = true;
+      state.value.showMenu = false;
+    },
     closeAll: (state, action) => {
       state.value.closeIt = false;
       state.value.showWomans = false;
@@ -387,6 +412,11 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showLillyAndSadKids = false;
       // ------- states for TEENS -------------//
       state.value.showShopAll = false;
+      state.value.showTeenBoys = false;
+      state.value.showTeenGirls = false;
+      state.value.showTeenBrands = false;
+      state.value.showGraphicTees = false;
+      state.value.showTeenLimitedEdition = false;
     },
   },
 });
@@ -452,6 +482,11 @@ export const {
   showBackToCrech,
   showLillyAndSadKids,
   showShopAll,
+  showTeenBoys,
+  showTeenGirls,
+  showTeenBrands,
+  showGraphicTees,
+  showTeenLimitedEdition,
   closeAll,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;
