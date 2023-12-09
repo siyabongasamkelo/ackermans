@@ -1,7 +1,7 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
-import { showMenu, closeAll, closeIts } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -16,24 +16,17 @@ export const Top = styled.div`
   }
 `;
 
-const FinanctialSolutions = () => {
+const TechAccessories = () => {
   const dispatch = useDispatch();
-  const showFinance = useSelector((state) => state.header.value.showFinance);
+  const showTechAccessories = useSelector(
+    (state) => state.header.value.showTechAccessories
+  );
 
-  const FinanctialSolutions = [
-    "Account Application",
-    "Ackerman Account",
-    "Lay-by",
-    "Insurance",
-    "Loans",
-    "Bill Payment",
-    "Money Transer",
-    "Vouchers",
-  ];
+  const accessories = ["View all in Accessories", "Watches", "Accessories"];
 
   return (
     <>
-      {showFinance ? (
+      {showTechAccessories ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -43,7 +36,7 @@ const FinanctialSolutions = () => {
                 dispatch(closeIts());
               }}
             />
-            Financial Solutios
+            Accessories
           </div>
           <XLg
             onClick={() => {
@@ -54,11 +47,11 @@ const FinanctialSolutions = () => {
       ) : (
         ""
       )}
-      {showFinance
-        ? FinanctialSolutions.map((finance) => {
+      {showTechAccessories
+        ? accessories.map((accessories) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
-                {finance} <CaretRightFill />
+                {accessories} <CaretRightFill />
               </div>
             );
           })
@@ -67,4 +60,4 @@ const FinanctialSolutions = () => {
   );
 };
 
-export default FinanctialSolutions;
+export default TechAccessories;

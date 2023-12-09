@@ -86,6 +86,7 @@ export const HeadrsLinksSlice = createSlice({
       // ----------------- states for Audio -----------------//
       showAudio: false,
       showPowerAndCharger: false,
+      showTechAccessories: false,
     },
   },
   reducers: {
@@ -367,6 +368,10 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showPowerAndCharger = true;
       state.value.showMenu = false;
     },
+    showTechAccessories: (state, action) => {
+      state.value.showTechAccessories = true;
+      state.value.showMenu = false;
+    },
     closeAll: (state, action) => {
       state.value.closeIt = false;
       state.value.showWomans = false;
@@ -451,6 +456,7 @@ export const HeadrsLinksSlice = createSlice({
       // ------- states for Audio -------------//
       state.value.showAudio = false;
       state.value.showPowerAndCharger = false;
+      state.value.showTechAccessories = false;
     },
   },
 });
@@ -522,10 +528,11 @@ export const {
   showGraphicTees,
   showTeenLimitedEdition,
   showBathroom,
-  closeAll,
   showDrinkAndLunch,
   showPartyAndDecoration,
   showAudio,
   showPowerAndCharger,
+  showTechAccessories,
+  closeAll,
 } = HeadrsLinksSlice.actions;
 export default HeadrsLinksSlice.reducer;

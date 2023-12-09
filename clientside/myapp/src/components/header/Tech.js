@@ -7,6 +7,7 @@ import {
   showTech,
   showAudio,
   showPowerAndCharger,
+  showTechAccessories,
 } from "../../Features/HeaderLinks";
 import styled from "styled-components";
 
@@ -69,8 +70,11 @@ const Tech = () => {
                   }
                   if (tech === "Power Bank & Chargers") {
                     dispatch(showTech());
-
                     dispatch(showPowerAndCharger());
+                  }
+                  if (tech === "Accessories") {
+                    dispatch(showTech());
+                    dispatch(showTechAccessories());
                   }
                 }}
               >

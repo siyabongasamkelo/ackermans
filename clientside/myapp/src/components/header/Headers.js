@@ -74,6 +74,7 @@ import DrinkAndLunch from "./Homewear/DrinkAndLunch";
 import PartyAndDecoration from "./Homewear/PartyAndDecoration";
 import Audio from "./Tech/Audio";
 import PowerAndCharger from "./Tech/PowerAndCharger";
+import TechAccessories from "./Tech/TechAccessories";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -362,6 +363,7 @@ const Headers = () => {
         {/* display things on Tech */}
         <Audio />
         <PowerAndCharger />
+        <TechAccessories />
       </Popup>
     </HeaderStyled>
   );
