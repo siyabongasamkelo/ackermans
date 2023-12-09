@@ -1,13 +1,7 @@
 import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  showMenu,
-  closeAll,
-  closeIts,
-  showHomeware,
-  showBathroom,
-} from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -22,23 +16,15 @@ export const Top = styled.div`
   }
 `;
 
-const Homeware = () => {
+const Bathroom = () => {
   const dispatch = useDispatch();
-  const homewaress = useSelector((state) => state.header.value.showHomeware);
+  const showBathroom = useSelector((state) => state.header.value.showBathroom);
 
-  const homeware = [
-    "View all in Homeware",
-    "Sale",
-    "Bathroom",
-    "Drinkware & Lunchboxes",
-    "Party & Decorations",
-    "Limited Edition",
-    "Novelty Essentials",
-  ];
+  const bathroom = ["View all in Bathroom", "Face Cloth", "Towels"];
 
   return (
     <>
-      {homewaress ? (
+      {showBathroom ? (
         <Top className="back d-flex align-items-center justify-content-between">
           <div>
             <ArrowLeft
@@ -48,7 +34,7 @@ const Homeware = () => {
                 dispatch(closeIts());
               }}
             />
-            Homeware
+            Bathroom
           </div>
           <XLg
             onClick={() => {
@@ -59,19 +45,11 @@ const Homeware = () => {
       ) : (
         ""
       )}
-      {homewaress
-        ? homeware.map((homeware) => {
+      {showBathroom
+        ? bathroom.map((bathroom) => {
             return (
-              <div
-                className="list d-flex align-items-center justify-content-between"
-                onClick={() => {
-                  if (homeware === "Bathroom") {
-                    dispatch(showHomeware());
-                    dispatch(showBathroom());
-                  }
-                }}
-              >
-                {homeware} <CaretRightFill />
+              <div className="list d-flex align-items-center justify-content-between">
+                {bathroom} <CaretRightFill />
               </div>
             );
           })
@@ -80,4 +58,4 @@ const Homeware = () => {
   );
 };
 
-export default Homeware;
+export default Bathroom;
