@@ -98,6 +98,7 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showMenu = true;
     },
     showPromotions: (state, action) => {
+      state.value.showMenu = false;
       state.value.showPromotions = true;
     },
     showWoman: (state, action) => {
