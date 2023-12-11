@@ -75,6 +75,7 @@ import PartyAndDecoration from "./Homewear/PartyAndDecoration";
 import Audio from "./Tech/Audio";
 import PowerAndCharger from "./Tech/PowerAndCharger";
 import TechAccessories from "./Tech/TechAccessories";
+import Promotions from "./Promotions";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -290,6 +291,7 @@ const Headers = () => {
         <Homeware />
         <Tech />
         <FinanctialSolutions />
+        <Promotions />
 
         {/* display things on woman */}
 

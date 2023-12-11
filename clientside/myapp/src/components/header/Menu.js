@@ -12,6 +12,7 @@ import {
   showHomeware,
   showTech,
   showFinance,
+  showPromotions,
 } from "../../Features/HeaderLinks";
 
 import styled from "styled-components";
@@ -101,6 +102,9 @@ const Menu = () => {
                   }
                   if (menu === "Financtial Solutions") {
                     dispatch(showFinance());
+                  }
+                  if (menu === "Promotions") {
+                    dispatch(showPromotions());
                   }
                 }}
               >

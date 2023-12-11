@@ -15,6 +15,7 @@ export const HeadrsLinksSlice = createSlice({
       showHomeware: false,
       showTech: false,
       showFinance: false,
+      showPromotions: false,
       //-------------------menu for womans------------------------//
       showClothing: false,
       showLingerieAndSleep: false,
@@ -95,6 +96,9 @@ export const HeadrsLinksSlice = createSlice({
     },
     showMenu: (state, action) => {
       state.value.showMenu = true;
+    },
+    showPromotions: (state, action) => {
+      state.value.showPromotions = true;
     },
     showWoman: (state, action) => {
       state.value.showWomans = !state.value.showWomans;
@@ -384,6 +388,7 @@ export const HeadrsLinksSlice = createSlice({
       state.value.showHomeware = false;
       state.value.showTech = false;
       state.value.showFinance = false;
+      state.value.showPromotions = false;
       // ------- states for womans menu -------------//
       state.value.showClothing = false;
       state.value.showLingerieAndSleep = false;
@@ -469,6 +474,7 @@ export const {
   showBaby,
   showKids,
   showTeens,
+  showPromotions,
   showCharacter,
   showHomeware,
   showTech,
