@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import DropDownWoman from "./DropDownWoman";
 import DropDownBeauty from "./DropDownBeauty";
 import DropDownBaby from "./DropDownBaby";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { hover } from "../../../Features/DropDown";
+import DropDownComp from "./DropDownComp";
 
 export const Dropdown = styled.div`
   height: 70px;
@@ -24,8 +25,17 @@ export const Dropdown = styled.div`
 
 const DropDownMenu = () => {
   const dispatch = useDispatch();
-  const hovers = useSelector((state) => state.dropdown.value);
-  console.log(hovers);
+
+  const productsTest = {
+    headers: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6"],
+    items1: ["items1 1", "items1 2", "items1 3", "items1 4"],
+    items2: ["items1 1", "items1 2", "items1 3", "items1 4"],
+    items3: ["items1 1", "items1 2", "items1 3", "items1 4"],
+    items4: ["items1 1", "items1 2", "items1 3", "items1 4"],
+    items5: ["items1 1", "items1 2", "items1 3", "items1 4"],
+    items6: ["items1 1", "items1 2", "items1 3", "items1 4"],
+  };
+
   return (
     <>
       <Dropdown className="">
@@ -148,6 +158,7 @@ const DropDownMenu = () => {
           <DropDownWoman />
           <DropDownBeauty />
           <DropDownBaby />
+          <DropDownComp products={productsTest} />
         </div>
       </Dropdown>
     </>

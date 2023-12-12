@@ -1,10 +1,21 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Dropdown } from "./DropDown.styled";
+import { hover } from "../../../Features/DropDown";
 
 const DropDownBaby = () => {
-  const hover = useSelector((state) => state.dropdown.value);
+  const hovers = useSelector((state) => state.dropdown.value);
+  const dispatch = useDispatch();
+
   return (
-    <Dropdown hover={hover}>
+    <Dropdown
+      hover={hovers}
+      onMouseOver={() => {
+        dispatch(hover(".baby"));
+      }}
+      onMouseLeave={() => {
+        dispatch(hover(""));
+      }}
+    >
       <div className="baby justify-content-around">
         <div>
           <h5>NEWBORN</h5>
