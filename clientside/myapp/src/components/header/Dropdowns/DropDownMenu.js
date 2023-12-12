@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import DropDownWoman from "./DropDownWoman";
 import DropDownBeauty from "./DropDownBeauty";
+import DropDownBaby from "./DropDownBaby";
+import { useState } from "react";
 
 export const Dropdown = styled.div`
   height: 70px;
@@ -20,12 +22,24 @@ export const Dropdown = styled.div`
 `;
 
 const DropDownMenu = () => {
+  const [show, setShow] = useState("");
+  console.log(show);
   return (
     <>
       <Dropdown className="">
         <div className="linkcover d-flex justify-content-center align-items-center">
           <div className="cover  d-flex justify-content-evenly">
-            <Link to="qwe">PROMOTIONS</Link>
+            <Link
+              to="qwe"
+              onMouseOver={() => {
+                setShow("Promotions");
+              }}
+              onMouseLeave={() => {
+                setShow("");
+              }}
+            >
+              PROMOTIONS
+            </Link>
             <Link to="qwe">WOMAN</Link>
             <Link to="qwe">BEAUTY</Link>
             <Link to="qwe">KIDS</Link>
@@ -38,8 +52,9 @@ const DropDownMenu = () => {
           </div>
         </div>
         <div className="dropdowns">
-          {/* <DropDownWoman /> */}
+          <DropDownWoman />
           <DropDownBeauty />
+          <DropDownBaby />
         </div>
       </Dropdown>
     </>

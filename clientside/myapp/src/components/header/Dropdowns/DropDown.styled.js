@@ -1,8 +1,10 @@
 import styled from "styled-components";
 export const Dropdown = styled.div`
   height: auto;
-  .woman {
-    display: flex;
+  .woman,
+  .beauty,
+  .baby {
+    display: none;
     div {
       width: 18%;
       height: 100px;
