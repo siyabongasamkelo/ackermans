@@ -10,6 +10,7 @@ import {
   showTechAccessories,
 } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { tech } from "./MenuData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -27,13 +28,6 @@ export const Top = styled.div`
 const Tech = () => {
   const dispatch = useDispatch();
   const showTechs = useSelector((state) => state.header.value.showTech);
-
-  const tech = [
-    "View all in Tech",
-    "Audio",
-    "Power Bank & Chargers",
-    "Accessories",
-  ];
 
   return (
     <>

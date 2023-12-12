@@ -9,6 +9,7 @@ import {
   showBagAndWallets,
   showHeadgear,
 } from "../../../Features/HeaderLinks";
+import { accessories } from "./WomanData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -28,8 +29,6 @@ const Accessories = () => {
   const showAccessoriess = useSelector(
     (state) => state.header.value.showAccessories
   );
-
-  const Accessories = ["View all in Accessories", "Bags & Wallets", "Headgear"];
 
   return (
     <>
@@ -55,7 +54,7 @@ const Accessories = () => {
         ""
       )}
       {showAccessoriess
-        ? Accessories.map((accessories) => {
+        ? accessories.map((accessories) => {
             return (
               <div
                 className="list d-flex align-items-center justify-content-between"

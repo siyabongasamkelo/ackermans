@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { drinkAndLunch } from "./HomewearData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -21,11 +22,6 @@ const DrinkAndLunch = () => {
   const showDrinkAndLunch = useSelector(
     (state) => state.header.value.showDrinkAndLunch
   );
-
-  const drinkAndLunch = [
-    "View all in Drinkware & LunchBoxes",
-    "Drinkware,Lunchboxes",
-  ];
 
   return (
     <>

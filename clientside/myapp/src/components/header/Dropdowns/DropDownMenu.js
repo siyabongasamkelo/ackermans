@@ -38,7 +38,7 @@ const DropDownMenu = () => {
 
   return (
     <>
-      <Dropdown className="">
+      <Dropdown className=" d-none d-lg-block ">
         <div className="linkcover d-flex justify-content-center align-items-center">
           <div className="cover  d-flex justify-content-evenly">
             <Link

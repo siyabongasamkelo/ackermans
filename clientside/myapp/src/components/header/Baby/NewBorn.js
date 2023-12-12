@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { newborn } from "./BabyData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -19,17 +20,6 @@ export const Top = styled.div`
 const Newborn = () => {
   const dispatch = useDispatch();
   const showNewBorn = useSelector((state) => state.header.value.showNewBorn);
-
-  const newborn = [
-    "View all in Newborn",
-    "Babygrow",
-    "Rompers",
-    "Bottoms and Leggings",
-    "Bodyvests",
-    "Sets",
-    "Accessories",
-    "Shoes",
-  ];
 
   return (
     <>

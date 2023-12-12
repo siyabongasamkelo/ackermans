@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { school } from "./KidsData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -19,16 +20,6 @@ export const Top = styled.div`
 const School = () => {
   const dispatch = useDispatch();
   const showSchool = useSelector((state) => state.header.value.showSchool);
-
-  const school = [
-    "View all in School",
-    "School Clothes",
-    "School Shoes",
-    "School Bags",
-    "School SportBag",
-    "School Stationary",
-    "Drinkware & Lunchboxes",
-  ];
 
   return (
     <>

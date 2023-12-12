@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { showMenu, closeAll, closeIts } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { character } from "./MenuData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -21,16 +22,6 @@ const Character = () => {
   const showCharacters = useSelector(
     (state) => state.header.value.showCharacter
   );
-
-  const character = [
-    "View all in Character",
-    "Sale",
-    "Baby",
-    "Kids",
-    "Homeware",
-    "Brands",
-    "Christmas",
-  ];
 
   return (
     <>

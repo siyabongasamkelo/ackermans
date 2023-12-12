@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { showMenu, closeAll, closeIts } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { FinanctialSolutionss } from "./MenuData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -19,17 +20,6 @@ export const Top = styled.div`
 const FinanctialSolutions = () => {
   const dispatch = useDispatch();
   const showFinance = useSelector((state) => state.header.value.showFinance);
-
-  const FinanctialSolutions = [
-    "Account Application",
-    "Ackerman Account",
-    "Lay-by",
-    "Insurance",
-    "Loans",
-    "Bill Payment",
-    "Money Transer",
-    "Vouchers",
-  ];
 
   return (
     <>
@@ -55,7 +45,7 @@ const FinanctialSolutions = () => {
         ""
       )}
       {showFinance
-        ? FinanctialSolutions.map((finance) => {
+        ? FinanctialSolutionss.map((finance) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
                 {finance} <CaretRightFill />

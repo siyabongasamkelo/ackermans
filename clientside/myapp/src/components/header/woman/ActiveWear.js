@@ -9,6 +9,7 @@ import {
   showActiveTop,
   showActivePants,
 } from "../../../Features/HeaderLinks";
+import { activeWare } from "./WomanData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -28,8 +29,6 @@ const ActiveWare = () => {
   const showActivewares = useSelector(
     (state) => state.header.value.showActiveware
   );
-
-  const activeWare = ["View all in ActiveWare", "Top", "Pants"];
 
   return (
     <>

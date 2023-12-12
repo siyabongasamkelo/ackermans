@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { girls } from "./KidsData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -19,21 +20,6 @@ export const Top = styled.div`
 const GirlsTwoToTen = () => {
   const dispatch = useDispatch();
   const showGirls210 = useSelector((state) => state.header.value.showGirls210);
-
-  const girls = [
-    "View all in Girls 2-10 years",
-    "Tops & T-Shirts",
-    "Bottoms & Jeans",
-    "Jacket & Knitwear",
-    "Tracksuits",
-    "Sets",
-    "Dungerees",
-    "Sleepware",
-    "Underwear & Socks",
-    "Swimwear",
-    "Accessories",
-    "Shoes",
-  ];
 
   return (
     <>

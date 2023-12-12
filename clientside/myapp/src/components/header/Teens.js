@@ -13,6 +13,7 @@ import {
   showTeenLimitedEdition,
 } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { teens } from "./MenuData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -30,19 +31,6 @@ export const Top = styled.div`
 const Teens = () => {
   const dispatch = useDispatch();
   const showTeenss = useSelector((state) => state.header.value.showTeens);
-
-  const teens = [
-    "View all in Teens",
-    "Sale",
-    "Shop All",
-    "Teen Boys",
-    "Teen Girls",
-    "Brands",
-    "Graphic Tees",
-    "Tropical Heat",
-    "The Demin Shop",
-    "Limited Edition",
-  ];
 
   return (
     <>

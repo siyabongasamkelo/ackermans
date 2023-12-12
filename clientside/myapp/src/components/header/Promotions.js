@@ -14,6 +14,7 @@ import {
   showFirstWardrobe,
 } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { promotions } from "./MenuData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -33,8 +34,6 @@ const Promotions = () => {
   const showPromotions = useSelector(
     (state) => state.header.value.showPromotions
   );
-
-  const promotions = ["Back To School", "Christmas"];
 
   return (
     <>

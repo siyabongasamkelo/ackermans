@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { limited } from "./KidsData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -18,18 +19,9 @@ export const Top = styled.div`
 
 const LimitedEditionKids = () => {
   const dispatch = useDispatch();
-  const showLimitedKids = useSelector((state) => state.header.value.showLimitedKids);
-
-  const limited = [
-    "View all in Limited Edition",
-    "Boys 2-8 Years",
-    "Girls 2-8 Years",
-    "Sleepwear",
-    "Accessories",
-    "Shoes",
-    "Boys 2-10 Years",
-    "Girls 2-10 Years",
-  ];
+  const showLimitedKids = useSelector(
+    (state) => state.header.value.showLimitedKids
+  );
 
   return (
     <>

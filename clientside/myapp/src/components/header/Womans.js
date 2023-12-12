@@ -13,6 +13,7 @@ import {
   showActiveware,
   showLimitedEdtion,
 } from "../../Features/HeaderLinks";
+import { woman } from "./MenuData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -30,22 +31,6 @@ export const Top = styled.div`
 const Womans = () => {
   const dispatch = useDispatch();
   const showWomans = useSelector((state) => state.header.value.showWomans);
-  const woman = [
-    "View all in Woman",
-    "Sale",
-    "Clothing",
-    "Lingerie & Sleepwear",
-    "Shoes",
-    "Accessories",
-    "ActiveWare",
-    "Limited Edition",
-    "The LIngerie Shop",
-    "The Denim Shop",
-    "Bra Guide",
-    "Trnding",
-    "Christmas",
-    "Summer-Ware Capsule",
-  ];
 
   return (
     <>

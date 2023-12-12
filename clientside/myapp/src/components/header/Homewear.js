@@ -10,6 +10,7 @@ import {
   showPartyAndDecoration,
 } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { homeware } from "./MenuData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -27,16 +28,6 @@ export const Top = styled.div`
 const Homeware = () => {
   const dispatch = useDispatch();
   const homewaress = useSelector((state) => state.header.value.showHomeware);
-
-  const homeware = [
-    "View all in Homeware",
-    "Sale",
-    "Bathroom",
-    "Drinkware & Lunchboxes",
-    "Party & Decorations",
-    "Limited Edition",
-    "Novelty Essentials",
-  ];
 
   return (
     <>

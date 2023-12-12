@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { teenGirls } from "./TeenData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -21,21 +22,6 @@ const TeenGirls = () => {
   const showTeenGirls = useSelector(
     (state) => state.header.value.showTeenGirls
   );
-
-  const teenGirls = [
-    "View all in Teen Girls",
-    "Tops & T-Shirts",
-    "Shorts",
-    "Skirts",
-    "Bottom & Jeans",
-    "Jackets",
-    "Tracksuits",
-    "Dresses",
-    "Sleepwear",
-    "Underwear & Socks",
-    "Bath & Body",
-    "Accessories",
-  ];
 
   return (
     <>

@@ -11,6 +11,7 @@ import {
   showSandals,
   showSneakersAndTrainers,
 } from "../../../Features/HeaderLinks";
+import { shoes } from "./WomanData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -28,14 +29,6 @@ export const Top = styled.div`
 const Shoes = () => {
   const dispatch = useDispatch();
   const showShoess = useSelector((state) => state.header.value.showShoes);
-
-  const shoes = [
-    "View all in Shoes",
-    "Heels",
-    "Pumps & Flats",
-    "Sandals",
-    "Sneakers & Trainers",
-  ];
 
   return (
     <>

@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { accessories } from "./TechData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -21,8 +22,6 @@ const TechAccessories = () => {
   const showTechAccessories = useSelector(
     (state) => state.header.value.showTechAccessories
   );
-
-  const accessories = ["View all in Accessories", "Watches", "Accessories"];
 
   return (
     <>

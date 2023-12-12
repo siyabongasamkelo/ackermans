@@ -13,6 +13,7 @@ import {
   showBrands,
 } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { beauty } from "./MenuData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -30,16 +31,6 @@ export const Top = styled.div`
 const Beauty = () => {
   const dispatch = useDispatch();
   const showBeautys = useSelector((state) => state.header.value.showBeauty);
-
-  const beauty = [
-    "View all in Beauty",
-    "Makeup",
-    "Bath & Body",
-    "Skincare",
-    "Oral Care",
-    "Fragrance",
-    "Brands",
-  ];
 
   return (
     <>

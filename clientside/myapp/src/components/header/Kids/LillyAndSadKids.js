@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { lilly } from "./KidsData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -21,14 +22,6 @@ const LillyAndSidKids = () => {
   const showLillyAndSadKids = useSelector(
     (state) => state.header.value.showLillyAndSadKids
   );
-
-  const lilly = [
-    "View all in Lilly + Sid",
-    "Boys 2-8 Years",
-    "Girls 2-8 Years",
-    "Boys 2-10 Years",
-    "Girls 2-10 Years",
-  ];
 
   return (
     <>

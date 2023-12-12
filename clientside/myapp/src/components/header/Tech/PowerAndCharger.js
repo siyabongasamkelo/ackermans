@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { power } from "./TechData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -21,12 +22,6 @@ const PowerAndCharger = () => {
   const showPowerAndCharger = useSelector(
     (state) => state.header.value.showPowerAndCharger
   );
-
-  const power = [
-    "View all in Power Bank & Chargers",
-    "Power Banks",
-    "Charger Cables",
-  ];
 
   return (
     <>

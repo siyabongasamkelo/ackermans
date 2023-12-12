@@ -14,6 +14,7 @@ import {
   showSkirt,
   showDressAndJump,
 } from "../../../Features/HeaderLinks";
+import { clothing } from "./WomanData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -31,17 +32,6 @@ export const Top = styled.div`
 const Clothing = () => {
   const dispatch = useDispatch();
   const showClothings = useSelector((state) => state.header.value.showClothing);
-
-  const clothing = [
-    "View all in Clothing",
-    "Tops",
-    "T-Shirts",
-    "Pants",
-    "Demin Jeans",
-    "Shorts",
-    "Skirts",
-    "Dresses Jumpsuits",
-  ];
 
   return (
     <>

@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { girls3to36 } from "./BabyData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -21,18 +22,6 @@ const Girls3to36 = () => {
   const showGirls3to36 = useSelector(
     (state) => state.header.value.showGirls3to36
   );
-
-  const girls3to36 = [
-    "View all in Girls 3-36 Months",
-    "Dresses & Dungarees",
-    "Tops & T-Shirts",
-    "Bottoms & Jeans",
-    "Jackets & Knitwear",
-    "Tracksuits",
-    "Sets",
-    "Accessories",
-    "Shoes",
-  ];
 
   return (
     <>

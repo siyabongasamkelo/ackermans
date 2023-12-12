@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { BabyEssentialss } from "./BabyData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -21,16 +22,6 @@ const BabyEssentials = () => {
   const showBabyEssential = useSelector(
     (state) => state.header.value.showBabyEssential
   );
-
-  const BabyEssentials = [
-    "View all in Baby Essentials",
-    "Baby Bedroom",
-    "Baby Bathroom",
-    "Nappi & Wipes",
-    "Bags & Luggage",
-    "Baby Toiletries",
-    "Feeding & Accessories",
-  ];
 
   return (
     <>
@@ -56,7 +47,7 @@ const BabyEssentials = () => {
         ""
       )}
       {showBabyEssential
-        ? BabyEssentials.map((boys3to36) => {
+        ? BabyEssentialss.map((boys3to36) => {
             return (
               <div className="list d-flex align-items-center justify-content-between">
                 {boys3to36} <CaretRightFill />

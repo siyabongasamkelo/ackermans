@@ -14,6 +14,7 @@ import {
   showFirstWardrobe,
 } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { baby } from "./MenuData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -31,19 +32,6 @@ export const Top = styled.div`
 const Baby = () => {
   const dispatch = useDispatch();
   const showBabys = useSelector((state) => state.header.value.showBaby);
-
-  const baby = [
-    "View all in Baby",
-    "Sale",
-    "Newborn",
-    "Boys 3-36 Months",
-    "Girls 3-36 Months",
-    "Baby Esentials",
-    "Limitted Edition",
-    "Christmas",
-    "Lilly + Sid",
-    "My First Wardrobe",
-  ];
 
   return (
     <>

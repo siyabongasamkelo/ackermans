@@ -14,6 +14,7 @@ import {
   showLingerieEssentials,
   showSleepWare,
 } from "../../../Features/HeaderLinks";
+import { lingerieAndSleep } from "./WomanData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -33,18 +34,6 @@ const LingerieAndSleep = () => {
   const showLingerieAndSleeps = useSelector(
     (state) => state.header.value.showLingerieAndSleep
   );
-
-  const LingerieAndSleep = [
-    "View all in Lingerie & SleepWear",
-    "Bras",
-    "Panties",
-    "Seamfree",
-    "Shapewear",
-    "Socks & Hosiery",
-    "Lingerie Essentials",
-    "Sleepware",
-    "Matching Sets",
-  ];
 
   return (
     <>
@@ -70,7 +59,7 @@ const LingerieAndSleep = () => {
         ""
       )}
       {showLingerieAndSleeps
-        ? LingerieAndSleep.map((lingerie) => {
+        ? lingerieAndSleep.map((lingerie) => {
             return (
               <div
                 className="list d-flex align-items-center justify-content-between"

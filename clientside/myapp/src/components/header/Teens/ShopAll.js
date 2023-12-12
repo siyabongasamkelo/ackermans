@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { shopAll } from "./TeenData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -19,22 +20,6 @@ export const Top = styled.div`
 const ShopAll = () => {
   const dispatch = useDispatch();
   const showShopAll = useSelector((state) => state.header.value.showShopAll);
-
-  const shopAll = [
-    "View all in Shop All",
-    "Tops & T-Shirts",
-    "Shorts",
-    "Skirts",
-    "Bottoms & Jeans",
-    "Jackets",
-    "Tracksuits",
-    "Dresses",
-    "Sleepwear",
-    "Underwear & Socks",
-    "Accessories",
-    "Shoes",
-    "Bath & Body",
-  ];
 
   return (
     <>

@@ -2,6 +2,7 @@ import { ArrowLeft, CaretRightFill, XLg } from "react-bootstrap-icons";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { closeIts, showMenu, closeAll } from "../../../Features/HeaderLinks";
+import { makeUp } from "./BeautyData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -19,14 +20,6 @@ export const Top = styled.div`
 const Makeup = () => {
   const dispatch = useDispatch();
   const showMakeUp = useSelector((state) => state.header.value.showMakeUp);
-
-  const makeUp = [
-    "View all in Makeup",
-    "Eyes",
-    "Lips",
-    "Face",
-    "Cosmetic Accessories",
-  ];
 
   return (
     <>

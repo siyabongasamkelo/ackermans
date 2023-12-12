@@ -14,6 +14,7 @@ import {
   showLillyAndSadKids,
 } from "../../Features/HeaderLinks";
 import styled from "styled-components";
+import { kids } from "./MenuData";
 
 export const Top = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -31,21 +32,6 @@ export const Top = styled.div`
 const Kids = () => {
   const dispatch = useDispatch();
   const showKidss = useSelector((state) => state.header.value.showKids);
-
-  const kids = [
-    "View all in Kids",
-    "Sale",
-    "Boys 2-10 Years",
-    "Girls 2-10 Years",
-    "School",
-    "Limited Edition",
-    "The Denim Shop",
-    "Christmas",
-    "Swim Shop",
-    "Back To Crech",
-    "Valentines Day",
-    "Lilly + Sid",
-  ];
 
   return (
     <>
