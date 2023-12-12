@@ -11,4 +11,8 @@ export const Dropdown = styled.div`
       margin: 20px 0 20px 0;
     }
   }
+  /* ${({ hover }) => hover} */
+  ${({ hover }) => hover} {
+    display: flex;
+  }
 `;

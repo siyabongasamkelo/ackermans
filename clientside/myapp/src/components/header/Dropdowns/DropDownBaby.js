@@ -1,8 +1,10 @@
+import { useSelector } from "react-redux";
 import { Dropdown } from "./DropDown.styled";
 
 const DropDownBaby = () => {
+  const hover = useSelector((state) => state.dropdown.value);
   return (
-    <Dropdown>
+    <Dropdown hover={hover}>
       <div className="baby justify-content-around">
         <div>
           <h5>NEWBORN</h5>

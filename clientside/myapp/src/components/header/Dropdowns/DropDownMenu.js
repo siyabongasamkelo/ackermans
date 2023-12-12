@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import DropDownWoman from "./DropDownWoman";
 import DropDownBeauty from "./DropDownBeauty";
 import DropDownBaby from "./DropDownBaby";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { hover } from "../../../Features/DropDown";
 
 export const Dropdown = styled.div`
   height: 70px;
@@ -22,8 +23,9 @@ export const Dropdown = styled.div`
 `;
 
 const DropDownMenu = () => {
-  const [show, setShow] = useState("");
-  console.log(show);
+  const dispatch = useDispatch();
+  const hovers = useSelector((state) => state.dropdown.value);
+  console.log(hovers);
   return (
     <>
       <Dropdown className="">
@@ -32,23 +34,114 @@ const DropDownMenu = () => {
             <Link
               to="qwe"
               onMouseOver={() => {
-                setShow("Promotions");
+                dispatch(hover(".promotions"));
               }}
               onMouseLeave={() => {
-                setShow("");
+                dispatch(hover(""));
               }}
             >
               PROMOTIONS
             </Link>
-            <Link to="qwe">WOMAN</Link>
-            <Link to="qwe">BEAUTY</Link>
-            <Link to="qwe">KIDS</Link>
-            <Link to="qwe">TEENS</Link>
+            <Link
+              to="qwe"
+              onMouseOver={() => {
+                dispatch(hover(".woman"));
+              }}
+              onMouseLeave={() => {
+                dispatch(hover(""));
+              }}
+            >
+              WOMAN
+            </Link>
+            <Link
+              to="qwe"
+              onMouseOver={() => {
+                dispatch(hover(".beauty"));
+              }}
+              onMouseLeave={() => {
+                dispatch(hover(""));
+              }}
+            >
+              BEAUTY
+            </Link>
+            <Link
+              to="qwe"
+              onMouseOver={() => {
+                dispatch(hover(".baby"));
+              }}
+              onMouseLeave={() => {
+                dispatch(hover(""));
+              }}
+            >
+              BABY
+            </Link>
+            <Link
+              to="qwe"
+              onMouseOver={() => {
+                dispatch(hover(".kids"));
+              }}
+              onMouseLeave={() => {
+                dispatch(hover(""));
+              }}
+            >
+              KIDS
+            </Link>
+            <Link
+              to="qwe"
+              onMouseOver={() => {
+                dispatch(hover(".teens"));
+              }}
+              onMouseLeave={() => {
+                dispatch(hover(""));
+              }}
+            >
+              TEENS
+            </Link>
 
-            <Link to="qwe">CHARACTER</Link>
-            <Link to="qwe">HOMEWARE</Link>
-            <Link to="qwe">TECH</Link>
-            <Link to="qwe">CELLULAR</Link>
+            <Link
+              to="qwe"
+              onMouseOver={() => {
+                dispatch(hover(".character"));
+              }}
+              onMouseLeave={() => {
+                dispatch(hover(""));
+              }}
+            >
+              CHARACTER
+            </Link>
+            <Link
+              to="qwe"
+              onMouseOver={() => {
+                dispatch(hover(".homeware"));
+              }}
+              onMouseLeave={() => {
+                dispatch(hover(""));
+              }}
+            >
+              HOMEWARE
+            </Link>
+            <Link
+              to="qwe"
+              onMouseOver={() => {
+                dispatch(hover(".tech"));
+              }}
+              onMouseLeave={() => {
+                dispatch(hover(""));
+              }}
+            >
+              TECH
+            </Link>
+            <Link
+              to="qwe"
+              onMouseOver={() => {
+                dispatch(hover(".cellular"));
+              }}
+              onMouseLeave={() => {
+                dispatch(hover(""));
+              }}
+            >
+              CELLULAR
+            </Link>
           </div>
         </div>
         <div className="dropdowns">
