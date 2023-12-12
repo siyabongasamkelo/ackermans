@@ -1,19 +1,8 @@
-import styled from "styled-components";
-export const Dropdowns = styled.div`
-  height: auto;
-  .woman {
-    display: flex;
-    div {
-      width: 18%;
-      height: 100px;
-      margin: 20px 0 20px 0;
-    }
-  }
-`;
+import { Dropdown } from "./DropDown.styled";
 
 const DropDownWoman = () => {
   return (
-    <Dropdowns>
+    <Dropdown>
       <div className="woman justify-content-around">
         <div>
           <h5>CLOTHING</h5>
@@ -73,7 +62,7 @@ const DropDownWoman = () => {
           </ul>
         </div>
       </div>
-    </Dropdowns>
+    </Dropdown>
   );
 };
 

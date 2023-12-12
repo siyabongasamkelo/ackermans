@@ -1,0 +1,12 @@
+import styled from "styled-components";
+export const Dropdown = styled.div`
+  height: auto;
+  .woman {
+    display: flex;
+    div {
+      width: 18%;
+      height: 100px;
+      margin: 20px 0 20px 0;
+    }
+  }
+`;

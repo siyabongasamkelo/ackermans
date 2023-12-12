@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import DropDownWoman from "./DropDownWoman";
+import DropDownBeauty from "./DropDownBeauty";
 
 export const Dropdown = styled.div`
   height: 70px;
@@ -37,7 +38,8 @@ const DropDownMenu = () => {
           </div>
         </div>
         <div className="dropdowns">
-          <DropDownWoman />
+          {/* <DropDownWoman /> */}
+          <DropDownBeauty />
         </div>
       </Dropdown>
     </>
