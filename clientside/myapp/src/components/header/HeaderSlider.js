@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import HeaderSliderComp from "./HeaderSliderComp";
-import { themenu, woman } from "./MenuData";
+import { themenu } from "./MenuData";
+import WomanSliders from "./woman/WomanSliders";
 
 export const Popup = styled.div`
   height: 90vh;
@@ -27,7 +28,7 @@ export const Popup = styled.div`
 `;
 
 const HeaderSlider = () => {
-  const showMenu = useSelector((state) => state.headers.value.showMenu);
+  const showSlider = useSelector((state) => state.headers.value.showSlider);
 
   // const showMenus = useSelector((state) => state.headers.value.showWoman);
   return (
@@ -35,7 +36,7 @@ const HeaderSlider = () => {
       <Popup
         as={motion.div}
         animate={{
-          x: showMenu ? -12 : -500,
+          x: showSlider ? -12 : -500,
         }}
         transition={{ duration: 0.5 }}
         className=" d-lg-none"
@@ -44,7 +45,7 @@ const HeaderSlider = () => {
         <HeaderSliderComp data={themenu} shows={"showMenu"} title={"MENU"} />
 
         {/* This is for displaying the woman menu */}
-        <HeaderSliderComp data={woman} shows={"showWoman"} title={"WOMAN"} />
+        <WomanSliders />
       </Popup>
     </>
   );
