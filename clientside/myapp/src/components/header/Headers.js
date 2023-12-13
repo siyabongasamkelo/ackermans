@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Cart4, GeoAlt, List, Person, Search } from "react-bootstrap-icons";
 import { useDispatch } from "react-redux";
-import { showMenu, closeIts } from "../../Features/HeaderLinks";
 import HeaderSlider from "./HeaderSlider";
 import DropDownMenu from "./Dropdowns/DropDownMenu";
+import { show } from "../../Features/HeaderLink";
 
 export const HeaderStyled = styled.header`
   @media only screen and (max-width: 600px) {
@@ -123,8 +123,7 @@ const Headers = () => {
           <List
             className=" d-lg-none"
             onClick={() => {
-              dispatch(showMenu());
-              dispatch(closeIts());
+              dispatch(show("menu"));
             }}
           />
           <h3>ACKERMANS</h3>

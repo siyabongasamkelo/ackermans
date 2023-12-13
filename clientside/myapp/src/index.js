@@ -11,6 +11,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
 import HeaderLinks from "./Features/HeaderLinks";
 import DropDown from "./Features/DropDown";
+import HeaderLink from "./Features/HeaderLink";
 
 const persistConfig = {
   key: "root",
@@ -20,6 +21,7 @@ const persistConfig = {
 
 const reducer = combineReducers({
   header: HeaderLinks,
+  headers: HeaderLink,
   dropdown: DropDown,
 });
 
