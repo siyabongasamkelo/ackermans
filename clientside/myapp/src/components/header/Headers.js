@@ -123,7 +123,7 @@ const Headers = () => {
           <List
             className=" d-lg-none"
             onClick={() => {
-              dispatch(show("slider"));
+              dispatch(show("menu"));
             }}
           />
           <h3>ACKERMANS</h3>
