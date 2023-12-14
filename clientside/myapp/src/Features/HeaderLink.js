@@ -12,6 +12,7 @@ export const HeadrsLinkSlice = createSlice({
       showLingerie: false,
       showShoes: false,
       showAccessories: false,
+      showActiveware: false,
     },
   },
   reducers: {
@@ -43,10 +44,14 @@ export const HeadrsLinkSlice = createSlice({
         state.value.showShoes = true;
       }
       if (action.payload === "Accessories") {
-        alert("working");
         state.value.showMenu = false;
         state.value.showWoman = false;
         state.value.showAccessories = true;
+      }
+      if (action.payload === "ActiveWare") {
+        state.value.showMenu = false;
+        state.value.showWoman = false;
+        state.value.showActiveware = true;
       }
     },
     closeAll: (state, action) => {
@@ -58,6 +63,7 @@ export const HeadrsLinkSlice = createSlice({
       state.value.showShoes = false;
       state.value.showLingerie = false;
       state.value.showAccessories = false;
+      state.value.showActiveware = false;
     },
   },
 });
