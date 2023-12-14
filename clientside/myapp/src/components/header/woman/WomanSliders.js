@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderSliderComp from "../HeaderSliderComp";
-import { clothing, lingerieAndSleep, shoes } from "./WomanData";
+import { accessories, clothing, lingerieAndSleep, shoes } from "./WomanData";
 import { woman } from "../MenuData";
 
 const WomanSliders = () => {
@@ -18,6 +18,11 @@ const WomanSliders = () => {
         title={"CLOTHING"}
       />
       <HeaderSliderComp data={shoes} shows={"showShoes"} title={"SHOES"} />
+      <HeaderSliderComp
+        data={accessories}
+        shows={"Accessories"}
+        title={"ACCESSORIES"}
+      />
     </>
   );
 };
