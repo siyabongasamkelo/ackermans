@@ -36,12 +36,6 @@ const WomanSliders = () => {
       />
 
       <HeaderSliderComp
-        data={accessories}
-        shows={"showAccessories"}
-        title={"ACCESSORIES"}
-      />
-
-      <HeaderSliderComp
         data={activeWare}
         shows={"showActiveware"}
         title={"ACTIVEWEAR"}

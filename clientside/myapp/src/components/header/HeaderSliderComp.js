@@ -9,11 +9,7 @@ export const Top = styled.div`
   height: 50px;
   svg {
     margin-right: 20px;
-  }
-  div {
-    svg {
-      margin-left: 20px;
-    }
+    fill: black;
   }
 `;
 
@@ -44,7 +40,7 @@ const HeaderSliderComp = ({ data, shows, title }) => {
                   dispatch(show(menu));
                 }}
               >
-                {menu} <CaretRightFill />
+                {menu} <CaretRightFill style={{ fill: "black" }} />
               </div>
             );
           })
