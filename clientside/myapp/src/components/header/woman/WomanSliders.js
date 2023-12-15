@@ -4,6 +4,7 @@ import {
   accessories,
   activeWare,
   clothing,
+  limitedEdition,
   lingerieAndSleep,
   shoes,
 } from "./WomanData";
@@ -44,6 +45,12 @@ const WomanSliders = () => {
         data={activeWare}
         shows={"showActiveware"}
         title={"ACTIVEWEAR"}
+      />
+
+      <HeaderSliderComp
+        data={limitedEdition}
+        shows={"showLimitedEdition"}
+        title={"LIMITED EDTION"}
       />
     </>
   );

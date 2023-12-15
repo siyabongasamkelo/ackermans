@@ -13,6 +13,7 @@ export const HeadrsLinkSlice = createSlice({
       showShoes: false,
       showAccessories: false,
       showActiveware: false,
+      showLimitedEdition: false,
     },
   },
   reducers: {
@@ -53,6 +54,11 @@ export const HeadrsLinkSlice = createSlice({
         state.value.showWoman = false;
         state.value.showActiveware = true;
       }
+      if (action.payload === "Limited Edition") {
+        state.value.showMenu = false;
+        state.value.showWoman = false;
+        state.value.showLimitedEdition = true;
+      }
     },
     closeAll: (state, action) => {
       state.value.showMenu = false;
@@ -64,6 +70,7 @@ export const HeadrsLinkSlice = createSlice({
       state.value.showLingerie = false;
       state.value.showAccessories = false;
       state.value.showActiveware = false;
+      state.value.showLimitedEdition = false;
     },
   },
 });
