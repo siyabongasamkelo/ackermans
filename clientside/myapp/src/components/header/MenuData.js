@@ -103,11 +103,11 @@ export const teens = [
   "Shop All",
   "Teen Boys",
   "Teen Girls",
-  "Brands",
+  "brands",
   "Graphic Tees",
   "Tropical Heat",
   "The Demin Shop",
-  "Limited Edition",
+  "Limited Editions",
 ];
 
 export const woman = [

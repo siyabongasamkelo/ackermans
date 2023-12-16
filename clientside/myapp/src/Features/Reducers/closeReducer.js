@@ -35,4 +35,10 @@ export const closeReducer = (state, action) => {
   state.value.showKidsLillyPlusSid = false;
   //-------------states for the kids teens ----------------//
   state.value.showTeens = false;
+  state.value.showShopAll = false;
+  state.value.showTeenBoys = false;
+  state.value.showTeenGirls = false;
+  state.value.showTeenBrands = false;
+  state.value.showGraphicTees = false;
+  state.value.showTeenLimitedEdition = false;
 };

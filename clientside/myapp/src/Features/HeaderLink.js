@@ -43,6 +43,12 @@ export const HeadrsLinkSlice = createSlice({
       showKidsLillyPlusSid: false,
       //-------------states for the kids teens ----------------//
       showTeens: false,
+      showShopAll: false,
+      showTeenBoys: false,
+      showTeenGirls: false,
+      showTeenBrands: false,
+      showGraphicTees: false,
+      showTeenLimitedEdition: false,
     },
   },
   reducers: {

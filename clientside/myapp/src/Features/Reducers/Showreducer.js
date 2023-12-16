@@ -158,4 +158,35 @@ export const showReducer = (state, action) => {
     state.value.showMenu = false;
     state.value.showTeens = true;
   }
+  if (action.payload === "Shop All") {
+    state.value.showMenu = false;
+    state.value.showTeens = false;
+    state.value.showShopAll = true;
+  }
+
+  if (action.payload === "Teen Boys") {
+    state.value.showMenu = false;
+    state.value.showTeens = false;
+    state.value.showTeenBoys = true;
+  }
+  if (action.payload === "Teen Girls") {
+    state.value.showMenu = false;
+    state.value.showTeens = false;
+    state.value.showTeenGirls = true;
+  }
+  if (action.payload === "brands") {
+    state.value.showMenu = false;
+    state.value.showTeens = false;
+    state.value.showTeenBrands = true;
+  }
+  if (action.payload === "Graphic Tees") {
+    state.value.showMenu = false;
+    state.value.showTeens = false;
+    state.value.showGraphicTees = true;
+  }
+  if (action.payload === "Limited Editions") {
+    state.value.showMenu = false;
+    state.value.showTeens = false;
+    state.value.showTeenLimitedEdition = true;
+  }
 };
