@@ -189,4 +189,15 @@ export const showReducer = (state, action) => {
     state.value.showTeens = false;
     state.value.showTeenLimitedEdition = true;
   }
+
+  //-------------states for the character menu ----------------//
+  if (action.payload === "Character") {
+    state.value.showMenu = false;
+    state.value.showCharacter = true;
+  }
+  if (action.payload === "Kid") {
+    state.value.showMenu = false;
+    state.value.showCharacter = false;
+    state.value.showCharacterKid = true;
+  }
 };

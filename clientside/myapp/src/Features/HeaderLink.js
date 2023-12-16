@@ -49,6 +49,9 @@ export const HeadrsLinkSlice = createSlice({
       showTeenBrands: false,
       showGraphicTees: false,
       showTeenLimitedEdition: false,
+      //-------------states for the kids teens ----------------//
+      showCharacter: false,
+      showCharacterKid: false,
     },
   },
   reducers: {

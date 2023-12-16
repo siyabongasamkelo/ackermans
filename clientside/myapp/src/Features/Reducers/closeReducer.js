@@ -41,4 +41,6 @@ export const closeReducer = (state, action) => {
   state.value.showTeenBrands = false;
   state.value.showGraphicTees = false;
   state.value.showTeenLimitedEdition = false;
+  //-------------states for the kids character ----------------//
+  state.value.showCharacter = false;
 };

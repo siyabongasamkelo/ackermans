@@ -46,7 +46,7 @@ export const character = [
   "View all in Character",
   "Sale",
   "Baby",
-  "Kids",
+  "Kid",
   "Homeware",
   "Brands",
   "Christmas",
