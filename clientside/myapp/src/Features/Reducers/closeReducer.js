@@ -33,4 +33,6 @@ export const closeReducer = (state, action) => {
   state.value.showSchool = false;
   state.value.showSwimShop = false;
   state.value.showKidsLillyPlusSid = false;
+  //-------------states for the kids teens ----------------//
+  state.value.showTeens = false;
 };

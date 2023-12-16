@@ -153,4 +153,9 @@ export const showReducer = (state, action) => {
     state.value.showKids = false;
     state.value.showKidsLillyPlusSid = true;
   }
+  //-------------states for the kids menu ----------------//
+  if (action.payload === "Teens") {
+    state.value.showMenu = false;
+    state.value.showTeens = true;
+  }
 };

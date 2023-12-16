@@ -41,6 +41,8 @@ export const HeadrsLinkSlice = createSlice({
       showSchool: false,
       showSwimShop: false,
       showKidsLillyPlusSid: false,
+      //-------------states for the kids teens ----------------//
+      showTeens: false,
     },
   },
   reducers: {
