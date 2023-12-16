@@ -18,6 +18,15 @@ export const HeadrsLinkSlice = createSlice({
       showLimitedEdition: false,
       //-------------states for the beauty menu ----------------//
       showBeauty: false,
+      showMakeup: false,
+      showBathAndBody: false,
+      showSkincare: false,
+      showOralcare: false,
+      showFragrance: false,
+      showBrands: false,
+
+      //-------------states for the beauty menu ----------------//
+      showBaby: false,
     },
   },
   reducers: {

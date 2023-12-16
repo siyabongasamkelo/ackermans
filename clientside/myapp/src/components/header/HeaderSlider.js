@@ -45,7 +45,7 @@ const HeaderSlider = () => {
 
         <HeaderMenuComp data={themenu} shows={"showMenu"} title={"MENU"} />
 
-        {/* This is for displaying the woman menu */}
+        {/* This is for displaying the woman menu on mobile view */}
         <WomansMenu />
         <BeautyMenu />
       </Popup>

@@ -45,4 +45,46 @@ export const showReducer = (state, action) => {
     state.value.showMenu = false;
     state.value.showBeauty = true;
   }
+
+  if (action.payload === "Makeup") {
+    state.value.showMenu = false;
+    state.value.showBeauty = false;
+    state.value.showMakeup = true;
+  }
+
+  if (action.payload === "Bath & Body") {
+    state.value.showMenu = false;
+    state.value.showBeauty = false;
+    state.value.showBathAndBody = true;
+  }
+
+  if (action.payload === "Skincare") {
+    state.value.showMenu = false;
+    state.value.showBeauty = false;
+    state.value.showSkincare = true;
+  }
+
+  if (action.payload === "Oral Care") {
+    state.value.showMenu = false;
+    state.value.showBeauty = false;
+    state.value.showOralcare = true;
+  }
+
+  if (action.payload === "Fragrance") {
+    state.value.showMenu = false;
+    state.value.showBeauty = false;
+    state.value.showFragrance = true;
+  }
+
+  if (action.payload === "Brands") {
+    state.value.showMenu = false;
+    state.value.showBeauty = false;
+    state.value.showBrands = true;
+  }
+
+  //-------------states for the baby menu ----------------//
+  if (action.payload === "Baby") {
+    state.value.showMenu = false;
+    state.value.showBaby = true;
+  }
 };

@@ -9,5 +9,14 @@ export const closeReducer = (state, action) => {
   state.value.showAccessories = false;
   state.value.showActiveware = false;
   state.value.showLimitedEdition = false;
+  //-------------states for the womans menu ----------------//
   state.value.showBeauty = false;
+  state.value.showMakeup = false;
+  state.value.showBathAndBody = false;
+  state.value.showSkincare = false;
+  state.value.showOralcare = false;
+  state.value.showFragrance = false;
+  state.value.showBrands = false;
+  //-------------states for the beauty menu ----------------//
+  state.value.showBabay = false;
 };
