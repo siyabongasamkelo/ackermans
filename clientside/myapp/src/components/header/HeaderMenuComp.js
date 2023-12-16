@@ -13,7 +13,7 @@ export const Top = styled.div`
   }
 `;
 
-const HeaderSliderComp = ({ data, shows, title }) => {
+const HeaderMenuComp = ({ data, shows, title }) => {
   const dispatch = useDispatch();
   const showMenus = useSelector((state) => state.headers.value[shows]);
 
@@ -49,4 +49,4 @@ const HeaderSliderComp = ({ data, shows, title }) => {
   );
 };
 
-export default HeaderSliderComp;
+export default HeaderMenuComp;

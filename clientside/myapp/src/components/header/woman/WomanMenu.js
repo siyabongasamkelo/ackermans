@@ -1,5 +1,4 @@
 import React from "react";
-import HeaderSliderComp from "../HeaderSliderComp";
 import {
   accessories,
   activeWare,
@@ -9,39 +8,40 @@ import {
   shoes,
 } from "./WomanData";
 import { woman } from "../MenuData";
+import HeaderMenuComp from "../HeaderMenuComp";
 
-const WomanSliders = () => {
+const WomansMenu = () => {
   return (
     <>
-      <HeaderSliderComp data={woman} shows={"showWoman"} title={"WOMAN"} />
+      <HeaderMenuComp data={woman} shows={"showWoman"} title={"WOMAN"} />
 
-      <HeaderSliderComp
+      <HeaderMenuComp
         data={lingerieAndSleep}
         shows={"showLingerie"}
         title={"LINGERIE & SLEEPWARE"}
       />
 
-      <HeaderSliderComp
+      <HeaderMenuComp
         data={clothing}
         shows={"showClothing"}
         title={"CLOTHING"}
       />
 
-      <HeaderSliderComp data={shoes} shows={"showShoes"} title={"SHOES"} />
+      <HeaderMenuComp data={shoes} shows={"showShoes"} title={"SHOES"} />
 
-      <HeaderSliderComp
+      <HeaderMenuComp
         data={accessories}
         shows={"showAccessories"}
         title={"ACCESSORIES"}
       />
 
-      <HeaderSliderComp
+      <HeaderMenuComp
         data={activeWare}
         shows={"showActiveware"}
         title={"ACTIVEWEAR"}
       />
 
-      <HeaderSliderComp
+      <HeaderMenuComp
         data={limitedEdition}
         shows={"showLimitedEdition"}
         title={"LIMITED EDTION"}
@@ -50,4 +50,4 @@ const WomanSliders = () => {
   );
 };
 
-export default WomanSliders;
+export default WomansMenu;

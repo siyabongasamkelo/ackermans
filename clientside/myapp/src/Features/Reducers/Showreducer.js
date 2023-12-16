@@ -1,4 +1,4 @@
-export const womansReducer = (state, action) => {
+export const showReducer = (state, action) => {
   if (action.payload === "menu") {
     state.value.showSlider = !state.value.showSlider;
     state.value.showMenu = !state.value.showMenu;
@@ -37,5 +37,12 @@ export const womansReducer = (state, action) => {
     state.value.showMenu = false;
     state.value.showWoman = false;
     state.value.showLimitedEdition = true;
+  }
+
+  //-------------states for the beauty menu ----------------//
+
+  if (action.payload === "Beauty") {
+    state.value.showMenu = false;
+    state.value.showBeauty = true;
   }
 };
