@@ -27,6 +27,20 @@ export const HeadrsLinkSlice = createSlice({
 
       //-------------states for the beauty menu ----------------//
       showBaby: false,
+      showNewborn: false,
+      showBoys3To36: false,
+      showGirls3To36: false,
+      showBabyEssentials: false,
+      showBabyLimitedEdition: false,
+      showLillyPlusSid: false,
+      showFirstWardrobe: false,
+      //-------------states for the kids menu ----------------//
+      showKids: false,
+      showBoys2To10Years: false,
+      showGirls2To10Years: false,
+      showSchool: false,
+      showSwimShop: false,
+      showKidsLillyPlusSid: false,
     },
   },
   reducers: {

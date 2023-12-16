@@ -1,4 +1,4 @@
-export const BabyEssentialss = [
+export const babyEssentialss = [
   "View all in Baby Essentials",
   "Baby Bedroom",
   "Baby Bathroom",

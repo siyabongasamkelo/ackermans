@@ -85,7 +85,7 @@ export const kids = [
   "Swim Shop",
   "Back To Crech",
   "Valentines Day",
-  "Lilly + Sid",
+  "Lilly + Sids",
 ];
 
 export const promotions = ["Back To School", "Christmas"];

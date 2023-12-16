@@ -5,6 +5,8 @@ import { themenu } from "./MenuData";
 import WomansMenu from "./woman/WomanMenu";
 import HeaderMenuComp from "./HeaderMenuComp";
 import BeautyMenu from "./Beauty/BeautyMenu";
+import BabyMenu from "./Baby/BabyMenu";
+import KidsMenu from "./Kids/KidsMenu";
 
 export const Popup = styled.div`
   height: 90vh;
@@ -48,6 +50,8 @@ const HeaderSlider = () => {
         {/* This is for displaying the woman menu on mobile view */}
         <WomansMenu />
         <BeautyMenu />
+        <BabyMenu />
+        <KidsMenu />
       </Popup>
     </>
   );

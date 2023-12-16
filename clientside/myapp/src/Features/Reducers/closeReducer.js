@@ -19,4 +19,18 @@ export const closeReducer = (state, action) => {
   state.value.showBrands = false;
   //-------------states for the beauty menu ----------------//
   state.value.showBabay = false;
+  state.value.showNewborn = false;
+  state.value.showBoys3To36 = false;
+  state.value.showGirls3To36 = false;
+  state.value.showBabyEssentials = false;
+  state.value.showBabyLimitedEdition = false;
+  state.value.showLillyPlusSid = false;
+  state.value.showFirstWardrobe = false;
+  //-------------states for the kids menu ----------------//
+  state.value.showKids = false;
+  state.value.showBoys2To10Years = false;
+  state.value.showGirls2To10Years = false;
+  state.value.showSchool = false;
+  state.value.showSwimShop = false;
+  state.value.showKidsLillyPlusSid = false;
 };
