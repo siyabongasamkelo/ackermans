@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderMenuComp from "../HeaderMenuComp";
 import { tech } from "../MenuData";
-import { accessories, audio, power } from "./TechData";
+import { techAccessories, audio, power } from "./TechData";
 
 const TechMenu = () => {
   return (
@@ -10,7 +10,7 @@ const TechMenu = () => {
       <HeaderMenuComp data={audio} title={"AUDIO"} shows={"showAudio"} />
       <HeaderMenuComp data={power} title={"POWER"} shows={"showPower"} />
       <HeaderMenuComp
-        data={accessories}
+        data={techAccessories}
         title={"ACCESSORIES"}
         shows={"showTechAccessories"}
       />

@@ -26,6 +26,9 @@ import {
 } from "../Baby/BabyData";
 import { boys, girls, school } from "../Kids/KidsData";
 import { shopAll, teenBoys, teenGirls, teenBrands } from "../Teens/TeenData";
+import { baby, homeware, kids } from "../Character/CharacterData";
+import { bathroom, drinkAndLunch, partyAndDec } from "../Homewear/HomewearData";
+import { audio, power, techAccessories } from "../Tech/TechData";
 
 export const Dropdown = styled.div`
   height: 70px;
@@ -73,7 +76,20 @@ const DropDownMenu = () => {
     "THE DEMIN SHOP",
     "LIMITED EDITION",
   ];
+  const characterSale = ["CHRISTMAS"];
+  const homewareSale = ["LIMITED EDITION", "NOVELTY ESSENTIALS"];
   const empty = [""];
+  const characterBrands = [
+    "Disney",
+    "Marvel",
+    "Werner Bros",
+    "DC Super Heroes",
+    "Universal",
+    "Nickelodeon",
+    "Hasbro",
+    "Mattel",
+    "Other",
+  ];
   return (
     <>
       <Dropdown className=" d-none d-lg-block ">
@@ -275,7 +291,6 @@ const DropDownMenu = () => {
               teenGirls,
               empty,
               teenBrands,
-
               teensSale,
             ]}
             headers={[
@@ -284,10 +299,56 @@ const DropDownMenu = () => {
               "TEEN GIRLS",
               "",
               "BRANDS",
-
               "SALE",
             ]}
             classNames={"teens"}
+          />
+
+          <DropDownComp
+            products={[
+              baby,
+              kids,
+              homeware,
+              empty,
+              characterBrands,
+
+              characterSale,
+            ]}
+            headers={["BABY", "KIDS", "HOMEWARE", "", "BRANDS", "SALE"]}
+            classNames={"character"}
+          />
+
+          <DropDownComp
+            products={[
+              bathroom,
+              drinkAndLunch,
+              empty,
+              empty,
+              partyAndDec,
+              homewareSale,
+            ]}
+            headers={[
+              "BATHROOM",
+              "DRINKWARE & LUNCHBOXES",
+              "",
+              "",
+              "PARTY & DECORATIONS",
+              "SALES",
+            ]}
+            classNames={"homeware"}
+          />
+
+          <DropDownComp
+            products={[audio, power, techAccessories, empty, empty, empty]}
+            headers={[
+              "AUDIO",
+              "POWERBANKS & CHARGERS",
+              "ACCESSORIES",
+              "",
+              "",
+              "",
+            ]}
+            classNames={"tech"}
           />
         </div>
       </Dropdown>

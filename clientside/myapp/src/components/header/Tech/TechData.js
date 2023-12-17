@@ -5,7 +5,7 @@ export const power = [
   "Charger Cables",
 ];
 
-export const accessories = [
+export const techAccessories = [
   "View all in Accessories",
   "Watches",
   "Accessories",
