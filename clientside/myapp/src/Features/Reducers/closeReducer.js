@@ -52,4 +52,9 @@ export const closeReducer = (state, action) => {
   state.value.showDrinkAndLunch = false;
   //-------------states for the TECH ----------------//
   state.value.showTech = false;
+  state.value.showAudio = false;
+  state.value.showPower = false;
+  state.value.showTechAccessories = false;
+  //-------------states for the Financial situation ----------------//
+  state.value.showFinancial = false;
 };

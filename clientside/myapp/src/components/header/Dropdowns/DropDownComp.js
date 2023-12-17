@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Dropdown } from "./DropDown.styled";
 import { hover } from "../../../Features/DropDown";
 
-const DropDownComp = ({ products }) => {
+const DropDownComp = ({ products, className, headers }) => {
   const hovers = useSelector((state) => state.dropdown.value);
   const dispatch = useDispatch();
 

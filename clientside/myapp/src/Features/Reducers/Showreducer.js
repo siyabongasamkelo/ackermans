@@ -230,4 +230,24 @@ export const showReducer = (state, action) => {
     state.value.showMenu = false;
     state.value.showTech = true;
   }
+  if (action.payload === "Audio") {
+    state.value.showMenu = false;
+    state.value.showTech = false;
+    state.value.showAudio = true;
+  }
+  if (action.payload === "Power") {
+    state.value.showMenu = false;
+    state.value.showTech = false;
+    state.value.showPower = true;
+  }
+  if (action.payload === "accessories") {
+    state.value.showMenu = false;
+    state.value.showTech = false;
+    state.value.showTechAccessories = true;
+  }
+  //-------------states for the Financial SOlutions ----------------//
+  if (action.payload === "Financtial Solutions") {
+    state.value.showMenu = false;
+    state.value.showFinancial = true;
+  }
 };

@@ -11,6 +11,7 @@ import TeensMenu from "./Teens/TeensMenu";
 import CharacterMenu from "./Character/CharacterMenu";
 import HomewearMenu from "./Homewear/HomewearMenu";
 import TechMenu from "./Tech/TechMenu";
+import FinanceMenu from "./Finance/FinanceMenu";
 
 export const Popup = styled.div`
   height: 90vh;
@@ -59,6 +60,7 @@ const HeaderSlider = () => {
         <TeensMenu />
         <CharacterMenu />
         <HomewearMenu />
+        <FinanceMenu />
         <TechMenu />
       </Popup>
     </>

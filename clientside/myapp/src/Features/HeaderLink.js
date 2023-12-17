@@ -60,6 +60,11 @@ export const HeadrsLinkSlice = createSlice({
       showDrinkAndLuch: false,
       //-------------states for the Tech ----------------//
       showTech: false,
+      showAudio: false,
+      showPower: false,
+      showTechAccessories: false,
+      //-------------states for the Financial solution ----------------//
+      showFinancial: false,
     },
   },
   reducers: {

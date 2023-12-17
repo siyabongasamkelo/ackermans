@@ -94,7 +94,7 @@ export const tech = [
   "View all in Tech",
   "Audio",
   "Power Bank & Chargers",
-  "Accessories",
+  "accessories",
 ];
 
 export const teens = [

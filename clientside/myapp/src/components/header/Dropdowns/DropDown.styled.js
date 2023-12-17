@@ -18,7 +18,6 @@ export const Dropdown = styled.div`
       }
     }
   }
-  /* ${({ hover }) => hover} */
   ${({ hover }) => hover} {
     display: flex;
   }
