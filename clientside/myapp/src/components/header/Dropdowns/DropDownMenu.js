@@ -273,16 +273,18 @@ const DropDownMenu = () => {
               shopAll,
               teenBoys,
               teenGirls,
-              teenBrands,
               empty,
+              teenBrands,
+
               teensSale,
             ]}
             headers={[
               "SHOP ALL",
               "TEEN BOYS",
               "TEEN GIRLS",
-              "BRANDS",
               "",
+              "BRANDS",
+
               "SALE",
             ]}
             classNames={"teens"}
