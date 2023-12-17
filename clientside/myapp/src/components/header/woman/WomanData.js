@@ -10,6 +10,7 @@ export const clothing = [
   "Tops",
   "T-Shirts",
   "Pants",
+
   "Demin Jeans",
   "Shorts",
   "Skirts",

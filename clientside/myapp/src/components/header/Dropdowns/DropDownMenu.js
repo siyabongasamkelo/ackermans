@@ -6,7 +6,13 @@ import DropDownBaby from "./DropDownBaby";
 import { useDispatch } from "react-redux";
 import { hover } from "../../../Features/DropDown";
 import DropDownComp from "./DropDownComp";
-import { woman } from "../MenuData";
+import {
+  accessories,
+  activeWare,
+  clothing,
+  lingerieAndSleep,
+  shoes,
+} from "../woman/WomanData";
 
 export const Dropdown = styled.div`
   height: 70px;
@@ -26,7 +32,14 @@ export const Dropdown = styled.div`
 
 const DropDownMenu = () => {
   const dispatch = useDispatch();
-
+  const sale = [
+    "LIMITED EDITION",
+    "THE LINGERIE SHOP",
+    "THE DEMIN SHOP",
+    "TRENDING",
+    "CHRISTMAS",
+    "SUMMER-WARE CAPSULE",
+  ];
   return (
     <>
       <Dropdown className=" d-none d-lg-block ">
@@ -146,7 +159,25 @@ const DropDownMenu = () => {
           </div>
         </div>
         <div className="dropdowns">
-          <DropDownComp products={woman} />
+          <DropDownComp
+            products={[
+              clothing,
+              lingerieAndSleep,
+              shoes,
+              accessories,
+              activeWare,
+              sale,
+            ]}
+            headers={[
+              "CLOTHING",
+              "LINGERIE & SLEEPWARE",
+              "SHOES",
+              "ACCESSORIES",
+              "ACTIVEWARE",
+              "SALE",
+            ]}
+            classNames={"woman"}
+          />
         </div>
       </Dropdown>
     </>
