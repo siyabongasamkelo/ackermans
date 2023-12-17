@@ -3,7 +3,13 @@ export const Dropdown = styled.div`
   height: auto;
   .woman,
   .beauty,
-  .baby {
+  .baby,
+  .kids,
+  .teens,
+  .character,
+  .homeware,
+  .tech,
+  .cellular {
     display: none;
     margin-top: -2%;
     div {

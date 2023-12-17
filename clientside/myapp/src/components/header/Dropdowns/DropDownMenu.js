@@ -1,8 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import DropDownWoman from "./DropDownWoman";
-import DropDownBeauty from "./DropDownBeauty";
-import DropDownBaby from "./DropDownBaby";
 import { useDispatch } from "react-redux";
 import { hover } from "../../../Features/DropDown";
 import DropDownComp from "./DropDownComp";
@@ -13,6 +10,22 @@ import {
   lingerieAndSleep,
   shoes,
 } from "../woman/WomanData";
+import {
+  bathAndBody,
+  brands,
+  fragrance,
+  makeUp,
+  oralCare,
+  skincare,
+} from "../Beauty/BeautyData";
+import {
+  babyEssentialss,
+  boys3to36s,
+  girls3to36,
+  newborn,
+} from "../Baby/BabyData";
+import { boys, girls, school } from "../Kids/KidsData";
+import { shopAll, teenBoys, teenGirls, teenBrands } from "../Teens/TeenData";
 
 export const Dropdown = styled.div`
   height: 70px;
@@ -40,6 +53,27 @@ const DropDownMenu = () => {
     "CHRISTMAS",
     "SUMMER-WARE CAPSULE",
   ];
+  const babySale = [
+    "LIMITED EDITION",
+    "CHRISTMAS",
+    "LILLY + SID",
+    "TURTLEDOVE LONDON",
+    "MY FIRST WARDROBE",
+  ];
+  const kidsSale = [
+    "LIMITED EDITION",
+    "THE DEMIN SHOP",
+    "CHRISTMAS",
+    "SWIM SHOP",
+    "LILLY + SID",
+  ];
+  const teensSale = [
+    "GRAPHIC TEES",
+    "TROPICAL HEAT",
+    "THE DEMIN SHOP",
+    "LIMITED EDITION",
+  ];
+  const empty = [""];
   return (
     <>
       <Dropdown className=" d-none d-lg-block ">
@@ -177,6 +211,81 @@ const DropDownMenu = () => {
               "SALE",
             ]}
             classNames={"woman"}
+          />
+
+          <DropDownComp
+            products={[
+              makeUp,
+              bathAndBody,
+              skincare,
+              oralCare,
+              fragrance,
+              brands,
+            ]}
+            headers={[
+              "MAKEUP",
+              "BATH&BODY",
+              "SKINCARE",
+              "ORAL CARE",
+              "FRAGRANCE",
+              "BRANDS",
+            ]}
+            classNames={"beauty"}
+          />
+
+          <DropDownComp
+            products={[
+              newborn,
+              boys3to36s,
+              girls3to36,
+              empty,
+              babyEssentialss,
+
+              babySale,
+            ]}
+            headers={[
+              "NEWBORN",
+              "BOYS 3-36 MONTHS",
+              "GIRLS 3-36 MONTHS",
+
+              "",
+              "BABY ESSENTIALS",
+              "SALE",
+            ]}
+            classNames={"baby"}
+          />
+
+          <DropDownComp
+            products={[boys, girls, empty, empty, school, kidsSale]}
+            headers={[
+              "BOYS 2-10 YEARS",
+              "GIRLS 2-10 YEARS",
+              "",
+              "",
+              "SCHOOL",
+              "SALE",
+            ]}
+            classNames={"kids"}
+          />
+
+          <DropDownComp
+            products={[
+              shopAll,
+              teenBoys,
+              teenGirls,
+              teenBrands,
+              empty,
+              teensSale,
+            ]}
+            headers={[
+              "SHOP ALL",
+              "TEEN BOYS",
+              "TEEN GIRLS",
+              "BRANDS",
+              "",
+              "SALE",
+            ]}
+            classNames={"teens"}
           />
         </div>
       </Dropdown>

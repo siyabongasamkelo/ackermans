@@ -1,4 +1,4 @@
-export const brands = ["View all in Teen Brands", "Peanuts", "Barbie"];
+export const teenBrands = ["View all in Teen Brands", "Peanuts", "Barbie"];
 export const graphic = ["View all in Graphic Tees", "Girls", "Boys"];
 export const limited = [
   "View all in Limited Edition",

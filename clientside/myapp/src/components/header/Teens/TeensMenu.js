@@ -1,7 +1,7 @@
 import HeaderMenuComp from "../HeaderMenuComp";
 import { teens } from "../MenuData";
 import {
-  brands,
+  teenBrands,
   graphic,
   limited,
   shopAll,
@@ -24,7 +24,11 @@ const TeensMenu = () => {
         title={"TEEN GIRLS"}
         shows={"showTeenGirls"}
       />
-      <HeaderMenuComp data={brands} title={"BRANDS"} shows={"showTeenBrands"} />
+      <HeaderMenuComp
+        data={teenBrands}
+        title={"BRANDS"}
+        shows={"showTeenBrands"}
+      />
       <HeaderMenuComp
         data={graphic}
         title={"GRAPHIC TEES"}
