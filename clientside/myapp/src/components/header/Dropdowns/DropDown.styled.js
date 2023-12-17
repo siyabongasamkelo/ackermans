@@ -20,6 +20,11 @@ export const Dropdown = styled.div`
         li {
           padding-top: 7px;
           margin-left: -15%;
+          cursor: pointer;
+          transition: 0.5 ease-in-out;
+          &:hover {
+            color: green;
+          }
         }
       }
     }
