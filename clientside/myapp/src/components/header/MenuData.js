@@ -45,9 +45,9 @@ export const beauty = [
 export const character = [
   "View all in Character",
   "Sale",
-  "Baby",
+  "Babies",
   "Kid",
-  "Homeware",
+  "Homewares",
   "Brands",
   "Christmas",
 ];

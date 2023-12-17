@@ -200,4 +200,34 @@ export const showReducer = (state, action) => {
     state.value.showCharacter = false;
     state.value.showCharacterKid = true;
   }
+  if (action.payload === "Babies") {
+    state.value.showMenu = false;
+    state.value.showCharacter = false;
+    state.value.showCharacterBaby = true;
+  }
+  if (action.payload === "Homewares") {
+    state.value.showMenu = false;
+    state.value.showCharacter = false;
+    state.value.showCharacterHomeware = true;
+  }
+  //-------------states for the homeware menu ----------------//
+  if (action.payload === "Homeware") {
+    state.value.showMenu = false;
+    state.value.showHomeware = true;
+  }
+  if (action.payload === "Bathroom") {
+    state.value.showMenu = false;
+    state.value.showHomeware = false;
+    state.value.showBathroom = true;
+  }
+  if (action.payload === "Drinkware & Lunchboxes") {
+    state.value.showMenu = false;
+    state.value.showHomeware = false;
+    state.value.showDrinkAndLunch = true;
+  }
+  //-------------states for the Tech ----------------//
+  if (action.payload === "Tech") {
+    state.value.showMenu = false;
+    state.value.showTech = true;
+  }
 };

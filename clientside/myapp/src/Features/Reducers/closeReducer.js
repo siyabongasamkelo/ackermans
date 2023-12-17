@@ -43,4 +43,13 @@ export const closeReducer = (state, action) => {
   state.value.showTeenLimitedEdition = false;
   //-------------states for the kids character ----------------//
   state.value.showCharacter = false;
+  state.value.showCharacterKid = false;
+  state.value.showCharacterBaby = false;
+  state.value.showCharacterHomeware = false;
+  //-------------states for the kids character ----------------//
+  state.value.showHomeware = false;
+  state.value.showBathroom = false;
+  state.value.showDrinkAndLunch = false;
+  //-------------states for the TECH ----------------//
+  state.value.showTech = false;
 };

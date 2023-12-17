@@ -9,6 +9,8 @@ import BabyMenu from "./Baby/BabyMenu";
 import KidsMenu from "./Kids/KidsMenu";
 import TeensMenu from "./Teens/TeensMenu";
 import CharacterMenu from "./Character/CharacterMenu";
+import HomewearMenu from "./Homewear/HomewearMenu";
+import TechMenu from "./Tech/TechMenu";
 
 export const Popup = styled.div`
   height: 90vh;
@@ -56,6 +58,8 @@ const HeaderSlider = () => {
         <KidsMenu />
         <TeensMenu />
         <CharacterMenu />
+        <HomewearMenu />
+        <TechMenu />
       </Popup>
     </>
   );

@@ -49,9 +49,17 @@ export const HeadrsLinkSlice = createSlice({
       showTeenBrands: false,
       showGraphicTees: false,
       showTeenLimitedEdition: false,
-      //-------------states for the kids teens ----------------//
+      //-------------states for the teens ----------------//
       showCharacter: false,
       showCharacterKid: false,
+      showCharacterBaby: false,
+      showCharacterHomeware: false,
+      //-------------states for the kids homeware ----------------//
+      showHomeware: false,
+      showBathroom: false,
+      showDrinkAndLuch: false,
+      //-------------states for the Tech ----------------//
+      showTech: false,
     },
   },
   reducers: {
