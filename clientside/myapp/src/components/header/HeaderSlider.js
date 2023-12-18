@@ -18,21 +18,6 @@ export const Popup = styled.div`
   width: 100%;
   position: absolute;
   z-index: 2;
-  .menu {
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 50px;
-    svg {
-      margin-right: 20px;
-    }
-  }
-  .list {
-    height: 50px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin-left: 20px;
-    svg {
-      margin-right: 30px;
-    }
-  }
 `;
 
 const HeaderSlider = () => {
@@ -53,6 +38,7 @@ const HeaderSlider = () => {
         <HeaderMenuComp data={themenu} shows={"showMenu"} title={"MENU"} />
 
         {/* This is for displaying the woman menu on mobile view */}
+
         <WomansMenu />
         <BeautyMenu />
         <BabyMenu />

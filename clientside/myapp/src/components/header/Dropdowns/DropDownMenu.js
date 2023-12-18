@@ -17,14 +17,21 @@ export const Dropdown = styled.div`
   .linkcover {
     height: 70px;
     width: 100%;
-    .cover {
-      width: 65%;
-    }
     a {
       text-decoration: none;
       font-weight: 700;
       color: rgba(0, 0, 0, 0.7);
     }
+  }
+`;
+
+export const Cover = styled.div`
+  width: 65%;
+  @media only screen and (min-width: 992px) {
+    width: 90%;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 70%;
   }
 `;
 
@@ -35,7 +42,7 @@ const DropDownMenu = () => {
     <>
       <Dropdown className=" d-none d-lg-block ">
         <div className="linkcover d-flex justify-content-center align-items-center">
-          <div className="cover  d-flex justify-content-evenly">
+          <Cover className="cover  d-flex justify-content-evenly">
             <Link
               to="qwe"
               onMouseOver={() => {
@@ -147,7 +154,7 @@ const DropDownMenu = () => {
             >
               CELLULAR
             </Link>
-          </div>
+          </Cover>
         </div>
         <div className="dropdowns">
           <DropDownWoman />
