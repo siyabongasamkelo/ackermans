@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const Button = styled.div`
   height: 50px;
   /* width: ${({ width }) => width}; */
-  margin-top: ${({ mt }) => mt};
+  /* margin-top: ${({ mt }) => mt}; */
   padding: 0 30px 0 30px;
   background-color: green;
   border-radius: 30px;
