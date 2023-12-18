@@ -3,19 +3,21 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Headers from "../components/header/Headers";
 import styled from "styled-components";
+import home1 from "../Assets/Images/home1.jpg";
 
-export const UpperImages = styled.div`
+export const ImagesCovers = styled.div`
   width: 100%;
   height: 400px;
   margin-top: 10px;
-  background-color: red;
 `;
 
-export const LowerImages = styled.div`
-  width: 100%;
-  height: 400px;
-  margin-top: 40px;
-  background-color: blue;
+export const Options = styled.div`
+  height: 100%;
+  width: ${({ width }) => width};
+  margin-top: ${({ mg }) => mg};
+  background-image: url(${({ image }) => image});
+  background-size: cover;
+  background-position: center;
 `;
 
 const Home = () => {
@@ -25,8 +27,13 @@ const Home = () => {
         <Row>
           <Col>
             <Headers />
-            <UpperImages className=" d-flex justify-content-between "></UpperImages>
-            <LowerImages></LowerImages>
+            <ImagesCovers className=" d-flex justify-content-between ">
+              <Options image={home1} width={"49.5%"}></Options>
+              <Options image={home1} width={"49.5%"}></Options>
+            </ImagesCovers>
+            <ImagesCovers>
+              <Options image={home1} width={"100%"} mg={"20px"}></Options>
+            </ImagesCovers>
           </Col>
         </Row>
       </Container>
