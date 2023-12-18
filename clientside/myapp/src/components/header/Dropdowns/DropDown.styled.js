@@ -11,23 +11,12 @@ export const Dropdown = styled.div`
   .tech,
   .cellular {
     display: none;
-    margin-top: -2%;
-    div {
-      width: 18%;
-      margin: 50px 0 20px 0;
-      ul {
-        list-style: none;
-        li {
-          padding-top: 7px;
-          margin-left: -15%;
-          cursor: pointer;
-          transition: 0.5 ease-in-out;
-          &:hover {
-            color: green;
-          }
-        }
-      }
-    }
+    margin-top: -1%;
+    margin-left: 1.5%;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    width: 65%;
   }
   ${({ hover }) => hover} {
     display: flex;

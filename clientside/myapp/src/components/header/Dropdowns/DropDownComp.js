@@ -1,6 +1,25 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Dropdown } from "./DropDown.styled";
 import { hover } from "../../../Features/DropDown";
+import styled from "styled-components";
+
+export const Divs = styled.div`
+  width: 18%;
+`;
+
+export const Ul = styled.ul`
+  list-style: none;
+`;
+
+export const Li = styled.li`
+  padding-top: 7px;
+  margin-left: -15%;
+  cursor: pointer;
+  transition: 0.5 ease-in-out;
+  &:hover {
+    color: green;
+  }
+`;
 
 const DropDownComp = ({ products, classNames, headers }) => {
   const hovers = useSelector((state) => state.dropdown.value);
@@ -16,52 +35,52 @@ const DropDownComp = ({ products, classNames, headers }) => {
       }}
     >
       <div className={`${classNames} justify-content-around`}>
-        <div>
+        <Divs>
           <h5>{headers[0]}</h5>
-          <ul>
+          <Ul>
             {products[0].map((items) => {
-              return <li>{items}</li>;
+              return <Li>{items}</Li>;
             })}
-          </ul>
-        </div>
-        <div>
+          </Ul>
+        </Divs>
+        <Divs>
           <h5>{headers[1]}</h5>
-          <ul>
+          <Ul>
             {products[1].map((items) => {
-              return <li>{items}</li>;
+              return <Li>{items}</Li>;
             })}
-          </ul>
-        </div>
-        <div>
+          </Ul>
+        </Divs>
+        <Divs>
           <h5>{headers[2]}</h5>
-          <ul>
+          <Ul>
             {products[2].map((items) => {
-              return <li>{items}</li>;
+              return <Li>{items}</Li>;
             })}
-          </ul>
+          </Ul>
           <h5>{headers[3]}</h5>
-          <ul>
+          <Ul>
             {products[3].map((items) => {
-              return <li>{items}</li>;
+              return <Li>{items}</Li>;
             })}
-          </ul>
-        </div>
-        <div>
+          </Ul>
+        </Divs>
+        <Divs>
           <h5>{headers[4]}</h5>
-          <ul>
+          <Ul>
             {products[4].map((items) => {
-              return <li>{items}</li>;
+              return <Li>{items}</Li>;
             })}
-          </ul>
-        </div>
-        <div>
+          </Ul>
+        </Divs>
+        <Divs>
           <h5>{headers[5]}</h5>
-          <ul>
+          <Ul>
             {products[5].map((items) => {
-              return <li>{items}</li>;
+              return <Li>{items}</Li>;
             })}
-          </ul>
-        </div>
+          </Ul>
+        </Divs>
       </div>
     </Dropdown>
   );
