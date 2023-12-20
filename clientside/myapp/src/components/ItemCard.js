@@ -5,6 +5,9 @@ export const ItemCartStyled = styled.div`
   height: 400px;
   width: 300px;
   cursor: pointer;
+  @media only screen and (max-width: 600px) {
+    width: 60%;
+  }
 `;
 export const UpperPart = styled.div`
   height: 80%;
