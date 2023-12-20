@@ -1,3 +1,4 @@
+import Cartegories from "../home/Cartegories";
 import Home from "../home/Home";
 import Tshirts from "../home/Tshirts";
 
@@ -6,6 +7,7 @@ const HomePage = () => {
     <div>
       <Home />
       <Tshirts />
+      <Cartegories />
     </div>
   );
 };

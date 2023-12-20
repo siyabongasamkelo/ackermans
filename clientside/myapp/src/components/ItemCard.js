@@ -32,7 +32,7 @@ const ItemCard = () => {
       </UpperPart>
       <LowerPart>
         <p>Stripe short sleeve T-shirt</p>
-        <h5>59.00</h5>
+        <h5>R 59.00</h5>
       </LowerPart>
     </ItemCartStyled>
   );

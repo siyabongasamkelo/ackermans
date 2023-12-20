@@ -52,9 +52,7 @@ export const Action = styled.div`
   margin-left: 5%;
   margin-top: 8%;
 `;
-
 export const MyCarousel = styled.div`
-  height: 50vh;
   margin-top: 50px;
 `;
 
