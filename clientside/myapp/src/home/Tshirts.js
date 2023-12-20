@@ -24,6 +24,13 @@ export const Div = styled.div`
 `;
 export const MyButton = styled(Button)`
   width: 220px;
+  @media only screen and (max-width: 600px) {
+    margin-left: 17%;
+  }
+  @media only screen and (min-width: 768px) {
+    margin-top: -20px;
+    margin-left: 30%;
+  }
 `;
 export const Text = styled.div`
   margin-left: 15%;
@@ -45,6 +52,25 @@ export const Text = styled.div`
     }
     h3 {
       font-size: 28px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    h5 {
+      font-size: 20px;
+      margin-top: 30px;
+      margin-left: 20%;
+    }
+    h3 {
+      font-size: 28px;
+      margin-left: 20%;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    h5 {
+      margin-left: 25%;
+    }
+    h3 {
+      margin-left: 0%;
     }
   }
 `;

@@ -9,6 +9,10 @@ export const Div = styled.div`
   margin-top: 30px;
 `;
 
+export const Devider = styled.div`
+  width: ${({ divs }) => divs};
+`;
+
 const Cartegories = () => {
   return (
     <Container>
@@ -16,30 +20,42 @@ const Cartegories = () => {
         <Col>
           <div>
             <Div className=" d-lg-flex justify-content-lg-between ">
-              <div className=" d-flex">
-                <CartBox />
-                <CartBox />
-              </div>
-              <div>
-                <CartBox />
-              </div>
-              <div className=" d-flex">
-                <CartBox />
-                <CartBox />
-              </div>
+              <Devider
+                className=" d-flex justify-content-between "
+                divs={"38%"}
+              >
+                <CartBox quantity={2} />
+                <CartBox quantity={2} />
+              </Devider>
+              <Devider divs={"18%"}>
+                <CartBox quantity={1} />
+              </Devider>
+              <Devider
+                className=" d-flex justify-content-between "
+                divs={"38%"}
+              >
+                <CartBox quantity={2} />
+                <CartBox quantity={2} />
+              </Devider>
             </Div>
             <Div className=" d-lg-flex justify-content-lg-between ">
-              <div>
-                <CartBox />
-                <CartBox />
-              </div>
-              <div>
-                <CartBox />
-              </div>
-              <div>
-                <CartBox />
-                <CartBox />
-              </div>
+              <Devider
+                className=" d-flex justify-content-between "
+                divs={"38%"}
+              >
+                <CartBox quantity={2} />
+                <CartBox quantity={2} />
+              </Devider>
+              <Devider divs={"18%"}>
+                <CartBox quantity={1} />
+              </Devider>
+              <Devider
+                className=" d-flex justify-content-between "
+                divs={"38%"}
+              >
+                <CartBox quantity={2} />
+                <CartBox quantity={2} />
+              </Devider>
             </Div>
           </div>
         </Col>

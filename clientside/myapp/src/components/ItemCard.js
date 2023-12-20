@@ -6,7 +6,7 @@ export const ItemCartStyled = styled.div`
   width: 300px;
   cursor: pointer;
   @media only screen and (max-width: 600px) {
-    width: 60%;
+    width: 90%;
   }
 `;
 export const UpperPart = styled.div`
