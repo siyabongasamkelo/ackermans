@@ -19,7 +19,7 @@ export const Dropdown = styled.div`
     width: 65%;
     @media only screen and (min-width: 992px) {
       width: 80%;
-      margin-left: 3.5%;
+      margin-left: 5.5%;
     }
     @media only screen and (min-width: 1200px) {
       width: 65%;

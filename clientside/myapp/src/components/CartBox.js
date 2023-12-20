@@ -2,7 +2,8 @@ import styled from "styled-components";
 import p2 from "../Assets/Images/p2.jpg";
 export const CartBoxStyled = styled.div`
   height: 380px;
-  width: 24%;
+  /* width: 18%; */
+  width: 300px;
 `;
 export const UpperDiv = styled.div`
   height: 75%;

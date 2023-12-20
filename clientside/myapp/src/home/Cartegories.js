@@ -15,17 +15,31 @@ const Cartegories = () => {
       <Row>
         <Col>
           <div>
-            <Div className=" d-flex justify-content-between ">
-              <CartBox />
-              <CartBox />
-              <CartBox />
-              <CartBox />
+            <Div className=" d-lg-flex justify-content-lg-between ">
+              <div className=" d-flex">
+                <CartBox />
+                <CartBox />
+              </div>
+              <div>
+                <CartBox />
+              </div>
+              <div className=" d-flex">
+                <CartBox />
+                <CartBox />
+              </div>
             </Div>
-            <Div className=" d-flex justify-content-between ">
-              <CartBox />
-              <CartBox />
-              <CartBox />
-              <CartBox />
+            <Div className=" d-lg-flex justify-content-lg-between ">
+              <div>
+                <CartBox />
+                <CartBox />
+              </div>
+              <div>
+                <CartBox />
+              </div>
+              <div>
+                <CartBox />
+                <CartBox />
+              </div>
             </Div>
           </div>
         </Col>
