@@ -38,6 +38,15 @@ export const Text = styled.div`
     padding-left: 80px;
     color: white;
   }
+  @media only screen and (max-width: 600px) {
+    h5 {
+      font-size: 21px;
+      margin-top: 15px;
+    }
+    h3 {
+      font-size: 28px;
+    }
+  }
 `;
 export const Action = styled.div`
   margin-left: 5%;
@@ -76,7 +85,7 @@ function Tshirts() {
           <div>
             <ImageCover>
               <Image image={home3}>
-                <Div className=" d-flex">
+                <Div className=" d-lg-flex">
                   <Text>
                     <h5>IT'S GIVING</h5>
                     <h3>TROPICAL</h3>
@@ -94,7 +103,6 @@ function Tshirts() {
                 <ItemCard />
                 <ItemCard />
               </Carousel>
-              ;
             </MyCarousel>
           </div>
         </Col>

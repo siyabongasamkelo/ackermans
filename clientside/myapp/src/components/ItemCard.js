@@ -4,13 +4,17 @@ import p1 from "../Assets/Images/p1.jpg";
 export const ItemCartStyled = styled.div`
   height: 400px;
   width: 300px;
-  background-color: red;
+  cursor: pointer;
 `;
 export const UpperPart = styled.div`
   height: 80%;
 `;
 export const LowerPart = styled.div`
   height: 20%;
+  h5 {
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 0px;
+  }
 `;
 
 const Image = styled.img.attrs((props) => ({
@@ -28,7 +32,7 @@ const ItemCard = () => {
       </UpperPart>
       <LowerPart>
         <p>Stripe short sleeve T-shirt</p>
-        <h4>59.00</h4>
+        <h5>59.00</h5>
       </LowerPart>
     </ItemCartStyled>
   );
