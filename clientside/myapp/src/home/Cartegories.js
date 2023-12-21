@@ -11,6 +11,10 @@ export const Div = styled.div`
 
 export const Devider = styled.div`
   width: ${({ divs }) => divs};
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    background-color: red;
+  }
 `;
 
 const Cartegories = () => {
@@ -24,39 +28,39 @@ const Cartegories = () => {
                 className=" d-flex justify-content-between "
                 divs={"38%"}
               >
-                <CartBox quantity={2} />
-                <CartBox quantity={2} />
+                <CartBox qua={true} />
+                <CartBox qua={false} />
               </Devider>
               <Devider divs={"18%"}>
-                <CartBox quantity={1} />
+                <CartBox qua={1} />
               </Devider>
               <Devider
                 className=" d-flex justify-content-between "
                 divs={"38%"}
               >
-                <CartBox quantity={2} />
-                <CartBox quantity={2} />
+                <CartBox qua={2} />
+                <CartBox qua={2} />
               </Devider>
             </Div>
-            <Div className=" d-lg-flex justify-content-lg-between ">
+            {/* <Div className=" d-lg-flex justify-content-lg-between ">
               <Devider
                 className=" d-flex justify-content-between "
                 divs={"38%"}
               >
-                <CartBox quantity={2} />
-                <CartBox quantity={2} />
+                <CartBox />
+                <CartBox />
               </Devider>
               <Devider divs={"18%"}>
-                <CartBox quantity={1} />
+                <CartBox />
               </Devider>
               <Devider
                 className=" d-flex justify-content-between "
                 divs={"38%"}
               >
-                <CartBox quantity={2} />
-                <CartBox quantity={2} />
+                <CartBox />
+                <CartBox />
               </Devider>
-            </Div>
+            </Div> */}
           </div>
         </Col>
       </Row>

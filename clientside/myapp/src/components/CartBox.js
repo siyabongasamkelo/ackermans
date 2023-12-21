@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import p2 from "../Assets/Images/p2.jpg";
 export const CartBoxStyled = styled.div`
-  height: 380px;
-  /* width: 30%; */
-  /* width: ${(quantity) => (quantity > 1 ? "40%" : "98%")}; */
-  width: 230px;
+  /* height: 380px;
+  width: 230px; */
+
   cursor: pointer;
+  @media only screen and (max-width: 600px) {
+    width: ${({ qua }) => (qua ? "100px" : "200px")};
+    /* width: 100px; */
+  }
 `;
 export const UpperDiv = styled.div`
   height: 75%;
