@@ -1,5 +1,6 @@
 import Cartegories from "../home/Cartegories";
 import Home from "../home/Home";
+import Jeans from "../home/Jeans";
 import Tshirts from "../home/Tshirts";
 
 const HomePage = () => {
@@ -8,6 +9,7 @@ const HomePage = () => {
       <Home />
       <Tshirts />
       <Cartegories />
+      <Jeans />
     </div>
   );
 };

@@ -6,6 +6,10 @@ import CartBox from "../components/CartBox";
 
 export const Devider = styled.div`
   width: 100%;
+`;
+
+export const Div = styled.div`
+  width: 100%;
   @media only screen and (min-width: 1200px) {
     margin-left: -30px;
   }
@@ -16,7 +20,7 @@ const Cartegories = () => {
     <Container>
       <Row>
         <Col>
-          <div className="mt-5 d-md-flex d-lg-flex">
+          <Div className="mt-5 d-md-flex d-lg-flex">
             <Devider className=" d-sm-flex justify-content-sm-between  d-flex">
               <CartBox qua={2} />
               <CartBox qua={2} />
@@ -28,7 +32,20 @@ const Cartegories = () => {
               <CartBox qua={2} />
               <CartBox qua={2} />
             </Devider>
-          </div>
+          </Div>
+          <Div className="mt-5 d-md-flex d-lg-flex">
+            <Devider className=" d-sm-flex justify-content-sm-between  d-flex">
+              <CartBox qua={2} />
+              <CartBox qua={2} />
+            </Devider>
+            <Devider>
+              <CartBox qua={1} />
+            </Devider>
+            <Devider className=" d-flex justify-content-between ">
+              <CartBox qua={2} />
+              <CartBox qua={2} />
+            </Devider>
+          </Div>
         </Col>
       </Row>
     </Container>
