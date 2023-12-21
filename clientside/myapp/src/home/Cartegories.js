@@ -4,16 +4,10 @@ import Col from "react-bootstrap/Col";
 import styled from "styled-components";
 import CartBox from "../components/CartBox";
 
-export const Div = styled.div`
-  width: 100%;
-  margin-top: 30px;
-`;
-
 export const Devider = styled.div`
-  width: ${({ divs }) => divs};
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-    background-color: red;
+  width: 100%;
+  @media only screen and (min-width: 1200px) {
+    margin-left: -30px;
   }
 `;
 
@@ -22,45 +16,18 @@ const Cartegories = () => {
     <Container>
       <Row>
         <Col>
-          <div>
-            <Div className=" d-lg-flex justify-content-lg-between ">
-              <Devider
-                className=" d-flex justify-content-between "
-                divs={"38%"}
-              >
-                <CartBox qua={true} />
-                <CartBox qua={false} />
-              </Devider>
-              <Devider divs={"18%"}>
-                <CartBox qua={1} />
-              </Devider>
-              <Devider
-                className=" d-flex justify-content-between "
-                divs={"38%"}
-              >
-                <CartBox qua={2} />
-                <CartBox qua={2} />
-              </Devider>
-            </Div>
-            {/* <Div className=" d-lg-flex justify-content-lg-between ">
-              <Devider
-                className=" d-flex justify-content-between "
-                divs={"38%"}
-              >
-                <CartBox />
-                <CartBox />
-              </Devider>
-              <Devider divs={"18%"}>
-                <CartBox />
-              </Devider>
-              <Devider
-                className=" d-flex justify-content-between "
-                divs={"38%"}
-              >
-                <CartBox />
-                <CartBox />
-              </Devider>
-            </Div> */}
+          <div className="mt-5 d-md-flex d-lg-flex">
+            <Devider className=" d-sm-flex justify-content-sm-between  d-flex">
+              <CartBox qua={2} />
+              <CartBox qua={2} />
+            </Devider>
+            <Devider>
+              <CartBox qua={1} />
+            </Devider>
+            <Devider className=" d-flex justify-content-between ">
+              <CartBox qua={2} />
+              <CartBox qua={2} />
+            </Devider>
           </div>
         </Col>
       </Row>
