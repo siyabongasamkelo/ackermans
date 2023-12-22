@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Options } from "./styles/Options.styled";
 import home3 from "../Assets/Images/home3.jpg";
 import "react-multi-carousel/lib/styles.css";
+import CartBox from "../components/CartBox";
 
 export const Image = styled(Options)`
   height: 200px;
@@ -71,6 +72,10 @@ export const MyCarousel = styled.div`
   margin-top: 50px;
 `;
 
+export const Divs = styled.div`
+  width: 100%;
+`;
+
 const Jeans = () => {
   return (
     <Container>
@@ -89,6 +94,17 @@ const Jeans = () => {
                 </Div>
               </Image>
             </ImageCover>
+
+            <Divs className=" d-lg-flex justify-content-lg-center mt-5 ">
+              <div className=" d-flex justify-content-between ">
+                <CartBox qua={2} />
+                <CartBox qua={2} />
+              </div>
+              <div className=" d-flex justify-content-between ">
+                <CartBox qua={2} />
+                <CartBox qua={2} />
+              </div>
+            </Divs>
           </div>
         </Col>
       </Row>
