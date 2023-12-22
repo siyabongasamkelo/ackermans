@@ -20,7 +20,17 @@ export const Financial = styled.div`
   background-color: red;
 `;
 
-export const FinancialHeader = styled.div``;
+export const FinancialHeader = styled.div`
+  div {
+    padding: 30px;
+  }
+`;
+
+export const FinanceOptions = styled.div`
+  height: 30px;
+  background-color: blue;
+  text-align: center;
+`;
 
 const FindOutMore = () => {
   return (
@@ -47,6 +57,17 @@ const FindOutMore = () => {
               <MyButton>Find Out More</MyButton>
             </Image>
           </div>
+          <Financial className=" mt-4">
+            <FinancialHeader className=" d-flex justify-content-center text-white">
+              <div>
+                <h4>FINANCIAL</h4>
+                <h4>SERVICES</h4>
+              </div>
+            </FinancialHeader>
+            <div className=" text-white">
+              <FinanceOptions>APPLY FOR A LOAN</FinanceOptions>
+            </div>
+          </Financial>
         </Col>
       </Row>
     </Container>
