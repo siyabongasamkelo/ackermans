@@ -11,25 +11,34 @@ export const Image = styled(Options)`
   width: 49%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(${({ image }) => image});
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 49%;
+  }
 `;
 export const MyButton = styled(Button)`
   width: 220px;
 `;
-
-export const Financial = styled.div`
-  background-color: red;
-`;
-
+export const Financial = styled.div``;
 export const FinancialHeader = styled.div`
+  background-color: grey;
   div {
     padding: 30px;
   }
 `;
-
 export const FinanceOptions = styled.div`
-  height: 30px;
-  background-color: blue;
+  height: 45px;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const FindOutMore = () => {
@@ -37,7 +46,7 @@ const FindOutMore = () => {
     <Container>
       <Row>
         <Col>
-          <div className=" d-flex justify-content-between">
+          <div className=" d-lg-flex justify-content-lg-between">
             <Image
               image={home3}
               className=" d-flex flex-column align-items-center justify-content-center text-white"
@@ -65,6 +74,13 @@ const FindOutMore = () => {
               </div>
             </FinancialHeader>
             <div className=" text-white">
+              <FinanceOptions>APPLY FOR A LOAN</FinanceOptions>
+              <FinanceOptions>APPLY FOR A LOAN</FinanceOptions>
+              <FinanceOptions>APPLY FOR A LOAN</FinanceOptions>
+
+              <FinanceOptions>APPLY FOR A LOAN</FinanceOptions>
+              <FinanceOptions>APPLY FOR A LOAN</FinanceOptions>
+              <FinanceOptions>APPLY FOR A LOAN</FinanceOptions>
               <FinanceOptions>APPLY FOR A LOAN</FinanceOptions>
             </div>
           </Financial>
