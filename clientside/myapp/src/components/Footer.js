@@ -3,28 +3,172 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import styled from "styled-components";
 import { Button } from "./Button.styled";
+import {
+  Facebook,
+  GeoAltFill,
+  Instagram,
+  Linkedin,
+  Youtube,
+} from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 export const UpperPart = styled.div``;
 export const SignUp = styled.div`
   width: 60%;
+  input {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-left: 20px;
+  }
 `;
-export const ConnectWithus = styled.div``;
+export const ConnectWithus = styled.div`
+  width: 40%;
+  height: 100px;
+  background-color: green;
+  svg {
+    transform: scale(200%);
+    margin-left: 30px;
+    fill: white;
+    cursor: pointer;
+  }
+`;
+export const MyButton = styled(Button)`
+  width: 180px;
+  margin-left: 20px;
+`;
+export const Label = styled.label`
+  font-size: 18px;
+  color: white;
+  padding-left: 30px;
+`;
+
+export const LowerPart = styled.div``;
+
+export const TheLinks = styled.div``;
+
+export const Devitions = styled.div`
+  width: 16%;
+`;
 
 const Footer = () => {
   return (
     <Container>
       <Row>
         <Col>
-          <UpperPart>
-            <SignUp>
+          <UpperPart className=" d-flex justify-content-between align-items-center mt-5">
+            <SignUp className=" d-flex align-items-center">
               <label>Sign up to our mailers</label>
               <input type="text" placeholder="Enter your email address" />
-              <Button>Subscribe</Button>
+              <MyButton>Subscribe</MyButton>
             </SignUp>
-            <ConnectWithus>
-              <label>Connect with us</label>
+            <ConnectWithus className=" d-flex align-items-center">
+              <Label>Connect with us</Label>
+              <Facebook />
+              <Youtube />
+              <Instagram />
+              <Linkedin />
+              <GeoAltFill />
             </ConnectWithus>
           </UpperPart>
+          <LowerPart className=" mb-5 ">
+            <TheLinks className=" d-flex justify-content-between mt-5 ">
+              <Devitions>
+                <h6>Customer Service</h6>
+                <Link>Returns F.A.Q</Link>
+                <br></br>
+                <Link>Delivery Details</Link>
+                <br></br>
+                <Link>How To Order</Link>
+                <br></br>
+                <Link>Store Locator</Link>
+                <br></br>
+                <br></br>
+                <h6>Ackerman Shop</h6>
+                <Link>Woman</Link>
+                <br></br>
+                <Link>Baby</Link>
+                <br></br>
+                <Link>Kids</Link>
+                <br></br>
+                <Link>Homeware</Link>
+                <br></br>
+                <Link>Cellular</Link>
+                <br></br>
+                <Link>Character</Link>
+              </Devitions>
+              <Devitions>
+                <h6>My Ackerman Profile</h6>
+                <Link>Register a Profile / Login</Link>
+                <br></br>
+                <Link>My Details</Link>
+                <br></br>
+                <Link>My Ackerman Account</Link>
+                <br></br>
+                <Link>My Lay-bay</Link>
+              </Devitions>
+              <Devitions>
+                <h6>Coperate Information</h6>
+                <Link>About Us</Link>
+                <br></br>
+                <Link>Carees</Link>
+                <br></br>
+                <Link>CSI</Link>
+                <br></br>
+                <Link>Store Directory</Link>
+                <br></br>
+                <Link>Store Locator</Link>
+                <br></br>
+                <Link>New Store</Link>
+                <br></br>
+                <Link>Listen To Ackerman Sound</Link>
+                <br></br>
+                <Link>Contact Us</Link>
+              </Devitions>
+
+              <Devitions>
+                <h6>Explore</h6>
+                <Link>Catalogues</Link>
+                <br></br>
+                <Link>Ackermans Blog</Link>
+                <br></br>
+                <Link>Competions</Link>
+                <br></br>
+                <Link>The Baby Corner</Link>
+              </Devitions>
+              <Devitions>
+                <h6>Financial Solutions</h6>
+                <Link>Account Application</Link>
+                <br></br>
+                <Link>Ackermans Account</Link>
+                <br></br>
+                <Link>Lay-By</Link>
+                <br></br>
+                <Link>Insurance</Link>
+                <br></br>
+                <Link>Loans</Link>
+                <br></br>
+                <Link>Bill Payments</Link>
+                <br></br>
+                <Link>Money Transfer</Link>
+                <br></br>
+                <Link>Vouchers</Link>
+              </Devitions>
+              <Devitions>
+                <h6>Terms & Conditions</h6>
+                <Link>General</Link>
+                <br></br>
+                <Link>Pepkor Privacy Policy</Link>
+                <br></br>
+                <Link>Cookie Policy</Link>
+                <br></br>
+                <Link>Competions Rules</Link>
+                <br></br>
+                <Link>Promotions Of Access To Information</Link>
+                <br></br>
+                <Link>Act Manual</Link>
+              </Devitions>
+            </TheLinks>
+          </LowerPart>
         </Col>
       </Row>
     </Container>
