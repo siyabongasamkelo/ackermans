@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Cartegories from "../home/Cartegories";
 import FindOutMore from "../home/FindOutMore";
 import Home from "../home/Home";
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Jeans />
       <FindOutMore />
       <MoreFashion />
+      <Footer />
     </div>
   );
 };
