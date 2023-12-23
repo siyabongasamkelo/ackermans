@@ -17,8 +17,18 @@ export const SignUp = styled.div`
   width: 60%;
   input {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
     margin-left: 20px;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    label {
+      padding-left: 28%;
+      padding-bottom: 5%;
+    }
+    input {
+      width: 100%;
+    }
   }
 `;
 export const ConnectWithus = styled.div`
@@ -31,15 +41,35 @@ export const ConnectWithus = styled.div`
     fill: white;
     cursor: pointer;
   }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin-top: 30px;
+    div {
+      width: 60%;
+      margin-left: 18%;
+    }
+    svg {
+      transform: scale(170%);
+    }
+  }
 `;
 export const MyButton = styled(Button)`
   width: 180px;
   margin-left: 20px;
+  @media only screen and (max-width: 600px) {
+    margin-left: 25%;
+    margin-top: 5%;
+  }
 `;
 export const Label = styled.label`
   font-size: 18px;
   color: white;
   padding-left: 30px;
+  @media only screen and (max-width: 600px) {
+    padding-left: 32%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
 `;
 
 export const LowerPart = styled.div``;
@@ -48,6 +78,14 @@ export const TheLinks = styled.div``;
 
 export const Devitions = styled.div`
   width: 16%;
+  a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s ease-in-out;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 const Footer = () => {
@@ -55,19 +93,28 @@ const Footer = () => {
     <Container>
       <Row>
         <Col>
-          <UpperPart className=" d-flex justify-content-between align-items-center mt-5">
-            <SignUp className=" d-flex align-items-center">
-              <label>Sign up to our mailers</label>
-              <input type="text" placeholder="Enter your email address" />
+          <UpperPart className=" d-lg-flex justify-content-lg-between align-items-lg-center mt-5">
+            <SignUp className=" d-lg-flex align-items-lg-center">
+              <div className=" d-lg-flex ">
+                <div>
+                  <label>Sign up to our mailers</label>
+                </div>
+                <div>
+                  <input type="text" placeholder="Enter your email address" />
+                </div>
+              </div>
+
               <MyButton>Subscribe</MyButton>
             </SignUp>
-            <ConnectWithus className=" d-flex align-items-center">
+            <ConnectWithus className="   d-lg-flex align-items-lg-center flex-lg-row ">
               <Label>Connect with us</Label>
-              <Facebook />
-              <Youtube />
-              <Instagram />
-              <Linkedin />
-              <GeoAltFill />
+              <div>
+                <Facebook />
+                <Youtube />
+                <Instagram />
+                <Linkedin />
+                <GeoAltFill />
+              </div>
             </ConnectWithus>
           </UpperPart>
           <LowerPart className=" mb-5 ">
