@@ -88,6 +88,8 @@ export const Devitions = styled.div`
   }
 `;
 
+export const MobileDisplay = styled.div``;
+
 const Footer = () => {
   return (
     <Container>
@@ -117,7 +119,7 @@ const Footer = () => {
               </div>
             </ConnectWithus>
           </UpperPart>
-          <LowerPart className=" mb-5 ">
+          <LowerPart className=" mb-5 d-none d-lg-block ">
             <TheLinks className=" d-flex justify-content-between mt-5 ">
               <Devitions>
                 <h6>Customer Service</h6>
@@ -216,6 +218,13 @@ const Footer = () => {
               </Devitions>
             </TheLinks>
           </LowerPart>
+          <MobileDisplay className=" d-sm-none d-lg-block">
+            <h6>CUSTOMER SERVICE</h6>
+            <p>Returns F.A.Q</p>
+            <p>Delivery Details</p>
+            <p>How to order</p>
+            <p>Store Locator</p>
+          </MobileDisplay>
         </Col>
       </Row>
     </Container>
